@@ -30,3 +30,10 @@ Not done:
 * Twitter
 * Facebook
 * ...
+
+## Hooks
+
+* `register_contact_importer(importer)` - importer is subclass of `ContactImporter`.
+* `register_contact_exporter(exporter)` - exporter is subclass of `ContactExporter`.
+* `register_contact_field_validator(field, validator)` - field is string, validator is subclass of `ContactFieldValidator`.
+* `register_contact_context_provider(provider)` - provider is subclass of `ContactContextProvider`.
