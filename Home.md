@@ -1,1 +1,5 @@
-Welcome to the Mailpile wiki!
+
+* [[Design documents]]
+* [[Mailpile internals]]
+* [[Design conversations]]
+* [[Security]]
