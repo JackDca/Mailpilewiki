@@ -3,3 +3,5 @@
 * [[Design conversations]]
 * [[Security]]
 * [[Data formats]]
+* [[Packaging]]
+* [[Ideas]]
