@@ -1,3 +1,4 @@
+* [[Getting started]]
 * [[Design documents]]
 * [[Mailpile internals]]
 * [[Design conversations]]
