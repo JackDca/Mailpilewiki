@@ -1,4 +1,4 @@
-## Deleting Mailboxes
+### Deleting Mailboxes
 
 Currently to make entire mailboxes disappear is a bit of a hack (and only works from the CLI), but here you go:
 
