@@ -1,3 +1,4 @@
 
-
-* [[Getting started on Windows|Windows]]
+* [[Getting started on Linux]]
+* [[Getting started on MacOS]]
+* [[Getting started on Windows]]
