@@ -1,2 +1,2 @@
 * [[Functionality layout]]
-* [[URLs|API URLs]]
+* [[API URLs|URLs]]
