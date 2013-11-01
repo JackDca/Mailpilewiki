@@ -1,4 +1,4 @@
 * [[Functionality layout]]
-* [[API URLs|URLs]]
+* [[API URLs|URLS]]
 * [[Configuration|Config]]
 * [[Frontend]]
