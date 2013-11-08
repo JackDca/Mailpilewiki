@@ -24,7 +24,8 @@ endpoints be used for automation.
     /api/0/contact/           <nickname>/
     /api/0/contact/import/    [<parameters>]/
     /api/0/contact/importers/
-    /api/0/contact/list/      [--full]/[<terms>]/
+    /api/0/contact/list/      [--lines]/[<terms>]/
+                              ?q=[search terms]&format=[lines or mpCard (default)]
     /api/0/filter/list/       [<search>|=<id>]/
     /api/0/help/              [<command-group>|variables]/
     /api/0/help/splash/
@@ -40,6 +41,8 @@ endpoints be used for automation.
     /api/0/page/
     /api/0/search/            [@<start>]/<terms>/
                               ?q=[search terms]&start=[start position]&end=[end position]&order=[sort order]
+    /api/0/search/address/    [<terms>]/
+                              ?q=[search terms]
     /api/0/settings/          <var>/
                               ?var=[section.variable]
     /api/0/shownetwork/       <terms>/
@@ -49,8 +52,8 @@ endpoints be used for automation.
 ### POST
 
     /api/0/contact/add/       <msgs>/
+    /api/0/contact/addline/   <email>/<lines>/
     /api/0/contact/remove/    <email>/
-    /api/0/contact/set/       <email>/<attr>/<value>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/compose/
@@ -79,7 +82,7 @@ endpoints be used for automation.
 
 ### UPDATE
 
-    /api/0/contact/set/       <email>/<attr>/<value>/
+    /api/0/contact/addline/   <email>/<lines>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/update/    <messages>/<<filename>/
@@ -108,11 +111,11 @@ endpoints be used for automation.
 
     /contact/
     /contact/add/
+    /contact/addline/
     /contact/import/
     /contact/importers/
     /contact/list/
     /contact/remove/
-    /contact/set/
     /filter/list/
     /help/
     /help/splash/
@@ -131,6 +134,7 @@ endpoints be used for automation.
     /message/update/send/
     /page/
     /search/
+    /search/address/
     /settings/
     /settings/add/
     /settings/set/
