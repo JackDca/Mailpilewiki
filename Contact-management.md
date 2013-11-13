@@ -24,12 +24,57 @@ Not done:
 * ...?
 
 ## Context providers
-A context provider is an import filter which, when provided with certain information about a contact, extracts useful context about the contact to deepen the user's understanding of what the user is doing. This is a slightly creepy feature, but actually fairly reasonable to implement as long as it's primarily using public info or info that is otherwise available to the Mailpile user in question. Heck, it might even encourage people to think a bit more about privacy...
+A context provider is an import filter which, when provided with certain information about a contact, extracts useful context about the contact to deepen the user's understanding of what the user is doing, who they are, and how best to contact them. 
 
-Not done:
-* Twitter
+This is a slightly creepy feature, but actually fairly reasonable considering it is primarily using public info or info that is otherwise available to the Mailpile user in question. Heck, it might even encourage people to think a bit more about privacy...
+
+This is not NOT DONE in anyway yet, but here are the API's we're considering about:
+
 * Facebook
-* ...
+  * Auth: oauth2 api requests with application specific tokens (HARD)
+  * Can't programaticaly get my "friends" email addresses (for east comparisons), even if they list email address in their profile. 
+  * Docs: https://developers.facebook.com
+  * Available Data:
+    * Name
+    * Avatar
+    * Current Location
+    * Home Location
+    * Website
+    * Birthday
+    * Schools
+    * Work
+    * Gender
+    * Languages
+* Twitter
+  * Auth: oauth1 api requests with unique application specific tokens (DIFFICULT)
+  * Docs: https://dev.twitter.com
+  * Available Data:
+    * Name
+    * Avatar
+    * Website
+    * Location
+    * Bio
+* Gravatar
+  * Auth: Send an MD5 hash of an email address appended to a URL endpoint (VERY EASY)
+  * Available Data:
+    * Name
+    * Mutliple Avatars
+    * Chat Accounts
+    * Bio
+    * Location
+    * Various URLs
+    * Validated social media profile URLs
+  * Docs: http://en.gravatar.com/site/implement/profiles/
+  * Example: http://en.gravatar.com/brennannovak.json or .vcf
+* Identengine
+  * Auth: None
+  * Docs: http://www.identengine.com/documentation/
+  * Available Data:
+    * Varies depending on contacts & type of query
+  * Example: http://www.identengine.com/api/identities/http%3A%2F%2Ftwitter.com%2Fglennjones/ (Twitter Lookup)
+  * Example: http://www.identengine.com/api/identities/glennjonesnet%40gmail.com/ (webfinger)
+
+Due to the technical overhead and steps required for Facebook & Twitter, we are considering creating a Mailpile web service that handles making the OAuth requests and returns the data for you contacts. However, we are aware of the privacy issues of this approach which will make it unacceptable for many users. For those privacy minded users we will try to make the process as easy as possible so they the only requests will be between their Mailpile <---> Twitter / Facebook
 
 ## Hooks
 
