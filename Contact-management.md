@@ -66,6 +66,16 @@ This is not NOT DONE in anyway yet, but here are the API's we're considering abo
     * Validated social media profile URLs
   * Docs: http://en.gravatar.com/site/implement/profiles/
   * Example: http://en.gravatar.com/brennannovak.json or .vcf
+* IndieWeb
+  * Auth: None - simple HTTP requests, hot dog!
+  * Available Data (varies):
+    * Name
+    * Avatar
+    * Various URLs
+    * Email
+    * Phone
+  * Docs: http://indiewebcamp.com/How_to_set_up_web_sign-in_on_your_own_domain
+  * MicroFormats: http://microformats.org/wiki/hcard
 * Identengine
   * Auth: None
   * Docs: http://www.identengine.com/documentation/
