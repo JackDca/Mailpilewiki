@@ -1,0 +1,5 @@
+
+## Existing privacy concerns
+
+### Information leaks
+* Beware that Mailpile currently polls Gravatar, leaking MD5 hashes of your contact's e-mail addresses. This is a temporary violation for purposes of development and will be changed before the alpha release.
