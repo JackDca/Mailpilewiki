@@ -3,6 +3,7 @@
 * [[Mailpile internals]]
 * [[Design conversations]]
 * [[Security]]
+* [[Privacy]]
 * [[Data formats]]
 * [[Packaging]]
 * [[Ideas]]
