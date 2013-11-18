@@ -1,6 +1,6 @@
 * [[Getting started]]
 * [[Design documents]]
-* [[Mailpile internals]]
+* [[Mailpile internals]] / [[Development guide]]
 * [[Design conversations]]
 * [[Security]]
 * [[Privacy]]
