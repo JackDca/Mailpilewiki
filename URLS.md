@@ -21,11 +21,12 @@ endpoints be used for automation.
 
 ### GET (also accept POST)
 
-    /api/0/contact/           <nickname>/
+    /api/0/contact/           [<email>]/
+    /api/0/contact/add/       <msgs>/
     /api/0/contact/import/    [<parameters>]/
     /api/0/contact/importers/
     /api/0/contact/list/      [--lines]/[<terms>]/
-                              ?q=[search terms]&format=[lines or mpCard (default)]
+                              ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
     /api/0/filter/list/       [<search>|=<id>]/
     /api/0/help/              [<command-group>|variables]/
     /api/0/help/splash/
@@ -42,7 +43,7 @@ endpoints be used for automation.
     /api/0/search/            [@<start>]/<terms>/
                               ?q=[search terms]&start=[start position]&end=[end position]&order=[sort order]
     /api/0/search/address/    [<terms>]/
-                              ?q=[search terms]
+                              ?q=[search terms]&num=[number of results]
     /api/0/settings/          <var>/
                               ?var=[section.variable]
     /api/0/shownetwork/       <terms>/
