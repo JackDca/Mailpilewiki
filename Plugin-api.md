@@ -3,8 +3,8 @@ There are demos of the plugin API in `mailpile/plugins/demos.py`
 ### Command plugin hooks
 See [[Command plugins]]
 
-* `mailpile.plugins.register_command(plugin)` - `plugin` is subclass of `Command`.
 * `mailpile.plugins.register_commands(*plugins)` - `plugins` is a list of one or more subclass of `Command`.
+* **DEPRECATED** `mailpile.plugins.register_command(plugin)` - `plugin` is subclass of `Command`. (This will go away before v0.1)
 
 ### Configuration plugin hooks
 See [[Extending Maipile's Configuration]] and [[Configuring Mailpile]].
