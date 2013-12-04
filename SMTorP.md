@@ -1,0 +1,192 @@
+# SMTorP
+
+SMTorP is the Simple Mail Tor Protocol (a.k.a. SMTP over Tor).
+
+The idea can be summarized as follows:
+
+* SMTorP is e-mail, but delivered over a secure channel which protects
+  the metadata as well as message contents.
+* SMTorP defines an e-mail address format: addresses ending in .onion
+* SMTorP servers are enhanced SMTP servers which run as Tor hidden services
+* Mailpile as an MUA should ship with both an SMTorP client and server
+  built-in, and be bundled with Tor (Win, Mac) or depend on Tor on Linux.
+
+**Note:** This document is a rough draft of notes and ideas, once this
+has been polished and proof of concept code written, we should draft an
+RFC and get the community to weigh in.
+
+
+## High level goals
+
+The primary goal of SMTorP is to provide a largely backwards-compatible
+upgrade path for e-mail, which is fully decentralized and makes it very
+difficult for an adversary to know that two users have communicated. The
+protocol should protect both message content and the metadata of e-mail
+from spying.
+
+Note that SMTorP does not provide stronger anonymity guarantees than the
+Tor network itself, which means that at the very least a sufficiently
+powerful adversary may be able to infer that two users are probably
+communicating, based on statistical analysis of network traffic at both
+endpoints (timing attacks). This is a problem inherited from Tor itself
+and is considered out of scope for SMTorP.
+
+
+## Preventing spam
+
+We are interested in implementing a mandatory hashcash-like proof of
+work system, to make bulk unsolicited e-mail over SMTorP economically
+infeasable.
+
+Since hashcash was invented, hardware advances (primarily widespread GPU
+availability) have rendered the original proposals obsolete. However,
+research is being done into developing hashing algorithms which are
+"SIMD-hard", "Memory-hard" or difficult in other dimensions which may
+make them potential candidates.  We need to look at the relevant
+literature (Wikipedia probably is probably a good place to start, if not
+Ella tells us to talk to Matt Green).
+
+We also probably need to specify an upgrade path, so broken algorithms
+can be phased out and replaced with harder problems to solve.
+
+
+## SMTorP message format
+
+The SMTorP message format is the same as SMTP e-mail (RFC822 and
+successors).  PGP/MIME is recommended.
+
+
+## The SMTorP server
+
+The SMTorP server is a standard ESMTP server, exposed to the Internet
+using TLS on a Tor hidden service. TLS is mandatory (probably a
+minimum of version 1.2).
+
+Open questions:
+
+* Does SMTorP need additional protocol verbs for implementing hashcash
+  or checking the state of relayed mail (when using an outgoing relay)?
+* Would ever want to use STARTTLS? Why?
+* Should we provide a stand-alone server implemetation, or just Mailpile
+  native?
+* How to manage keys and prevent MITM? TOFU? Fingerprints in addresses?
+
+
+## SMTorP address format
+
+An SMTorP address has the same format as a normal SMTP e-mail address,
+with additional constraints on the domain part:
+
+    <user>@[<tls-cert-fingerprint>.]<tor-hidden-service-hash>.onion
+
+This syntax has the benefit of being largely backwards compatible with
+existing MUAs and in line with user expectations, allowing a staged
+rollout of SMTorP.
+
+The optional(?) tls-cert-fingerprint part of the address can be used to
+signal to the sending MUA what TLS credentials to expect the server to
+present upon connection. This improves the security of self-signed
+certificates and makes active man-in-the-middle attacks much more
+difficult. The difficulty level (and security) can be tuned by adjusting
+how many bits of the fingerprint are included in the e-mail address.
+MUAs could be encouraged to "upgrade" the addresses stored in a user's
+address book to the full length automatically on first use, the
+abbreviated form would primarily be manual scenarios.
+
+The main drawback of this address syntax is it is not very human
+readable, hashes are notoriously long and hard to write. Some potential
+mitigation strategies are discussed below.
+
+### Auto-upgrade
+
+Users with SMTorP addresses may choose to advertise them in their
+e-mail signatures or in a custom header, allowing compatible MUAs to
+recognize that a more secure path is available and opportunistically
+upgrading to the more secure protocol.
+
+### QR-codes
+
+An SMTorP address fits in a reasonably sized QR-code, for printing
+on business cards.
+
+### mailto: URLs
+
+The format of SMTorP addresses is a subset of normal SMTP e-mail
+addresses and the standard mailto: URL spec can be used, although
+there is risk of poor user experience when legacy e-mail clients
+attempt to send mail to an SMTorP address (see deployment strategy
+below).
+
+### DNS-based address discovery
+
+DNS TXT records could be used to map individual addresses, or entire
+domains to SMTorP addresses. The pros and cons of this approach should
+be explored further.
+
+
+## Deployment strategy
+
+Ideally, SMTorP will be natively supported by MUAs, and Mailpile will
+provide the initial proof-of-concept.
+
+However, since SMTorP inherits most of its characteristics from legacy
+e-mail it should be easy to implement plugins or proxies which add
+SMTorP support to legacy infrastructure.
+
+Any traditional e-mail provider or in-house mail server should be able
+to upgrade their SMTP submission servers to support SMTorP addresses in
+addition to legacy e-mail, if they so desire, merely by installing Tor
+and configuring the SMTP server to use a different policy for delivery
+of .onion addresses.  One partial implementation for exim was discussed
+in (INSERT LINK HERE).
+
+
+## Peer-to-peer SMTorP or relay-based SMTorP
+
+Whether SMTorP should always be purely peer-to-peer or whether it should
+allow for intermediate relays (analogous to fallback MX servers in the
+SMTP world) is an open question. There are two primary relay strategies
+available:
+
+* Sending relays (an SMTP submission server)
+* Receiving relays (an SMTP MX server)
+
+SMTorP could support either or both, but as the system is expected to
+operate independently of DNS, the question remains how to encode a
+fallback strategy into the addresses themselves without everything
+becoming illegible (always delivering through a relay is just asking
+for MITM attacks, we prefer direct delivery whenever possible).
+
+[TODO: Write more. Bjarni doesn't like relays, Ella contends they are
+necessary for users with intermittent networking. We met in the middle
+agreeing that sending relays may be a reasonable compromise.]
+
+
+## SMTorP and PGP
+
+When deployed as a peer-to-peer solution, SMTorP alone provides strong
+protection against network-based monitoring.
+
+However, the security of Tor hidden services is not generally considered
+to be entirely future-proof and SMTorP cannot protect the integrity of
+data at rest, once the mail has been delivered. So a "belt and
+suspenders" approach of using PGP/MIME for messages delivered over
+SMTorP is still recommended.
+
+The only reason to not use GPG, is unencrypted/unsigned e-mail may
+theoretically allow plausible deniability. Whether this has any real
+world value is a bit unclear at this point (most courts probably won't
+care).
+
+
+## User interface guidelines
+
+* When a message is being sent over SMTorP, the user should be made
+  aware, e.g. by putting a lock or SMTorP logo on the send button.
+
+* Mixing SMTorP and legacy e-mail addresses in the same e-mail should
+  be prevented by the MUA, both for security reasons and to prevent
+  the usability nightmare of the legacy recipients being unable to
+  reply-all to everyone.
+
+

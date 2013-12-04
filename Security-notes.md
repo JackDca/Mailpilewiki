@@ -1,6 +1,60 @@
-# Misc Security Notes #
+# Misc Security Notes
 
-## Updates
+(These are misellaneous security notes, collected during and
+around the threat modeling sessions with Eleanor Saitta.)
+
+
+## Security testing
+
+* Fuzzing: e-mail parser and httpd should be fuzzed constantly
+* We should accept the Syndis offer to get audited and pentested
+* We should use SSLlabs to make sure we don't forget to upgrade
+  our TLS configs when new vulnerabilities are found
+* Look into XSS/CSRF/... test suites, beg for free licenses from
+  vendors if necessary. (Ella can give advice & leads)
+* We should test the GnuPG interface code extra carefully, as
+  not all versions of gpg are the same.
+
+**Side note:** it might make sense to run the GPG tests on setup and
+make sure the app isn't making promises it can't keep.  Reporting back
+incompatibilities would help development, as long as we respect user
+privacy.
+
+
+## Downloading data from the Internet
+
+Any data downloaded from the internt (keys, gravatars, etc.) should
+be downloaded using Tor if possible, and we should make an effort to:
+
+* Look like other common apps/browsers so we can't be targeted with
+  exploits
+* Change Tor identity frequently to prevent the data provider or
+  exit node operator from being able to infer information about our
+  mail or social graph.
+
+
+## Logging
+
+Anonymizing logs is important so users can send us bug reports
+without leaking confidential data.
+
+The Tor project has done some interesting work on privacy friendly
+global logging for gathering of statistics, we should look at what
+they are doing.
+
+
+## Multiple personalities and GPG
+
+Users need to understand that the multiple personalities features of
+Mailpile are "soft" and if they want to be sure no data leaks from one
+personality to another, they should run separate instances of the app.
+
+Ella had some very specific scenarios where information about GPG
+keys and trust levels could leak from one persona to another. She
+felt this pertained most strongly to SMTorP use.
+
+
+## Software updates
 
 Use the UW protocol? Bittorrent prevents us from targeting
 individual users!
@@ -46,58 +100,12 @@ http://code.google.com/p/reform/
 OWASP anti-samy, helps make HTML safe to display.
 
 
-# Viruses
+## Viruses
 
 Statement of intent?  How do we deal with them?  Format verification,
 include ClamAV?  Recommended way would be to neutralize content into
 known-safe forms by converting images to themselves, PDF rendered in
 JS, etc.
-
-
-# PGP etc.
-
-## Downloading keys by default?
-
-Should probably be done by default unless a message signals somehow
-that it is meant to be anonymous.
-
-If we have a p2p channel, requesting keys over that could make sense
-for a TOFU model.
-
-## Regarding web of trust
-
-Ella recommends against using it, because the WoT generates a
-persistent and public social graph that can be mined by adversaries.
-Along with a historic record.
-
-Also it does not work.
-
-## Keys and trust
-
-Things to tell the user:
-
-   * You have not seen this key before, and have not verified it.
-   * You have seen this key before, but have not verified it.
-   * You have seen this key before, and have verified it.
-   * This key is different from what that person presented last time.
-       * Is new key signed by old key? (OK, shutup)
-       * The old key was about to expire
-       * The old key was revoked
-       * This might be weird.
-
-## Key generation
-
-Should be automatic, using best practices, 4K RSA, expiration?
-2-3 years?
-
-Questions to a minimum: Do you have a key? Upload to keyserver?
-
-On expiration, Mailpile could automatically generate new keys
-and sign with old keys and upload. Depending on pres.
-
-Life-stylers vs. normal humans, punt to the command-line for
-people who do not like the Mailpile GPG model. Or if possible
-make it a "build your own plugin" problem.
 
 
 ## Anonymity
@@ -113,7 +121,10 @@ things... button to "send fast"? ..... Ella says: IMPORTANT.
 Consider this as an alternate transport.
 
 
-## The SSL nightmare
+## The SSL/TLS nightmare
+
+Backwards compatibility is bad. We want to just support new browsers
+and real security if at all possible.
 
 Optimal case:
 
