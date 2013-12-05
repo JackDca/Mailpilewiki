@@ -13,7 +13,7 @@ a key for example, or trigger key discovery of some sort).
 
 Replying to a message, or forwarding, should maintain security if
 at all possible. We can't prevent the user from downgrading the
-security but there should be big scary warnings.
+security but there should be clear, understandable warnings.
 
 The current lock is good, but it might be good to also have a lock
 for the header section, and some sort of indication on the send

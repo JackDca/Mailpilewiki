@@ -53,7 +53,9 @@ literature (Wikipedia probably is probably a good place to start, if not
 Ella tells us to talk to Matt Green).
 
 We also probably need to specify an upgrade path, so broken algorithms
-can be phased out and replaced with harder problems to solve.
+can be phased out and replaced with harder problems to solve. One thing
+to do here, is offer multiple algorithms, but scale the difficulty on
+deprecated algorithms faster than on the algos we actually like.
 
 
 ## SMTorP message format
@@ -144,7 +146,7 @@ to upgrade their SMTP submission servers to support SMTorP addresses in
 addition to legacy e-mail, if they so desire, merely by installing Tor
 and configuring the SMTP server to use a different policy for delivery
 of .onion addresses.  One partial implementation for exim was discussed
-in (INSERT LINK HERE).
+[by Johannes Berg](http://johannes.sipsolutions.net/Projects/exim-tor-hidden-mail).
 
 
 ## Peer-to-peer SMTorP or relay-based SMTorP
@@ -168,7 +170,7 @@ necessary for users with intermittent networking. We met in the middle
 agreeing that sending relays may be a reasonable compromise.]
 
 
-## SMTorP and PGP
+## SMTorP and PGP/MIME
 
 When deployed as a peer-to-peer solution, SMTorP alone provides strong
 protection against network-based monitoring.
@@ -179,10 +181,9 @@ data at rest, once the mail has been delivered. So a "belt and
 suspenders" approach of using PGP/MIME for messages delivered over
 SMTorP is still recommended.
 
-The only reason to not use GPG, is unencrypted/unsigned e-mail may
-theoretically allow plausible deniability. Whether this has any real
-world value is a bit unclear at this point (most courts probably won't
-care).
+The only hypothetical reason to not use PGP/MIME, would be to allow
+for plausible deniability. It is our opinion that this currently has no
+real world benefit.
 
 
 ## User interface guidelines

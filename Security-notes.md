@@ -56,8 +56,9 @@ felt this pertained most strongly to SMTorP use.
 
 ## Software updates
 
-Use the UW protocol? Bittorrent prevents us from targeting
-individual users!
+Use the [UW protocol](https://updateframework.com/)?
+
+Or... bittorrent prevents us from targeting individual users!
 
 
 ## Securing Workflows
