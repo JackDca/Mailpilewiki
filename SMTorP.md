@@ -18,18 +18,24 @@ RFC and get the community to weigh in.
 
 ## High level goals
 
-The primary goal of SMTorP is to provide a largely backwards-compatible
-upgrade path for e-mail, which is fully decentralized and makes it very
+The primary goal of SMTorP is to provide a fully decentralized and largely
+backwards-compatible upgrade path for e-mail, which aims to make it very
 difficult for an adversary to know that two users have communicated. The
 protocol should protect both message content and the metadata of e-mail
 from spying.
 
-Note that SMTorP does not provide stronger anonymity guarantees than the
-Tor network itself, which means that at the very least a sufficiently
-powerful adversary may be able to infer that two users are probably
-communicating, based on statistical analysis of network traffic at both
-endpoints (timing attacks). This is a problem inherited from Tor itself
-and is considered out of scope for SMTorP.
+#### Non-goals:
+
+* SMTorP does not aim provide stronger security guarantees than the
+  Tor network itself, which means that at the very least a sufficiently
+  powerful adversary may be able to infer that two users are probably
+  communicating, based on statistical analysis of network traffic at both
+  endpoints (timing attacks). This is a problem inherited from Tor itself
+  and is considered out of scope for SMTorP.
+* Anonymous communication (allowing 2 parties to communicate securely
+  without knowing each others identity) is not a primary goal for SMTorP,
+  although users who take special care not to reveal personally identifying
+  information may well be able to use it in this manner.
 
 
 ## Preventing spam
@@ -97,19 +103,19 @@ The main drawback of this address syntax is it is not very human
 readable, hashes are notoriously long and hard to write. Some potential
 mitigation strategies are discussed below.
 
-### Auto-upgrade
+#### Auto-upgrade
 
 Users with SMTorP addresses may choose to advertise them in their
 e-mail signatures or in a custom header, allowing compatible MUAs to
 recognize that a more secure path is available and opportunistically
 upgrading to the more secure protocol.
 
-### QR-codes
+#### QR-codes
 
 An SMTorP address fits in a reasonably sized QR-code, for printing
 on business cards.
 
-### mailto: URLs
+#### mailto: URLs
 
 The format of SMTorP addresses is a subset of normal SMTP e-mail
 addresses and the standard mailto: URL spec can be used, although
@@ -117,7 +123,7 @@ there is risk of poor user experience when legacy e-mail clients
 attempt to send mail to an SMTorP address (see deployment strategy
 below).
 
-### DNS-based address discovery
+#### DNS-based address discovery
 
 DNS TXT records could be used to map individual addresses, or entire
 domains to SMTorP addresses. The pros and cons of this approach should
