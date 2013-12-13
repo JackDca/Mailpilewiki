@@ -54,7 +54,7 @@ the following benefits:
 The Architecture Model is pretty involved and Mailpile is currently not ready
 to start this work, things are still very much in flux and we are still
 deciding which features to provide in the first release - our requirements
-have not stabalized. However, the Architecture Model is there to help identify
+have not stabilized. However, the Architecture Model is there to help identify
 design flaws and from that perspective, the sooner work begins, the better.
 
 So we will revisit this and begin work after the Alpha release.
