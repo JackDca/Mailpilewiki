@@ -65,6 +65,46 @@ Things to tell the user:
        * This might be weird.
 
 
+## Message part status
+
+Things to tell the user (as data structure):
+
+    encryption: "",           # one of: none, decrypted, missingkey, error
+    signature: "",            # one of: none, invalid, unknown, good, error
+
+    encryption_info: {
+        protocol: "",           # one of: openpgp
+        status: "",             # Descriptive status text
+        have_keys: [ ... ],     # List of keys it's encrypted to
+        missing_keys: [ ... ],  # List of keys you don't have
+    }
+
+    signature_info: {
+        protocol: "",           # one of: openpgp
+        status: "",             # Descriptive status text
+        from: "",               # Name of signer
+        fromaddr: "",           # Address of signer
+        timestamp: 0123457689,  # Unix timestamp of signature
+        trust: ""               # one of: new, unverified, verified, untrusted, expired, revoked
+    }
+
+Possible situations:
+
+   * Not encrypted or signed
+   * Encrypted, but couldn't decrypt. No signature.
+   * Encrypted, but couldn't decrypt. Invalid signature.
+   * Encrypted, but couldn't decrypt. Unknown signing key.
+   * Encrypted, but couldn't decrypt. Good signature.
+   * Encrypted, decryption successful. No Signature.
+   * Encrypted, decryption successful. Invalid signature.
+   * Encrypted, decryption successful. Unknown signing key.
+   * Encrypted, decryption successful. Good signature.
+   * Not encrypted. No signature.
+   * Not encrypted. Invalid signature.
+   * Not encrypted. Unknown signing key.
+   * Not encrypted. Good signature.
+
+
 ## Regarding web of trust
 
 Ella recommends against using it, because the WoT generates a
