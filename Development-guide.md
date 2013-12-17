@@ -1,5 +1,17 @@
 New to Mailpile development? Want to contribute? Thinking of writing a plugin? Read on...
 
+## Turning on debugging
+If you're developing Mailpile, you probably want a lot more debug output than otherwise. Simply:
+
+`set sys.debug = [terms]`
+
+where [terms] is a space-separated list of types of debug messages you want to get. Options include:
+
+* log
+* http
+* compose
+* sendmail
+
 ## Writing plugins
 * Look at the [[Plugin API]]
 * Look at existing plugins
