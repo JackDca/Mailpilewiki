@@ -13,7 +13,9 @@ around the threat modeling sessions with Eleanor Saitta.)
 * Look into XSS/CSRF/... test suites, beg for free licenses from
   vendors if necessary. (Ella can give advice & leads)
 * We should test the GnuPG interface code extra carefully, as
-  not all versions of gpg are the same.
+  not all versions of gpg are the same. An example of GPG behavior
+  to watch for is old versions of --recv-keys do not actually verify
+  they got the requested key from the keyserver!
 
 **Side note:** it might make sense to run the GPG tests on setup and
 make sure the app isn't making promises it can't keep.  Reporting back
