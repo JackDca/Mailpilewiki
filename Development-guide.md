@@ -19,7 +19,8 @@ get. Options include:
 
 ## Writing plugins
 * Look at the [[Plugin API]]
-* Look at existing plugins
+* Look at the [[Front-end Plugin API]]
+* Look at existing plugins sketches https://github.com/mailpile/plugins
 
 ## Committing to Mailpile core
 
