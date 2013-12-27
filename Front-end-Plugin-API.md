@@ -1,6 +1,7 @@
 ### Plugin config.json
 
-`{
+`
+{
   "plugin": "force-grapher",
   "name": "Use The Force, Grapher",
   "created": "2013-10-31",
@@ -24,4 +25,5 @@
     "javscript": "true",
     "html": "true"
   }
-}`
+}
+`
