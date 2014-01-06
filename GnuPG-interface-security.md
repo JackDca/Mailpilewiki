@@ -69,24 +69,33 @@ Things to tell the user:
 
 Things to tell the user (as data structure):
 
-    encryption: "",           # one of: none, decrypted, missingkey, error
-    signature: "",            # one of: none, invalid, unknown, good, error
-
     encryption_info: {
         protocol: "",           # one of: openpgp
-        status: "",             # Descriptive status text
+        status: "",             # one of: none, decrypted, missingkey, error
+        description: "",        # Descriptive status text
         have_keys: [ ... ],     # List of keys it's encrypted to
         missing_keys: [ ... ],  # List of keys you don't have
     }
 
     signature_info: {
         protocol: "",           # one of: openpgp
-        status: "",             # Descriptive status text
-        from: "",               # Name of signer
-        fromaddr: "",           # Address of signer
+        status: "",             # one of: none, invalid, expired, revoked, unknown, verified, unverified, error
+        description: "",        # Descriptive status text
+        name: "",               # Name of signer
+        email: "",              # Address of signer
+        keyinfo: ""             # Key identification (e.g. fingerprint) of signer
         timestamp: 0123457689,  # Unix timestamp of signature
-        trust: ""               # one of: new, unverified, verified, untrusted, expired, revoked
     }
+
+none:         no signature
+invalid:      the signature was invalid (bad)
+expired:      the signature was made with an expired key
+revoked:      the signature was made with a revoked key
+unknown:      the signature was made with an unknown key, so we can't verify it
+verified:     the signature was good, and came from a verified key
+unverified:   the signature was good, and came from a key that isn't verified
+error:        there was some weird error.
+
 
 Possible situations:
 
