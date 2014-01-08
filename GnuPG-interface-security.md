@@ -87,14 +87,14 @@ Things to tell the user (as data structure):
         timestamp: 0123457689,  # Unix timestamp of signature
     }
 
-none:         no signature
-invalid:      the signature was invalid (bad)
-expired:      the signature was made with an expired key
-revoked:      the signature was made with a revoked key
-unknown:      the signature was made with an unknown key, so we can't verify it
-verified:     the signature was good, and came from a verified key
-unverified:   the signature was good, and came from a key that isn't verified
-error:        there was some weird error.
+* **none**         no signature
+* **invalid**      the signature was invalid (bad)
+* **expired**      the signature was made with an expired key
+* **revoked**      the signature was made with a revoked key
+* **unknown**      the signature was made with an unknown key, so we can't verify it
+* **verified**     the signature was good, and came from a verified key
+* **unverified**   the signature was good, and came from a key that isn't verified
+* **error**        there was some weird error.
 
 
 Possible situations:
