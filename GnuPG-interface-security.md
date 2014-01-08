@@ -114,6 +114,12 @@ Possible situations:
    * Not encrypted. Good signature.
 
 
+![Signature Icons](https://brennannovak.com/uploads/images/designs/Mailpile_Icons_Signatures.png)
+
+![Encryption Icons](https://brennannovak.com/uploads/images/designs/Mailpile_Icons_Encryption.png)
+
+
+
 ## Regarding web of trust
 
 Ella recommends against using it, because the WoT generates a
