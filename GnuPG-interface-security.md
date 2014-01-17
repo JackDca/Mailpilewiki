@@ -65,27 +65,93 @@ Things to tell the user:
        * This might be weird.
 
 
-## Message part status
+## Message Statuses
 
-Things to tell the user (as data structure):
+There are 3 places where PGP data is exposed in our data structures: the **message summary**, **message text part**, and **message metadata**
 
-    encryption_info: {
-        protocol: "",           # one of: openpgp
-        status: "",             # one of: none, decrypted, missingkey, error
-        description: "",        # Descriptive status text
-        have_keys: [ ... ],     # List of keys it's encrypted to
-        missing_keys: [ ... ],  # List of keys you don't have
+### Message Summary
+
+There is a crypto overview for messages that pertain to the WHOLE message, this overview will ALWAYS have information about encryption and signature states and contains mixed-* states as well as the normal states
+
+messages: {
+    MID: {
+        crypto: {
+            encryption: {
+                context: "",        # a number for comparing text_part crypto state 29
+                have_keys: [],      # start of a key? B8127F5124462421
+                missing_keys: [],   # start of a key? 8E86CED32B2BBB65
+                protocol: "",       # one of: openpgp
+                status: ""          # one of: none, decrypted, missingkey, error, mixed-*
+            },
+            signature: {
+                context: "",        # a number for comparing text_part crypto state 30
+                email: "",          # an address: name@email.org
+                keyinfo: "",        # a fingerprint or key ID 23GF7C78D83C580EF939
+                name: "",           # name of contact: Josephine Smythe
+                protocol: "",       # one of: openpgp
+                status: "",         # one of: none, invalid, expired, revoked, unknown, verified, unverified, mixed-*
+                timestamp: ""       # a UNIX timestamp 1389280400
+            }
+        }
     }
+}
 
-    signature_info: {
-        protocol: "",           # one of: openpgp
-        status: "",             # one of: none, invalid, expired, revoked, unknown, verified, unverified, error
-        description: "",        # Descriptive status text
-        name: "",               # Name of signer
-        email: "",              # Address of signer
-        keyinfo: ""             # Key identification (e.g. fingerprint) of signer
-        timestamp: 0123457689,  # Unix timestamp of signature
+
+### Message Text Part
+
+Each part of text data MIGHT have information about the encryption, signature, both or neither. This ONLY contains normal PGP states and never mixed-* values.
+
+messages: {
+    MID: {
+        text_parts: [
+            {
+                crypto: {
+                    encryption: {
+                        context: 29,
+                        status: "none"
+                    },
+                    signature: {
+                        context: 30,
+                        email: "name@email.org",
+                        keyinfo: "23GF7C78D83C580EF939642F230904D9190FG52B",
+                        name: "Josephine Smythe",
+                        protocol: "openpgp",
+                        status: "mixed-unverified",
+                        timestamp: 1389280400
+                    }
+                }
+            },{
+                crypto: {
+                    encryption: {
+                        context: 38,
+                        status: "none"
+                    },
+                    signature: {
+                        context: 39,
+                        protocol: "openpgp",
+                        status: "none",
+                        timestamp: 1389280400
+                    }
+                }
+            }
+        ]
     }
+}
+
+
+### Message Metadata
+
+Each message item in search results and threads also ALWAYS exposes crypo overview about both the encryption and signature of a given message. This returns the various mixed- states as well the normal states
+
+metadata: {
+    MID: {
+        crypto: {
+            encryption: "",   # one of: none, decrypted, missingkey, error, mixed-*
+            signature: ""     # one of: none, invalid, expired, revoked, unknown, verified, unverified, mixed-*
+        }
+    }
+}
+
 
 * **none**:         no signature
 * **invalid**:      the signature was invalid (bad)
