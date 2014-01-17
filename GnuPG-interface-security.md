@@ -73,6 +73,7 @@ There are 3 places where PGP data is exposed in our data structures: the **messa
 
 There is a crypto overview for messages that pertain to the WHOLE message, this overview will ALWAYS have information about encryption and signature states and contains mixed-* states as well as the normal states
 
+```
 messages: {
     MID: {
         crypto: {
@@ -95,12 +96,13 @@ messages: {
         }
     }
 }
-
+```
 
 ### Message Text Part
 
 Each part of text data MIGHT have information about the encryption, signature, both or neither. This ONLY contains normal PGP states and never mixed-* values.
 
+```
 messages: {
     MID: {
         text_parts: [
@@ -137,12 +139,13 @@ messages: {
         ]
     }
 }
-
+```
 
 ### Message Metadata
 
 Each message item in search results and threads also ALWAYS exposes crypo overview about both the encryption and signature of a given message. This returns the various mixed- states as well the normal states
 
+```
 metadata: {
     MID: {
         crypto: {
@@ -151,7 +154,7 @@ metadata: {
         }
     }
 }
-
+```
 
 * **none**:         no signature
 * **invalid**:      the signature was invalid (bad)
