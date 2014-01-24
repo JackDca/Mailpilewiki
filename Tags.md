@@ -38,7 +38,7 @@ The type field explains the role of the tag. The most basic and default type is 
 * ham: Explicitly non-junk messages.
 
 ### display
-** Valid values**: priority, tag, subtag, archive, invisible
+**Valid values**: priority, tag, subtag, archive, invisible
 
 * priority: Of high relevance to the user
 * tag: A normal tag (default)
