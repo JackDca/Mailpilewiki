@@ -1,4 +1,4 @@
-Tags are a central concept in Mailpile's design.
+Tags are a central concept in Mailpile's design. Tagging of messages is used in various ways to denote status, context, importance, display properties and many other things.
 
 ## Tag metadata
 
@@ -21,7 +21,30 @@ Tags are a central concept in Mailpile's design.
 | flag_editable | true, false      | false   | Mark tagged messages as editable?                         |
 | template      | _string_         | "index" | Default tag display template                              |
 
+
+### type
+**Valid values**: tag, folder, group, attribute, unread, drafts, trash, spam, ham
+
+The type field explains the role of the tag. The most basic and default type is 'tag', with other types having other roles.
+
+* tag: Non-exclusive identifier. A message can have multiple 'tag'-type tags simultaneously.
+* folder: Exclusive identifier. A message can not exist in two 'folder'-type tags simultaneously.
+* group: Used to delineate a social group, based on senders and recipients.
+* attribute: An internally meaningful behavioral characteristic that applies to the messages.
+* unread: An attribute suggesting that a message is unread.
+* drafts: An attribute suggesting that a message is a draft.
+* trash: A non-exclusive identifier of messages to be discarded.
+* spam: Junk messages.
+* ham: Explicitly non-junk messages.
+
 ### display
+** Valid values**: priority, tag, subtag, archive, invisible
+
+* priority: Of high relevance to the user
+* tag: A normal tag (default)
+* subtag: A tag with a parent, for treelike displays.
+* archive: An archive, used to store older messages but not intended to display generally.
+* invisible: A tag that never displays.
 
 ### display_order
 ### icon
@@ -31,9 +54,11 @@ Tags are a central concept in Mailpile's design.
 ### parent
 ### slug
 ### stats
-all: 468,
-new: 0,
-not: 7649
+There are three statistics on each tag, all automatically generated.
+
+* all: The number of messages with this tag.
+* new: The number of messages with this tag that are also tagged as unread.
+* not: The number of messages in the pile that do not have this tag.
 
 ### tid
 ### url
@@ -42,4 +67,3 @@ not: 7649
 ### flag_hides
 ### flag_editable
 ### template
-
