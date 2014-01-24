@@ -1,5 +1,8 @@
 Tags are a central concept in Mailpile's design. Tagging of messages is used in various ways to denote status, context, importance, display properties and many other things.
 
+## Setting tag attributes
+You can set tag attributes through the command line using 'set', if you know the tag's _tid_ value: `set tag.tid.field = value`.
+
 ## Tag metadata
 
 | Field         | Values           | Default | Description                                               |
