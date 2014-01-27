@@ -8,8 +8,8 @@ To install Mailpile on Debian or Ubuntu, please follow these steps.
 
 ### 1. Clone the source repository:
 
-    # The Alpha technical preview release
-    git clone https://github.com/pagekite/...
+    # The alpha release branch (technical preview)
+    git clone -b release/alpha https://github.com/pagekite/Mailpile.git
 
     # The main development branch
     git clone https://github.com/pagekite/Mailpile.git
