@@ -3,10 +3,13 @@ including Ubuntu.  It also works just fine on other modern distros (such
 as Fedora), but you will need to use different commands to install and
 configure the dependencies.
 
-To install Mailpile on Debian or Ubuntu, please follow these steps.
+To install Mailpile on Debian or Ubuntu, please follow these steps (last
+tested 27.01.2014 on Ubuntu 12.04).
 
 
 ### 1. Clone the source repository:
+
+Use one of the following two commands:
 
     # The alpha release branch (technical preview)
     git clone -b release/alpha https://github.com/pagekite/Mailpile.git
@@ -14,12 +17,13 @@ To install Mailpile on Debian or Ubuntu, please follow these steps.
     # The main development branch
     git clone https://github.com/pagekite/Mailpile.git
 
+(If those fail, try `sudo apt-get install git` first.)
 
 ### 2. Install the requirements:
 
     sudo apt-get install make
     cd Mailpile
-    sudo make debian-dev
+    sudo make debian-dev  # Does an apt-get install for requirements
 
 
 ### 3. Configure Mailpile!
