@@ -1,12 +1,23 @@
 Mailpile is currently only released in source form, from our Github repository.
 
+## Quickstart
+
 The quickest way to get up and running, is to follow one of the following guides:
 
 * [[Getting started on Linux]]
 * [[Getting started on MacOS]]
 * [[Getting started on Windows]]
 
-If you are using some other operating system, the following general guidelines may be of use.
+When that is done, the following guides will help you configure the software and get started using it:
+
+* [[Configuring Mailpile]]
+* [[Using Mailpile]]
+
+======================================================================================================
+
+## General Information
+
+If you are using some other operating system you are on your own, but the following general guidelines may be of use.
 
 ### Requirements
 
@@ -23,6 +34,20 @@ You will also need a tool which can download your e-mail and store in one of the
 - Windows Maildir
 - Mac Mail.app format
 - GMVault
+
+### Using PIP Install
+
+If you're the kind of Python dev who prefers to stay in the Python universe, the PIP tool can be used to install the required packages:
+
+    $ pip install -r requirements.txt
+
+Note that this requires having a functioning C development environment and sometimes `lxml` can be a bit tricky to install. For Debian-based distributions, the required development libraries can be installed like so:
+
+    $ sudo apt-get install libxml2-dev libxslt1-dev
+
+as per [this Stack Overflow
+answer](http://stackoverflow.com/questions/15759150/src-lxml-etree-defs-h931-fatal-error-libxml-xmlversion-h-no-such-file-or-di).
+
 
 
 
