@@ -24,10 +24,14 @@ a GMail account, contents like the following might work:
     set postmaster unixjoe
     poll pop.gmail with proto POP3
       user 'joe@gmail.com' there with password 'SEKRIT'
-      is unixjoe here nofetchall keep options ssl
+      is unixjoe here
+      nofetchall keep options ssl
 
-This can then be tested by running the following command:
+(To create this file, you can use `nano $HOME/.fetchmailrc` in the shell.)
 
+This setup can then be tested by running the following command:
+
+    # Fetch some mail!  (hit CTRL+C to abort)
     fetchmail
 
     # Or if you really need verbose output for debugging:
@@ -38,15 +42,20 @@ This can then be tested by running the following command:
 
 Once local mail delivery and fetchmail are both working, you can either use
 a cron job to periodically download your e-mail, or configure Mailpile to
-periodically invoke fetchmail for you:
+periodically invoke fetchmail for you. In the Mailpile CLI, type:
 
     # Run fetchmail before looking for new mail
-    ./mp --set 'prefs.rescan_command = fetchmail || true'
+    mailpile> set prefs.rescan_command = fetchmail || true
 
     # Configure Mailpile to look for new mail every 300 seconds
-    ./mp --set 'prefs.rescan_interval = 300'
+    mailpile> set prefs.rescan_interval = 300
 
 Finally, you need to tell Mailpile where to find your mail:
 
-    ./mp --add /var/mail/unixjoe
+    # Add your mailbox to the list of locations to scan
+    mailpile> add /var/mail/unixjoe
 
+    # Read it now! Invokes fetchmail and then scans for new mail.
+    mailpile> rescan
+
+That's all folks!
