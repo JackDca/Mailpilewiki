@@ -21,12 +21,6 @@ endpoints be used for automation.
 
 ### GET (also accept POST)
 
-    /api/0/contact/           [<email>]/
-    /api/0/contact/add/       <msgs>/
-    /api/0/contact/import/    [<parameters>]/
-    /api/0/contact/importers/
-    /api/0/contact/list/      [--lines]/[<terms>]/
-                              ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
     /api/0/filter/list/       [<search>|=<id>]/
     /api/0/help/              [<command-group>|variables]/
     /api/0/help/splash/
@@ -34,7 +28,7 @@ endpoints be used for automation.
     /api/0/help/variables/
     /api/0/message/           [raw]/<message>/
                               ?mid=[metadata-ID]
-    /api/0/message/download/  <att>/<message>/[><fn>]/
+    /api/0/message/download/  <msgs>/<att>/[><fn>]/
     /api/0/message/draft/     [<messages>]/
                               ?mid=[metadata-ID]
     /api/0/message/unthread/
@@ -42,33 +36,26 @@ endpoints be used for automation.
     /api/0/page/
     /api/0/search/            [@<start>]/<terms>/
                               ?q=[search terms]&start=[start position]&end=[end position]&order=[sort order]
-    /api/0/search/address/    [<terms>]/
-                              ?q=[search terms]&num=[number of results]
     /api/0/settings/          <var>/
                               ?var=[section.variable]
-    /api/0/shownetwork/       <terms>/
-                              ?q=[search terms]&start=[start position]&end=[end position]&order=[sort order]
     /api/0/tag/list/          [<wanted>|!<wanted>]/[...]/
 
 ### POST
 
-    /api/0/contact/add/       <msgs>/
-    /api/0/contact/addline/   <email>/<lines>/
-    /api/0/contact/remove/    <email>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
-    /api/0/message/compose/
-    ... POST only: body=[..]&from=[..]&cc=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
-    /api/0/message/forward/   [att]/<messages>/
+    /api/0/message/compose/   [ephemeral]/
+    ... POST only: body=[..]&to=[..]&from=[..]&cc=[..]&encryption=[..]&bcc=[..]&mid=[metadata-ID]&subject=[..]
+    /api/0/message/forward/   [att|ephemeral]/<messages>/
                               ?mid=[metadata-ID]
-    /api/0/message/reply/     [all]/<messages>/
+    /api/0/message/reply/     [all|ephemeral]/<messages>/
                               ?mid=[metadata-ID]
     /api/0/message/send/      <messages>/[<emails>]/
     ... POST only: to=[recipients]&mid=[metadata-ID]
     /api/0/message/update/    <messages>/<<filename>/
-    ... POST only: body=[..]&to=[..]&file-data=[file data]&from=[..]&cc=[..]&subject=[..]&mid=[metadata-ID]&bcc=[..]
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
     /api/0/message/update/send/
-    ... POST only: body=[..]&to=[recipients]&file-data=[file data]&from=[..]&cc=[..]&subject=[..]&mid=[metadata-ID]&bcc=[..]
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
     /api/0/settings/add/      <section.variable>/<value>/
     ... POST only: section.variable=[value|json-string]
     /api/0/settings/set/      <section.variable>/<value>/
@@ -78,16 +65,17 @@ endpoints be used for automation.
     /api/0/tag/               <[+|-]tags>/<msgs>/
     ... POST only: add=[tags]&del=[tags]&mid=[message-ids]
     /api/0/tag/add/           <tag>/
-    ... POST only: name=[tag name]&slug=[tag slug]
+    ... POST only: parent=[parent tag ID]&label_color=[label color]&name=[tag name]&template=[tag template type]&display=[tag display type]&label=[display as label in search results, or not]&search_terms=[magic search terms associated with this tag]&slug=[tag slug]&icon=[tag icon]
     /api/0/tag/delete/        <tag>/
 
 ### UPDATE
 
-    /api/0/contact/addline/   <email>/<lines>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/update/    <messages>/<<filename>/
-    ... POST only: body=[..]&to=[..]&file-data=[file data]&from=[..]&cc=[..]&subject=[..]&mid=[metadata-ID]&bcc=[..]
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
+    /api/0/message/update/send/
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
     /api/0/settings/add/      <section.variable>/<value>/
     ... POST only: section.variable=[value|json-string]
     /api/0/settings/set/      <section.variable>/<value>/
@@ -95,7 +83,6 @@ endpoints be used for automation.
 
 ### DELETE
 
-    /api/0/contact/remove/    <email>/
     /api/0/tag/delete/        <tag>/
 
 
@@ -110,13 +97,6 @@ endpoints be used for automation.
 
 *These accept the same arguments as the API calls above.*
 
-    /contact/
-    /contact/add/
-    /contact/addline/
-    /contact/import/
-    /contact/importers/
-    /contact/list/
-    /contact/remove/
     /filter/list/
     /help/
     /help/splash/
@@ -135,16 +115,14 @@ endpoints be used for automation.
     /message/update/send/
     /page/
     /search/
-    /search/address/
     /settings/
     /settings/add/
     /settings/set/
     /settings/unset/
-    /shownetwork/
     /tag/
     /tag/add/
     /tag/delete/
     /tag/list/
 
 
-<!-- TestResults(failed=0, attempted=45) -->
+<!-- TestResults(failed=0, attempted=46) -->
