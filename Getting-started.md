@@ -13,9 +13,11 @@ When that is done, the following guides will help you configure the software and
 * [[Configuring Mailpile]]
 * [[Using Mailpile]]
 
+If you are using some other operating system or are a developer who prefers Docker, Virtualenv or PIP to the above recipes, please read on...
+
 ======================================================================================================
 
-## General Information
+## Details for Developers
 
 If you are using some other operating system you are on your own, but the following general guidelines may be of use.
 
