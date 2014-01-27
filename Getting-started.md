@@ -48,6 +48,26 @@ Note that this requires having a functioning C development environment and somet
 as per [this Stack Overflow
 answer](http://stackoverflow.com/questions/15759150/src-lxml-etree-defs-h931-fatal-error-libxml-xmlversion-h-no-such-file-or-di).
 
+### Developing using virtualenv ###
 
+The `Makefile` includes a recipe for setting up a virtualenv for use with Mailpile:
 
+    $ make virtualenv
+    $ source mp-virtualenv/bin/activate
+    $ mailpile
 
+This allows easy, sandboxed usage.
+
+### Developing using docker ###
+
+You can build a docker image:
+
+    $ docker build -t mailpile scripts/docker/
+
+and run it:
+
+    $ docker run -i -t -p 33411:33411 mailpile
+
+or enter the container's bash prompt directly:
+
+    $ docker run -i -t mailpile bash
