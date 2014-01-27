@@ -1,7 +1,21 @@
+Mailpile is best tested on recent Debian-derived distributions, including Ubuntu.
 
-1. Clone Mailpile to a local directory: `git clone https://github.com/pagekite/Mailpile.git`
-2. `cd Mailpile`
-3. `pip install -r requirements.txt`. You may need to `sudo` this. If you don't have pip, go get that first.
-4. `./mp`  -- at which point Mailpile should start.
+To install Mailpile, please follow these steps.
 
-That's it. Now [[go and configure Mailpile|Configuring Mailpile]]!
+### 1. Clone the source repository:
+
+    # The Alpha technical preview release
+    git clone https://github.com/pagekite/...
+
+    # The main development branch
+    git clone https://github.com/pagekite/Mailpile.git
+
+### 2. Install the requirements:
+
+    sudo apt-get install make
+    cd Mailpile
+    sudo make debian-dev
+
+That's it!
+
+Now [[go and configure Mailpile|Configuring Mailpile]]!
