@@ -1,4 +1,4 @@
-Mailpile is currently only released in source form, from our Github repository.
+**Note:** Mailpile is currently only released in source form, from our Github repository.
 
 ## Quickstart
 
