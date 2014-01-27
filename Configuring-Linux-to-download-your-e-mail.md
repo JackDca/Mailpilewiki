@@ -22,12 +22,19 @@ home directory. If your Unix account is named `unixjoe`, and you have
 a GMail account, contents like the following might work:
 
     set postmaster unixjoe
-    poll pop.gmail with proto POP3
+    poll pop.gmail.com with proto POP3
       user 'joe@gmail.com' there with password 'SEKRIT'
       is unixjoe here
       nofetchall keep options ssl
 
-(To create this file, you can use `nano $HOME/.fetchmailrc` in the shell.)
+To create this file,use `nano $HOME/.fetchmailrc` in the shell (or your
+editor of choice), and afterwards run `chmod 0700 $HOME/.fetchmailrc` to
+set the correct access controls.
+
+(*Note for GMail users:* you cannot use your normal password with
+fetchmail if you are using two-factor authentication, instead you
+will need to create a custom password using GMail's security
+tools.)
 
 This setup can then be tested by running the following command:
 
