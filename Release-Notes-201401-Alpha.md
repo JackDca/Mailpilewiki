@@ -11,7 +11,7 @@ The code can be downloaded like so:
 
     git clone -b release/alpha https://github.com/pagekite/Mailpile.git
 
-This branch may receive minor updates (bug-fixes) over the next couple of weeks, but core development will continue on the `master` branch.
+This branch may receive minor updates (bug-fixes) over the next couple of weeks, but core development will continue on the `master` branch. Please see the [[Getting Started]] page for further details.
 
 There is also a live demo accessible on <https://www.mailpile.is/demos/>.    
 
@@ -42,6 +42,9 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * Support for importing contact details from the GnuPG keychain and Thunderbird (mork)
    * Selected messages can be exported en-masse to a portable mbox file
    * Mailpile has been tested and verified to run on Linux and Mac OS X
+* Internationalization
+   * Message strings in Python and HTML can be translated
+   * Work has begun translating Mailpile into roughly 30 languages
 
 
 ### Known bugs and limitations
