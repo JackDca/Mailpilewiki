@@ -6,9 +6,10 @@ operating systems as well, but the commands for installing software
 Two methods are described: **OfflineIMAP** and **postfix + fetchmail**.
 The two approaches can be summarized roughly as follows:
 
-* The OfflineIMAP method just downloads your mail to a local folder.
+* **OfflineIMAP** just downloads your mail to a local folder.
 * The **postfix + fetchmail** solution configures a local mail server,
-  which is a more advanced (and more complicated) configuration.
+  which is a more advanced (more flexible and more complicated)
+  configuration.
 
 So, choose your poison!
 
