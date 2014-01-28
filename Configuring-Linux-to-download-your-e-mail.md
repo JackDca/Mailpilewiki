@@ -7,9 +7,10 @@ Two methods are described: **OfflineIMAP** and **postfix + fetchmail**.
 The two approaches can be summarized roughly as follows:
 
 * **OfflineIMAP** just downloads your mail to a local folder.
-* The **postfix + fetchmail** solution configures a local mail server,
-  which is a more advanced (more flexible and more complicated)
-  configuration.
+* The **postfix + fetchmail** solution configures a local mail server.
+
+The former is simpler, the latter is a more advanced - more flexible and
+more complicated - configuration.
 
 So, choose your poison!
 
@@ -92,7 +93,7 @@ That's all folks!
 
 ### Installing postfix
 
-We like postfix, but thhese instructions probably also work almost
+We like postfix, but hese instructions probably also work almost
 verbatim for other common mail servers (exim for example).
 
     sudo apt-get install postfix fetchmail
@@ -119,9 +120,8 @@ editor of choice), and afterwards run `chmod 0700 $HOME/.fetchmailrc` to
 set the correct access controls.
 
 (*Note for GMail users:* you cannot use your normal password with
-fetchmail if you are using two-factor authentication, instead you
-will need to create a custom password using GMail's security
-tools.)
+fetchmail if you are using two-factor authentication. Instead you
+will need to create a custom password using GMail's security tools.)
 
 This setup can then be tested by running the following command:
 
@@ -152,4 +152,4 @@ Finally, you need to tell Mailpile where to find your mail:
     # Read it now! Invokes fetchmail and then scans for new mail.
     mailpile> rescan
 
-That's all folks!
+That wasn't too hard, was it?
