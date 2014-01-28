@@ -93,7 +93,7 @@ That's all folks!
 
 ### Installing postfix
 
-We like postfix, but hese instructions probably also work almost
+We like postfix, but these instructions probably also work almost
 verbatim for other common mail servers (exim for example).
 
     sudo apt-get install postfix fetchmail
