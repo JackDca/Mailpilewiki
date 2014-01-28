@@ -1,7 +1,93 @@
-This page describes how to configure the Ubuntu or Debian operating system
-for local mail delivery.  We recommend `postfix` and `fetchmail`, but other
-software can certainly be used to acheive the same effect.
+This page describes how to configure Ubuntu or Debian to download your
+e-mail from a remote server. These instructions probably apply to other
+operating systems as well, but the commands for installing software
+(`apt-get install` etc.) may differ.
 
+Two methods are described: **OfflineIMAP** and **postfix + fetchmail**.
+The two approaches can be summarized roughly as follows:
+
+* The OfflineIMAP method just downloads your mail to a local folder.
+* The **postfix + fetchmail** solution configures a local mail server,
+  which is a more advanced (and more complicated) configuration.
+
+So, choose your poison!
+
+--------------------------------------------------------------------
+
+## OfflineIMAP
+
+### Installing OfflineIMAP
+
+That should be as simple as:
+
+    sudo apt-get install offlineimap
+
+### Configuring OfflineIMAP
+
+OfflineIMAP reads its configuration from a file named `.offlineimaprc` in
+your home directory. You can edit (or create) it using a command line
+`nano $HOME/.offlineimaprc`.
+
+For a simple case of one remote IMAP account, all mail downloaded to a
+folder named `MyMail` in your home directory, the configuration file
+should look something like this:
+
+    [general]
+    accounts = MyMail
+
+    [Account MyMail]
+    localrepository = Local
+    remoterepository = Remote
+
+    [Repository Local]
+    type = Maildir
+    localfolders = ~/MyMail
+
+    [Repository Remote]
+    type = IMAP
+    remotehost = imap.yourprovider.com
+    remoteuser = yourname
+    remotepass = yourpassword
+
+If downloading from GMail, the last section might be better written like so:
+
+    [Repository Remote]
+    type = Gmail
+    cert_fingerprint = 89091347184d41768bfc0da9fad94bfe882dd358
+    folderfilter = lambda folder: folder.startswith('[Gmail]/All Mail')
+    remoteuser = yourname@gmail.com
+    remotepass = yourpassword
+
+This will only download the "All Mail" section.
+
+You can test your OfflineIMAP configuration by running `offlineimap`. If it
+looks like it is about to take forever, you can abort it by pressing CTRL+C.
+
+### Configuring Mailpile
+
+You can configure Mailpile to periodically invoke OfflineIMAP for
+you. In the Mailpile CLI, type:
+
+    # Run offlineimap before looking for new mail
+    mailpile> set prefs.rescan_command = offlineimap || true
+
+    # Configure Mailpile to look for new mail every 300 seconds
+    mailpile> set prefs.rescan_interval = 300
+
+Finally, you need to tell Mailpile where to find your mail:
+
+    # Add your mailbox to the list of locations to scan
+    mailpile> add ~/MyMail
+
+    # Read it now! Invokes offlineimap and then scans for new mail.
+    mailpile> rescan
+
+That's all folks!
+
+
+--------------------------------------------------------------------
+
+## postfix + fetchmail
 
 ### Installing postfix
 
