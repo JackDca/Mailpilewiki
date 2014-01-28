@@ -21,7 +21,7 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 * User interface:
    * Modern HTML5-based interface design
    * Original type-face
-   * something about PGP...
+   * Integrated user-friendly PGP support
    * ...
    * Alternate text and shell-based user interfaces available for power users
 * Encryption and security:
@@ -29,14 +29,14 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * The contents of incoming encrypted and signed mail is searchable
    * Contacts, configuration and meta-data are stored encrypted
 * Search
-   * Fast, custom search engine
+   * Fast, extensible, custom search engine
    * The search index is stored using a one-way hash to protect sensitive data
 * Tags
    * Can be used to organize indexed mail
    * Used internally to implement common e-mail metaphors such as "unread" and "inbox"
-   * Messages can be tagged automatically, using static filter rules or bayesian classifiers
+   * Messages can be tagged automatically, using static filter rules or Bayesian classifiers
 * Spam filtering
-   * A basic bayesian spam filter is configured by default
+   * A basic Bayesian spam filter is configured by default
 * Interoperability
    * Support for reading mail stored in mbox, Maildir, Thunderbird, Mac Mail.app and GMVault formats.
    * Support for importing contact details from the GnuPG keychain and Thunderbird (mork)
@@ -45,7 +45,9 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 * Internationalization
    * Message strings in Python and HTML can be translated
    * Work has begun translating Mailpile into roughly 30 languages
-
+* Extensibility
+   * Plugin hooks for numerous types of interactions
+   * Most core functionality is built using the plugin architecture
 
 ### Known bugs and limitations
 
@@ -54,10 +56,12 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 * The HTML user-interface is "read only" unless Javascript is enabled
 * Auto-saving of drafts doesn't work yet
 * The search index is not yet fully encrypted
-* Drafts, mailbox state and bayesian rules are not stored encrypted
+* Drafts, mailbox state and Bayesian rules are not stored encrypted
 * Encryption features are only available to users who have a PGP key
 * PGP keys are not created by default
 * HTML/Javascript performance has not been optimized
 * Native IMAP/POP3 is missing because it depends on local mailbox encryption
 * Multiple profile support is very primitive
-* ...
+* Contact management support is very primitive
+* Tag management support in HTML UI is very primitive
+
