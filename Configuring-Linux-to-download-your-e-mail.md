@@ -27,8 +27,8 @@ That should be as simple as:
 ### Configuring OfflineIMAP
 
 OfflineIMAP reads its configuration from a file named `.offlineimaprc` in
-your home directory. You can edit (or create) it using a command line
-`nano $HOME/.offlineimaprc`.
+your home directory. You can edit (or create) it using your favourite text
+editor, or this: `nano $HOME/.offlineimaprc`.
 
 For a simple case of one remote IMAP account, all mail downloaded to a
 folder named `MyMail` in your home directory, the configuration file
