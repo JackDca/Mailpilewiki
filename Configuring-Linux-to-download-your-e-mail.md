@@ -12,6 +12,11 @@ They can be summarized roughly as follows:
 The former is simpler, the latter is a more advanced - more flexible and
 more complicated - configuration.
 
+If neither of those sound good, maybe you want one of these:
+
+* [[Synchronizing Mailpile with Thunderbird]]
+* ...
+
 So, choose your poison!
 
 --------------------------------------------------------------------
