@@ -1,8 +1,6 @@
 ### What is Mailpile?
 
-Mailpile is a e-mail software (an app) that runs on your desktop or laptop computer. You interact with the program using your web browser.
-
-The goal of Mailpile is to allow people to send e-mail in a more secure and private manner than before.
+Mailpile is a e-mail software (an app) that runs on your desktop or laptop computer. You interact with the program using your web browser. The goal of Mailpile is to allow people to send e-mail in a more secure and private manner than before.
 
 ### Where does Mailpile store my mail?
 
