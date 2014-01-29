@@ -11,11 +11,15 @@ In the profile directory, there are folders called `Mail`, which contains POP3 m
 The directory will have a ".sbd" ending, and inside it you will find any subfolders in the same format.
 
 If you are using Linux or MacOS, you can find all of the mail directories by running:
-     $ find . -name "*.msf" | sed 's:.msf::'
+
+    $ find . -name "*.msf" | sed 's:.msf::'
+
 from the Mail or ImapMail. Remember to expand to the full path.
 
 Once you have the directories, add them to Mailpile using the `add` command, e.g.:
-     mailpile> add ~/.thunderbird/a1b2c3de.default/ImapMail/mail.example.com/INBOX
+
+    mailpile> add ~/.thunderbird/a1b2c3de.default/ImapMail/mail.example.com/INBOX
+
 Do this once for each directory.
 
 ### Setting IMAP to download
@@ -25,7 +29,8 @@ Note that if you're using Thunderbird as an IMAP client, you need to make sure T
 Thunderbird stores your contacts in two places in the profile: a file called `abook.mab`, and one called `history.mab`. The difference here is that `abook.mab` contains the address book that you have created through your interactions in Thunderbird, whereas `history.mab` has addresses that Thunderbird has collected from your e-mail.
 
 To add them to Mailpile, use the `prefs.vcard.importers.mork` attribute in the settings. Simplest is to go to the Mailpile command line and type, e.g.:
-     mailpile> set prefs.vcard.importers.mork.0.filename = ~/.thunderbird/a1b2c3de.default/abook.mab
+
+    mailpile> set prefs.vcard.importers.mork.0.filename = ~/.thunderbird/a1b2c3de.default/abook.mab
 
 The 0 there is the number of the importer. If you have more than one Mork file, remember to increase that number for each one.
 
