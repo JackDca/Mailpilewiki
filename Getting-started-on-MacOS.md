@@ -1,2 +1,2 @@
-# Leopard 10.6.8
+### Leopard 10.6.8
 Mailpile depends on lxml, which is a binder for two C libraries (libxml2 and libxslt). The GCC compiler is not included with MacOS 10.6.8. Some people are using XCode (that comes with GCC), others skip downloading the massive XCode installer and use [GCC packaged by Kenneth Reitz](https://github.com/kennethreitz/osx-gcc-installer). Long story short, to install Mailpile you have to have the GCC compiler installed, however you do it, and install lxml when GCC has been successfully installed. You will find [several discussion](http://stackoverflow.com/questions/1277124/how-do-you-install-lxml-on-os-x-leopard-without-using-macports-or-fink) threads regarding this issue if you get into any problems.
