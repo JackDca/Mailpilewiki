@@ -2,15 +2,16 @@
 
 * Release notes:
    * [[Alpha Release, January 2014|Release-Notes-201401-Alpha]]
-* [[Getting started]]
+* [[Getting Started]]
 
 ### Developing Mailpile
 
-* [[Design documents]]
-* [[Mailpile internals]] / [[Development guide]]
-* [[Design conversations]]
-* [[Security]]
-* [[Privacy]]
 * [[Data formats]]
-* [[Packaging]]
+* [[Design documents]]
+* [[Design conversations]]
+* [[Frequently Asked Questions]]
 * [[Ideas]]
+* [[Mailpile Internals]] / [[Development Guide]]
+* [[Privacy]]
+* [[Packaging]]
+* [[Security]]
