@@ -1,10 +1,14 @@
-### Is mailpile an encrypted mail service?
+### Is Mailpile an encrypted email service?
 
-Not a service, but Mailpile does support strong encryption.
+We are not a service, we are an email client. But Mailpile does support strong encryption.
 
 ### What Is your PGP public key?
 
+Standby...
+
 ### Can you please include *insert-some-random-encrypted-service*.
+
+Yah, we'll get right on that- after we get the widely adopted protocols supported robustly ;)
 
 ### I was looking for private email server that can hide my email address from everyone that I haven't mailed to, does your service provide this? 
 
