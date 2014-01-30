@@ -1,4 +1,3 @@
-
 ### Is mailpile an encrypted mail service?
 
 Not a service, but Mailpile does support strong encryption.
@@ -138,3 +137,7 @@ Of course. Although we do urge all e-mail providers to provide TLS natively, bec
 ### Will you hide the IP when send an e-mail with your service?
 
 We aren't providing a sending service. Our e-mail client can't obfuscate IP addresses - but if you route your mail through Tor or a Mixmaster, it might improve things for you.
+
+### Does Mailpile automatically search for recipients keys or generate new keys which is then submited to the public key servers?
+
+Yes we search & create keys. We are not sure yet about automatically submitting to keyservers.
