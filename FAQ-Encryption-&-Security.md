@@ -141,3 +141,7 @@ We aren't providing a sending service. Our e-mail client can't obfuscate IP addr
 ### Does Mailpile automatically search for recipients keys or generate new keys which is then submited to the public key servers?
 
 Yes we search & create keys. We are not sure yet about automatically submitting to keyservers.
+
+### Does Mailpile support sending SMIME emails?
+
+No.  We are working on pgp/mime first, getting the metaphors and the UI right before we add alternate encryption schemes. S/MIME is also generally based on PKI which the general consumer may not have easy access to. We expect it'll be supported in the future.
