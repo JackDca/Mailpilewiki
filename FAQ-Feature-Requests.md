@@ -6,7 +6,7 @@ Yes, we use "Tags" instead of folders, but they function similarly. We also have
 
 We will support importing of contacts from Google Contacts, but not synchronizing back to Google. However, someone may make a plugin to do so
 
- ### Will there be POP and IMAP support?
+### Will there be POP and IMAP support?
 
 Yes.
 
