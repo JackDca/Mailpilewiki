@@ -42,7 +42,7 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * Support for reading mail stored in mbox, Maildir, Thunderbird, Mac Mail.app and GMVault formats.
    * Support for importing contact details from the GnuPG keychain and Thunderbird (Mork)
    * Selected messages can be exported en-masse to a portable mbox file
-   * Mailpile has been tested and verified to run on Linux and Mac OS X
+   * Mailpile has been tested and verified to run on various versions of Debian and Ubuntu Linux, and on Mac OS X 10.9.1
 * **Internationalization**
    * Message strings in Python and HTML can be translated
    * [Work has begun translating Mailpile into roughly 30 languages](https://www.transifex.com/projects/p/mailpile/)
