@@ -1,6 +1,6 @@
 ![](https://www.mailpile.is/img/logo-275x200.png)
 
-The first alpha release of Mailpile is available for download from github. This release is a **technology preview release** and is not meant for production use. Use at your own risk! See the release blog post for elaboration.
+The first alpha release of Mailpile is available for download from github. This release is a **technology preview release** and is not meant for production use. Use at your own risk! See the [release blog post](https://mailpile.is/blog/2014-01-31_Alpha_Release_Shipping_Bits_and_Atoms.html) for elaboration.
 
 ### Reference platform and reporting
 Our reference platform for this release is Ubuntu Linux 12.04.  Other operating systems may work, but for best results we recommend testing on the reference platform. 
