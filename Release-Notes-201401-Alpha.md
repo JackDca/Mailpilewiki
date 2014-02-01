@@ -5,7 +5,7 @@ The first alpha release of Mailpile is available for download from github. This 
 ### Reference platform and reporting
 Our reference platform for this release is Ubuntu Linux 12.04.  Other operating systems may work, but for best results we recommend testing on the reference platform. 
 
-If you use Mailpile on with other setups, please consider letting us know how well it worked on [[Platform support/Alpha]] and [filing issues](https://github.com/pagekite/Mailpile/issues) if you run into any bugs.
+If you use Mailpile with other setups, please consider letting us know how well it worked on [[Platform support/Alpha]] and [filing issues](https://github.com/pagekite/Mailpile/issues) if you run into any bugs.
 
 ### Getting the release
 
