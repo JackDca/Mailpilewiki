@@ -21,13 +21,14 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 
 * User interface:
    * Modern HTML5-based interface design
-   * Original type-face
-   * Integrated user-friendly PGP support
+   * [Original typeface](https://github.com/mailpile/fonts)
+   * [[Integrated user-friendly PGP support|GnuPG interface security]]
    * Alternate text and shell-based user interfaces available for power users
 * Encryption and security:
    * Support for reading and writing PGP/MIME encrypted or signed e-mail
    * The contents of incoming encrypted and signed mail is searchable
    * Contacts, configuration and meta-data are stored encrypted
+   * First pass of Mailpile's [[threat model]] exists
 * Search
    * Fast, extensible, custom search engine
    * The search index is stored using a one-way hash to protect sensitive data
@@ -36,7 +37,7 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * Used internally to implement common e-mail metaphors such as "unread" and "inbox"
    * Messages can be tagged automatically, using static filter rules or Bayesian classifiers
 * Spam filtering
-   * A basic Bayesian spam filter is configured by default
+   * [A basic Bayesian spam filter is configured by default](https://www.mailpile.is/blog/2014-01-12_A_Plan_For_Spam.html)
 * Interoperability
    * Support for reading mail stored in mbox, Maildir, Thunderbird, Mac Mail.app and GMVault formats.
    * Support for importing contact details from the GnuPG keychain and Thunderbird (Mork)
@@ -44,9 +45,9 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * Mailpile has been tested and verified to run on Linux and Mac OS X
 * Internationalization
    * Message strings in Python and HTML can be translated
-   * Work has begun translating Mailpile into roughly 30 languages
+   * [Work has begun translating Mailpile into roughly 30 languages](https://www.transifex.com/projects/p/mailpile/)
 * Extensibility
-   * Plugin hooks for numerous types of interactions
+   * [[Plugin hooks for numerous types of interactions|Plugin API]]
    * Most core functionality is built using the plugin architecture
    * All API actions available as JSON-based API endpoints
    * Mailpile can be loaded as a Python module
