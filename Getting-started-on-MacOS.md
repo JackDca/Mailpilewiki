@@ -46,3 +46,5 @@ sudo ln -s /usr/bin/python2.7 /usr/bin/python2
 ```
 ./mp  
 ```
+
+**See "Getting started on linux" for more information on setting up Mailpile for the first time.**
