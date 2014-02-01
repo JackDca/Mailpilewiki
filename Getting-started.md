@@ -10,9 +10,16 @@ The quickest way to get up and running, is to follow one of the following guides
 
 When that is done, the following guides will help you configure the software and get started using it:
 
+* [[Setting up Basic Config]]
+* [[Indexing Mail]]
+* [[Using the Web Interface]]
+* [[Protecting Your Privacy]]
+* [[Hacking and Exploring]]
+* [[Mailpile's Performance]]
+* [[Synchronizing Mailpile with Thunderbird]]
+
 * [[Configuring Mailpile]]
 * [[Using Mailpile]]
-* [[Synchronizing Mailpile with Thunderbird]]
 
 If you are using some other operating system or are a developer who prefers Docker, Virtualenv or PIP to the above recipes, please read on...
 
