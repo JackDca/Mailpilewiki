@@ -19,34 +19,34 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 
 ### Highlights of this release
 
-* User interface:
+* **User interface**
    * Modern HTML5-based interface design
    * [Original typeface](https://github.com/mailpile/fonts)
    * [[Integrated user-friendly PGP support|GnuPG interface security]]
    * Alternate text and shell-based user interfaces available for power users
-* Encryption and security:
+* **Encryption and security**
    * Support for reading and writing PGP/MIME encrypted or signed e-mail
    * The contents of incoming encrypted and signed mail is searchable
    * Contacts, configuration and meta-data are stored encrypted
    * First pass of Mailpile's [[threat model]] exists
-* Search
+* **Search**
    * Fast, extensible, custom search engine
    * The search index is stored using a one-way hash to protect sensitive data
-* Tags
+* **Tags**
    * Can be used to organize indexed mail
    * Used internally to implement common e-mail metaphors such as "unread" and "inbox"
    * Messages can be tagged automatically, using static filter rules or Bayesian classifiers
-* Spam filtering
+* **Spam filtering**
    * [A basic Bayesian spam filter is configured by default](https://www.mailpile.is/blog/2014-01-12_A_Plan_For_Spam.html)
-* Interoperability
+* **Interoperability**
    * Support for reading mail stored in mbox, Maildir, Thunderbird, Mac Mail.app and GMVault formats.
    * Support for importing contact details from the GnuPG keychain and Thunderbird (Mork)
    * Selected messages can be exported en-masse to a portable mbox file
    * Mailpile has been tested and verified to run on Linux and Mac OS X
-* Internationalization
+* **Internationalization**
    * Message strings in Python and HTML can be translated
    * [Work has begun translating Mailpile into roughly 30 languages](https://www.transifex.com/projects/p/mailpile/)
-* Extensibility
+* **Extensibility**
    * [[Plugin hooks for numerous types of interactions|Plugin API]]
    * Most core functionality is built using the plugin architecture
    * All API actions available as JSON-based API endpoints
@@ -54,18 +54,18 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 
 ### Known bugs and limitations
 
-* User Experience
+* **User Experience**
   * The HTML user-interface is "read only" unless Javascript is enabled
   * Auto-saving of drafts doesn't work yet
   * HTML/Javascript performance has not been optimized
-* Security
+* **Security**
   * The search index is not yet fully encrypted
   * Drafts, mailbox state and Bayesian rules are not stored encrypted
   * Encryption features are only available to users who have a PGP key
   * PGP keys are not created by default
-* Protocol support
+* **Protocol support**
   * Native IMAP/POP3 is missing because it depends on local mailbox encryption
   * Multiple profile support is very primitive
-* Features
+* **Features**
   * Contact management support is very primitive
   * Tag management support in HTML UI is very primitive
