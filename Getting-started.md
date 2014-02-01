@@ -11,11 +11,11 @@ The quickest way to get up and running, is to follow one of the following guides
 When that is done, the following guides will help you configure the software and get started using it:
 
 * [[Configuring Mailpile]]
-** [[Setting up Basic Config]]
+  * [[Setting up Basic Config]]
 * [[Indexing Mail]]
-** [[Synchronizing Mailpile with Thunderbird]]
+  * [[Synchronizing Mailpile with Thunderbird]]
 * [[Using Mailpile]]
-** [[Using the Web Interface]]
+  * [[Using the Web Interface]]
 * [[Protecting Your Privacy]]
 * [[Hacking and Exploring]]
 * [[Mailpile's Performance]]
