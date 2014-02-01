@@ -1,6 +1,11 @@
-The first alpha release of Mailpile is available for download from github. This release is a **technology preview release** and is not meant for production use. Use at your own risk!
+![](https://raw.github.com/pagekite/Mailpile/master/static/default/img/logo.png)
 
-Our reference platform for this release is Ubuntu Linux 12.04.  Other operating systems may work, but for best results we recommend testing on the reference platform.
+The first alpha release of Mailpile is available for download from github. This release is a **technology preview release** and is not meant for production use. Use at your own risk! See the release blog post for elaboration.
+
+### Reference platform and reporting
+Our reference platform for this release is Ubuntu Linux 12.04.  Other operating systems may work, but for best results we recommend testing on the reference platform. 
+
+If you use Mailpile on with other setups, please consider letting us know how well it worked on [[Platform support/Alpha]] and [filing issues](https://github.com/pagekite/Mailpile/issues) if you run into any bugs.
 
 ### Getting the release
 
@@ -34,7 +39,7 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * A basic Bayesian spam filter is configured by default
 * Interoperability
    * Support for reading mail stored in mbox, Maildir, Thunderbird, Mac Mail.app and GMVault formats.
-   * Support for importing contact details from the GnuPG keychain and Thunderbird (mork)
+   * Support for importing contact details from the GnuPG keychain and Thunderbird (Mork)
    * Selected messages can be exported en-masse to a portable mbox file
    * Mailpile has been tested and verified to run on Linux and Mac OS X
 * Internationalization
@@ -48,17 +53,18 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 
 ### Known bugs and limitations
 
-(brain dump here, will reorganize and group later, would be good to have issue IDs for as many of these as possible)
-
-* The HTML user-interface is "read only" unless Javascript is enabled
-* Auto-saving of drafts doesn't work yet
-* The search index is not yet fully encrypted
-* Drafts, mailbox state and Bayesian rules are not stored encrypted
-* Encryption features are only available to users who have a PGP key
-* PGP keys are not created by default
-* HTML/Javascript performance has not been optimized
-* Native IMAP/POP3 is missing because it depends on local mailbox encryption
-* Multiple profile support is very primitive
-* Contact management support is very primitive
-* Tag management support in HTML UI is very primitive
-
+* User Experience
+  * The HTML user-interface is "read only" unless Javascript is enabled
+  * Auto-saving of drafts doesn't work yet
+  * HTML/Javascript performance has not been optimized
+* Security
+  * The search index is not yet fully encrypted
+  * Drafts, mailbox state and Bayesian rules are not stored encrypted
+  * Encryption features are only available to users who have a PGP key
+  * PGP keys are not created by default
+* Protocol support
+  * Native IMAP/POP3 is missing because it depends on local mailbox encryption
+  * Multiple profile support is very primitive
+* Features
+  * Contact management support is very primitive
+  * Tag management support in HTML UI is very primitive
