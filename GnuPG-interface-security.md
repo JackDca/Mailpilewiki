@@ -1,5 +1,3 @@
-# GnuPG interface security
-
 (These are misellaneous security notes, collected during and
 around the threat modeling sessions with Eleanor Saitta.)
 
