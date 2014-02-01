@@ -25,7 +25,7 @@ sudo STATIC_DEPS=true pip install lxml
 ```
 
 
-Clone and Install Mailpile (in user 'Sites' directory):  
+Clone and Install Mailpile (in user 'Sites' directory, but any directory will do):  
 ```
 cd ~/Sites  
 git clone -b release/alpha https://github.com/pagekite/Mailpile.git  
