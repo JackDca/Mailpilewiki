@@ -1,4 +1,4 @@
-![](https://raw.github.com/pagekite/Mailpile/master/static/default/img/logo.png)
+![](https://www.mailpile.is/img/logo-275x200.png)
 
 The first alpha release of Mailpile is available for download from github. This release is a **technology preview release** and is not meant for production use. Use at your own risk! See the release blog post for elaboration.
 
