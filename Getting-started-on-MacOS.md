@@ -5,13 +5,13 @@ Some people are using XCode (that comes with GCC), others skip downloading the m
   
   
 ### Mavericks 10.9.1 (Step-by-Step)  
-**Download and Install Xcode Command Line Tools**:   
+Download and Install Xcode Command Line Tools:   
 ```
 xcode-select --install  
 ```
 
 
-**Download and Install PIP for Python**:  
+Download and Install PIP for Python:  
 ```
 cd /tmp  
 curl -o get-pip.py https://raw.github.com/pypa/pip/master/contrib/get-pip.py  
@@ -19,13 +19,13 @@ sudo python get-pip.py
 ```
 
 
-**Install latest version of ‘lxml’ using Static Dependancies**:  
+Install latest version of ‘lxml’ using Static Dependancies:  
 ```
 sudo STATIC_DEPS=true pip install lxml  
 ```
 
 
-**Clone and Install Mailpile (in user 'Sites' directory)**:  
+Clone and Install Mailpile (in user 'Sites' directory):  
 ```
 cd ~/Sites  
 git clone -b release/alpha https://github.com/pagekite/Mailpile.git  
@@ -36,13 +36,13 @@ sudo pip install -r requirements.txt
 
 [**UGLY HACK WARNING** - Mailpile calls `python2` when opening, but in OS X this binary/symbolic link does not exist, instead we call `python` or `python2.X` directly.  For this reason, we must accommodate Mailpile by creating a symbolic link in the `usr/bin/` directory ]
 
-**Create symbolic link from 'python2.7' to 'python2'**:  
+Create symbolic link from 'python2.7' to 'python2':  
 ```
 sudo ln -s /usr/bin/python2.7 /usr/bin/python2  
 ```
 
 
-**Finally - run Mailpile!**  
+Finally - run Mailpile!  
 ```
 ./mp  
 ```
