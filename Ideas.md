@@ -1,5 +1,3 @@
-**This file canonically lives in doc/IDEAS.md - refer to that file for the most up to date version.**
-
 # A pile of ideas
 
 These are random ideas that may or may not make sense.  Most of them
