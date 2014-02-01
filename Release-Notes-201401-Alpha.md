@@ -1,9 +1,6 @@
-# WE HAVE NOT RELEASED YET... SOON! #
-
-The first alpha release of Mailpile is available for download from github. This release is a **technology preview release** and is not meant for production use.
+The first alpha release of Mailpile is available for download from github. This release is a **technology preview release** and is not meant for production use. Use at your own risk!
 
 Our reference platform for this release is Ubuntu Linux 12.04.  Other operating systems may work, but for best results we recommend testing on the reference platform.
-
 
 ### Getting the release
 
@@ -13,8 +10,7 @@ The code can be downloaded like so:
 
 This branch may receive minor updates (bug-fixes) over the next couple of weeks, but core development will continue on the `master` branch. Please see the [[Getting Started]] page for further details.
 
-There is also a live demo accessible on <https://www.mailpile.is/demos/>.    
-
+There is also a live demo accessible on <https://www.mailpile.is/demos/>. 
 
 ### Highlights of this release
 
@@ -22,7 +18,6 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * Modern HTML5-based interface design
    * Original type-face
    * Integrated user-friendly PGP support
-   * ...
    * Alternate text and shell-based user interfaces available for power users
 * Encryption and security:
    * Support for reading and writing PGP/MIME encrypted or signed e-mail
@@ -48,6 +43,8 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 * Extensibility
    * Plugin hooks for numerous types of interactions
    * Most core functionality is built using the plugin architecture
+   * All API actions available as JSON-based API endpoints
+   * Mailpile can be loaded as a Python module
 
 ### Known bugs and limitations
 
