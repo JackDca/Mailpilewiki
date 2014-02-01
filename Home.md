@@ -9,7 +9,6 @@
 
 * [[Data formats]]
 * [[Design documents]]
-* [[Design conversations]]
 * [[Ideas]]
 * [[Mailpile Internals]] / [[Development Guide]]
 * [[Privacy]]
