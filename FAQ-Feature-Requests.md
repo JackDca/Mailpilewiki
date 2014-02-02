@@ -8,7 +8,7 @@ We will support importing of contacts from Google Contacts, but not synchronizin
 
 ### Will there be POP and IMAP support?
 
-Yes.
+Yes. Soon.
 
 ### Will there be an app for Android?
 
@@ -42,7 +42,13 @@ Yes, this is currently implemented.
 
 Uses can specify this from the "Settings" interface.
 
-### Users should be allowed to choose rather or not SSL is enabled. SSL should  be either a self signed key which Mailpile makes, or a key the user  provides. For self signed, Mailpile should be able to output a  public  key in formats which can be imported into their systems and  should be  provided with instructions on how to import so that they won't  be  alerted about self signed certificates all the time. For iOS,  provide a iPhone Configuration file with the certificate.
+### Make users should be allowed to choose rather or not SSL is enabled. SSL should be either a self signed key which Mailpile makes, or a key the user provides.
+
+This is a great idea. We will hopefully implement features for SSL like this once we get further a long :)
+
+### Make it easy to provide a configuration file with the SSL certificate for iOS
+
+We are not sure how much we want to develop towards supporting Apple's heavily walled (and surveilled) garden, but consider accessing a mobile web app of Mailpile served from a Raspberry Pi on an iOS device
 
 ### Can I choose to have Mailpile delete the email from the original server after download or keep it.
 
@@ -55,3 +61,7 @@ This is an interesting idea that we are considering.
 ### Will Mailpile do automatic mail wiping?
 
 Inbox zero is a noble goal. Is that what you meant? We hope to encourage & work on plugins to achieve this goal.
+
+### Any plans to provide secure email accounts similar to what Lavabit did?
+
+No plans to do what Lavabit did as they were a centralized solution. Decentralization is one of our main end goals. We are considering offering services (relays, servers) that make the sending of email more secure + allow for decentralization + are sustainable + user friendly
