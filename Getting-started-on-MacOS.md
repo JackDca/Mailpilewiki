@@ -24,6 +24,15 @@ Install latest version of ‘lxml’ using Static Dependancies:
 sudo STATIC_DEPS=true pip install lxml  
 ```
 
+OR install 'lxml' without pip, macports, or fink
+```
+cd /tmp  
+curl -o lxml-3.3.0.tgz http://lxml.de/files/lxml-3.3.0.tgz  
+tar -xzvf lxml-3.3.0.tgz  
+cd lxml-3.3.0  
+python setup.py build --static-deps --libxml2-version=2.8.0  --libxslt-version=1.1.24  
+sudo python setup.py install
+```
 
 Clone and Install Mailpile (in user 'Sites' directory, but any directory will do):  
 ```
