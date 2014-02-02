@@ -33,3 +33,7 @@ Yes, we have a put a lot of time into thinking about and designing this to be in
 ### Is installation going to be a simple double click icon that once installed just opens a browser and loads mailpile?
 
 Yes, that is the goal. Perhpas even a headless instance of webkit that runs separately than your normal browser.
+
+### Why isn't there more access to GPG via the web interface?
+
+Because, Alpha. We are definitely going to expose more of GnuPG to the web UI like adding, signing and deleting of keys as well as other things. But, development just takes time :)
