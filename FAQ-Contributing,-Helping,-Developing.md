@@ -14,7 +14,7 @@ We're happy that you have a super cool project and that you think our project is
 
 You can be an official backer even if you don't pay with bitcoin!
 
-### Will you send me your iban and bic code and name and adres, so I can send y ou a financial support by bank?
+### Will you send me your IBAN and BIC code and name and address, so I can send you a financial support by bank?
 
 Yes. At some point.
 
