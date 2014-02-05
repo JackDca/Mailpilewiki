@@ -10,7 +10,9 @@
 * [[Data formats]]
 * [[Design documents]]
 * [[Ideas]]
-* [[Mailpile Internals]] / [[Development Guide]]
+* [[Mailpile Internals]]
+* [[Development Guide]]
+* [[Translations]] (i18n/i10n)
 * [[Privacy]]
 * [[Packaging]]
 * [[Security]]
