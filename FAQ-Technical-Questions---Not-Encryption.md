@@ -54,8 +54,6 @@ No, Mailpile is a mail client - if you want to update your DNS, you'll have to d
 
 Mailpile is not an email server, so our software will not be able to help you achieve this goal.
 
-### Could mailpile spoof(!) my ISP provider in having it seen as a sort of  regular download let us say via bittorrent?
-
 ### What about Linux? Are you coding mailpile for Linux as well?
 
 Two of our three core developers do everything on Linux. We're not even entirely sure how to use all those other OS's... ;)
