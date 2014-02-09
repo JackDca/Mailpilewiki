@@ -1,3 +1,10 @@
+## FIXMES
+
+* This encryption needs to be optional, not everyone values security vs.
+  usabilty / portability / reliability the same way. (bnvk)
+* If optional, making the unencrypted data-store compatible with Maildir
+  or some other popular mailbox format would be optimal. (bre)
+
 ## Rationale
 
 Mailpile stores e-mail and a large amount of other sensitive data.  One
