@@ -148,7 +148,6 @@ DNS TXT records could be used to map individual addresses, or entire
 domains to SMTorP addresses. The pros and cons of this approach should
 be explored further.
 
-
 ## Deployment strategy
 
 Ideally, SMTorP will be natively supported by MUAs, and Mailpile will
@@ -185,6 +184,19 @@ for MITM attacks, we prefer direct delivery whenever possible).
 [TODO: Write more. Bjarni doesn't like relays, Ella contends they are
 necessary for users with intermittent networking. We met in the middle
 agreeing that sending relays may be a reasonable compromise.]
+
+
+## User Privacy
+
+Running a hidden service of this nature makes it easier to track whether
+a particular user is online, as long as you know their SMTorP address.
+
+Although this is an active attack, it may be possible to check that the
+hidden service is online, without the hidden service ever seeing
+traffic, which makes this undetectable by the user.
+
+If this is considered a serious problem, then it argues in favour of
+running SMTorP relays.
 
 
 ## SMTorP and PGP/MIME
