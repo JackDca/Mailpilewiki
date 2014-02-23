@@ -79,3 +79,11 @@ and run it:
 or enter the container's bash prompt directly:
 
     $ docker run -i -t mailpile bash
+
+### Installing on Raspberry Pi ###
+
+Users have reported running into a problem when running **make** when building the Alpha on Raspberry Pi. Once you get to installing therubyracer it might fail due to a problem with libv8. Run the following:
+
+```
+$ gem install libv8 -- --with-system-v8
+``` 
