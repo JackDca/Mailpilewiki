@@ -16,7 +16,7 @@ There is no such thing! Mailpile is software you run on you computer, not an e-m
 
 ### Can I still Donate?
 
-Yes we would love for you to [support us](https://mailpile.is/donate/)
+Yes, we would love for you to [support us](https://mailpile.is/donate/).
 
 ### Is Mailpile always going to be free?
 
@@ -26,10 +26,10 @@ Yes, it is a free and open software. However, to live in the current global econ
 
 Not yet, but this is a good idea! We will think about it.
 
-### How to get updates from your project?
+### How do I get updates about your project?
 
-We have an IRC channel on Freenode, #mailpile. There it is easiest to get hold un us and ask questions. Otherwise you can follow us on Twitter. Maybe in the future we'll consider having a emaiiasdsdst
+We have an IRC channel on Freenode, #mailpile. This is the easiest to get hold of us and ask questions. Otherwise you can follow us on Twitter. Maybe in the future we'll consider having an email address. 
 
-### One thought I had though was regarding accessibility, what happens when my computer is offline?
+### Regarding accessibility, what happens when my computer is offline?
 
 When the computer (laptop, desktop, webserver) you run your Mailpile from is offline, your Mailpile instance is no longer usable.
