@@ -22,7 +22,7 @@ summit hackdays (Reykjavík, Feb 20th & 21st, 2014) validating that the idea
 is at least quite simple to implement. To test it yourself:
 
 1. Install Tor and the Python socksipy or socksipychain module
-2. Configure Tor for a hidden service mapping `something.onion:25` to `localhost:33412`
+2. [Configure Tor for a hidden service mapping](https://www.torproject.org/docs/tor-hidden-service) `something.onion:25` to `localhost:33412`
 3. Enable the smtp_server plugin:
 
     mailpile> append sys.plugins smtp_server
