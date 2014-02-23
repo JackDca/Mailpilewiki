@@ -14,7 +14,7 @@ backend exposes an internal interface. These can be seen as "Models".
 Data stores do not currently have a standardized interface. No currently defined
 data store uses and external database.
 
-![Data stores](https://raw.github.com/pagekite/Mailpile/master/doc/layout/datastores.png "Data stores")
+![Data stores](https://raw.github.com/wiki/pagekite/Mailpile/layout/datastores.png "Data stores")
 
 ### Mail management backend
 
@@ -24,7 +24,7 @@ search engine index. This search engine component is one of the central componen
 of Mailpile. The search engine is mostly defined in `mailpile/search.py`, but
 some importers are defined in `mailpile/mailboxes/`.
 
-![Mail management backend](https://raw.github.com/pagekite/Mailpile/master/doc/layout/mailmanagementbackend.png "Mail management backend")
+![Mail management backend](https://raw.github.com/wiki/pagekite/Mailpile/layout/mailmanagementbackend.png "Mail management backend")
 
 ### Contact backend
 
@@ -33,7 +33,7 @@ directory. The contacts backend transparently manages their creation, destructio
 etc. On runtime all the VCards are loaded into memory and interacted with there. This
 speeds up access and allows for fast sorting, searching, etc.
 
-![Contacts backend](https://raw.github.com/pagekite/Mailpile/master/doc/layout/contactbackend.png "Contacts backend")
+![Contacts backend](https://raw.github.com/wiki/pagekite/Mailpile/layout/contactbackend.png "Contacts backend")
 
 ### PGP backend
 
@@ -47,7 +47,7 @@ RSA/RSA PGP key for you if GnuPG is available, assigned to the user defined
 identity. If GnuPG is not available, GnuPG will be disabled and the user will 
 be presented with a grave warning.
 
-![PGP backend](https://raw.github.com/pagekite/Mailpile/master/doc/layout/pgpbackend.png "PGP backend")
+![PGP backend](https://raw.github.com/wiki/pagekite/Mailpile/layout/pgpbackend.png "PGP backend")
 
 ### Other backends
 
@@ -59,7 +59,7 @@ There are in addition a number of API commands. Each command can have zero or
 more subcommands. These return internal Python data structures that are to be 
 used in output. These can be seen as "Views".
 
-![Commands](https://raw.github.com/pagekite/Mailpile/master/doc/layout/apicommands.png "Commands")
+![Commands](https://raw.github.com/wiki/pagekite/Mailpile/layout/apicommands.png "Commands")
 
 Each command is internally subclassed from `Command` and returns a 
 `CommandResult` typed object. Commands are defined in `commands.py`, and some 
@@ -78,7 +78,7 @@ data output from the command, but sometimes when the output format requires, it
 will bake in further data provided as extra context. Some will use some kind of 
 template format to structure the data.
 
-![Output](https://raw.github.com/pagekite/Mailpile/master/doc/layout/outputformats.png "Output formatters")
+![Output](https://raw.github.com/wiki/pagekite/Mailpile/layout/outputformats.png "Output formatters")
 
 ### JSON formatter
 
@@ -117,7 +117,7 @@ either a console or HTTP server. These consume commands and parameters and
 return output. Every interaction mode can return every output format, although 
 some may be meaningless to the given mode.
 
-![Interaction modes](https://raw.github.com/pagekite/Mailpile/master/doc/layout/interactionmodes.png "Interaction modes")
+![Interaction modes](https://raw.github.com/wiki/pagekite/Mailpile/layout/interactionmodes.png "Interaction modes")
 
 ### Command Line Interface (CLI)
 
@@ -139,4 +139,4 @@ WRITE ME
 
 WRITE ME
 
-![Command structure](https://raw.github.com/pagekite/Mailpile/master/doc/layout/commandstructure.png "Command structure")
+![Command structure](https://raw.github.com/wiki/pagekite/Mailpile/layout/commandstructure.png "Command structure")
