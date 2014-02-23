@@ -1,5 +1,7 @@
 # SMTorP
 
+![](http://images/SMTorP-Wiki.png)
+
 SMTorP is the Simple Mail Tor Protocol (a.k.a. SMTP over Tor).
 
 The idea can be summarized as follows:
