@@ -15,6 +15,23 @@ The idea can be summarized as follows:
 has been polished and proof of concept code written, we should draft an
 RFC and get the community to weigh in.
 
+### Proof of concept
+
+A very rough 1st proof of concept was added to Mailpile at the Tor developer
+summit hackdays (Reykjavík, Feb 20th & 21st, 2014) validating that the idea
+is at least quite simple to implement. To test it yourself:
+
+1. Install Tor and the Python socksipy or socksipychain module
+2. Configure Tor for a hidden service mapping `something.onion:25` to `localhost:33412`
+3. Enable the smtp_server plugin:
+
+    mailpile> append sys.plugins smtp_server
+
+4. Restart Mailpile.
+
+You should now be able to send mail to `foo@bar.onion`, and receive
+incoming on the Tor hidden service domain configured in step 2.
+
 
 ## High level goals
 
