@@ -15,6 +15,23 @@ The idea can be summarized as follows:
 has been polished and proof of concept code written, we should draft an
 RFC and get the community to weigh in.
 
+### Proof of concept
+
+A very rough 1st proof of concept was added to Mailpile at the Tor developer
+summit hackdays (Reykjavík, Feb 20th & 21st, 2014) validating that the idea
+is at least quite simple to implement. To test it yourself:
+
+1. Install Tor and the Python socksipy or socksipychain module
+2. Configure Tor for a hidden service mapping `something.onion:25` to `localhost:33412`
+3. Enable the smtp_server plugin:
+
+    mailpile> append sys.plugins smtp_server
+
+4. Restart Mailpile.
+
+You should now be able to send mail to `foo@bar.onion`, and receive
+incoming on the Tor hidden service domain configured in step 2.
+
 
 ## High level goals
 
@@ -131,7 +148,6 @@ DNS TXT records could be used to map individual addresses, or entire
 domains to SMTorP addresses. The pros and cons of this approach should
 be explored further.
 
-
 ## Deployment strategy
 
 Ideally, SMTorP will be natively supported by MUAs, and Mailpile will
@@ -168,6 +184,19 @@ for MITM attacks, we prefer direct delivery whenever possible).
 [TODO: Write more. Bjarni doesn't like relays, Ella contends they are
 necessary for users with intermittent networking. We met in the middle
 agreeing that sending relays may be a reasonable compromise.]
+
+
+## User Privacy
+
+Running a hidden service of this nature makes it easier to track whether
+a particular user is online, as long as you know their SMTorP address.
+
+Although this is an active attack, it may be possible to check that the
+hidden service is online, without the hidden service ever seeing
+traffic, which makes this undetectable by the user.
+
+If this is considered a serious problem, then it argues in favour of
+running SMTorP relays.
 
 
 ## SMTorP and PGP/MIME

@@ -21,6 +21,13 @@ endpoints be used for automation.
 
 ### GET (also accept POST)
 
+    /api/0/contact/           [<email>]/
+    /api/0/contact/add/       <msgs>/
+                              ?@contactemail=[e-mail address]&@contactname=[Contact name]
+    /api/0/contact/import/    [<parameters>]/
+    /api/0/contact/importers/
+    /api/0/contact/list/      [--lines]/[<terms>]/
+                              ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
     /api/0/filter/list/       [<search>|=<id>]/
     /api/0/help/              [<command-group>|variables]/
     /api/0/help/splash/
@@ -36,12 +43,18 @@ endpoints be used for automation.
     /api/0/page/
     /api/0/search/            [@<start>]/<terms>/
                               ?q=[search terms]&start=[start position]&end=[end position]&order=[sort order]
+    /api/0/search/address/    [<terms>]/
+                              ?q=[search terms]&count=[number of results]&offset=[offset results]
     /api/0/settings/          <var>/
                               ?var=[section.variable]
     /api/0/tag/list/          [<wanted>|!<wanted>]/[...]/
 
 ### POST
 
+    /api/0/contact/add/       <msgs>/
+                              ?@contactemail=[e-mail address]&@contactname=[Contact name]
+    /api/0/contact/addline/   <email>/<lines>/
+    /api/0/contact/remove/    <email>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/compose/   [ephemeral]/
@@ -70,6 +83,7 @@ endpoints be used for automation.
 
 ### UPDATE
 
+    /api/0/contact/addline/   <email>/<lines>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/update/    <messages>/<<filename>/
@@ -83,6 +97,7 @@ endpoints be used for automation.
 
 ### DELETE
 
+    /api/0/contact/remove/    <email>/
     /api/0/tag/delete/        <tag>/
 
 
@@ -97,6 +112,13 @@ endpoints be used for automation.
 
 *These accept the same arguments as the API calls above.*
 
+    /contact/
+    /contact/add/
+    /contact/addline/
+    /contact/import/
+    /contact/importers/
+    /contact/list/
+    /contact/remove/
     /filter/list/
     /help/
     /help/splash/
@@ -115,6 +137,7 @@ endpoints be used for automation.
     /message/update/send/
     /page/
     /search/
+    /search/address/
     /settings/
     /settings/add/
     /settings/set/

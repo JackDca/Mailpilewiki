@@ -110,7 +110,7 @@ Recipient to prevent Owner from creating Message Content and Identity. If such
 an attacker tries, Mailpile shall thwart the attack.
 
 **SO2.3:** Mailpile shall not allow Anonymous, Sender, Mail Admin, or Recipient
-to prevent OWner from executing a Workflow. If such an attacker tries,
+to prevent Owner from executing a Workflow. If such an attacker tries,
 Mailpile shall thwart the attack.
 
 **SO2.4:** Mailpile shall not allow Anonymous, Sender, Mail Admin, or Recipient
@@ -123,8 +123,8 @@ Mailpile shall thwart the attack.
 a contact or group. If such an attacker tries, Mailpile shall thwart the
 attack.
 
-**SO3.2:** Mailpile shal not allow Anonbymous, Sender, or Mail Admin to create
-Message Content with an incorrect MEssae Identity. If such an attacker tries,
+**SO3.2:** Mailpile shall not allow Anonymous, Sender, or Mail Admin to create
+Message Content with an incorrect Message Identity. If such an attacker tries,
 Mailpile shall thwart the attack.
 
 **SO3.3:** Mailpile shall not allow Anonymous, Sender, or Mail Admin to
