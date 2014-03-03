@@ -2,7 +2,7 @@
 
 Mailpile's python code lives in `mailpile/`.
 
-Mailpile's default HTML templates and Javascript lives in `static/default/`
+Mailpile's default HTML templates and Javascript lives in `static/default/`.
 
 Miscellaneous documentation is in `doc/`.
 
