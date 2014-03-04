@@ -7,27 +7,28 @@ You can add arbitrary commands to Mailpile. See [[Command plugins]]
 
 An example command plugin:
 ```python
-class GPGKeySearch(Command):
-    """Search for a GPG Key."""
-    ORDER = ('', 0)
-    SYNOPSIS = (None, 'crypto/gpg/searchkey', 'crypto/gpg/searchkey', '<terms>')
-    HTTP_CALLABLE = ('GET', )
-    HTTP_QUERY_VARS = {'q': 'search terms'}
+class MyCommand(Command):
+    """Do some very fun action"""
+    ORDER = ('', 0)  # The command's order in the "help" output
+    # The first value in SYNOPSIS would be a shortform version, and 
+    # the last contains a description of the paramters the function takes.
+    SYNOPSIS = (None, 'textui_commandname', 'webui_commandname', '')
+    HTTP_CALLABLE = ('GET', )  # Can be "GET", "POST", "PUT",... or empty for no HTTP interaction
+    HTTP_QUERY_VARS = {'q': 'search terms'}  # A documented list of query variables taken
 
     class CommandResult(Command.CommandResult):
         def as_text(self):
-            if self.result:
-                return '\n'.join(["%s: %s <%s>" % (keyid, x["name"], x["email"]) for keyid, det in self.result.iteritems() for x in det["uids"]])
-            else:
-                return _("No results")
+            # Overload the text printout. Also: as_json, as_html, ...
+            return "...".join(self.result)
 
     def command(self):
-        args = self.args[:]
-        for q in self.data.get('q', []):
+        args = self.args[:] # The arguments of the function
+        for q in self.data.get('q', []):  # self.data contains HTTP query args
             args.extend(q.split())
 
-        g = GnuPG()
-        return g.search_key(" ".join(args))
+        # ... do something ...
+        # Return some kind of JSON-serializable data structure...
+        return {}
 ```
 
 ## Configuration plugin hooks
