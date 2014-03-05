@@ -1,1 +1,1 @@
-There are lots of commands. Type "help" to get a list. See [[URLS]] for API endpoint specifications. See [[Command plugins]] for adding new commands.
+There are lots of commands. Type "help" in the command line interface to get a list. See [[URLS]] for API endpoint specifications. See [[Command plugins]] for adding new commands.
