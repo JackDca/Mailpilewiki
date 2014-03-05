@@ -2,9 +2,9 @@
 
 Here are some notes about the current build process to work on the front-end code of Mailpile. This is a  rough draft of front-end documentation but it will be more fleshed out soon.
 
-## Themes
+## [[Themes]]
 
-Currently, there is only one known theme for Mailpile, it is called "Default" and is located in **/static/default** folder of the Mailpile codebase.
+Currently, there is only one known theme for Mailpile, it is called "Default" and is located in **/static/default** folder of the Mailpile codebase. See [[Themes]] for further details.
 
 ## JavaScripts
 
