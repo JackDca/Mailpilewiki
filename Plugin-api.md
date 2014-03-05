@@ -53,3 +53,5 @@ The internal contacts manager stores everything internally as VCards. It support
 * `mailpile.plugins.register_contact_context_provider(provider)` - `provider` is subclass of `ContactContextProvider`.
 
 ## Job plugin hooks
+
+Needs documenting.
