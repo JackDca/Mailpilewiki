@@ -1,5 +1,7 @@
 There are demos of the plugin API in `mailpile/plugins/demos.py`
 
+If you want to know which plugins are currently registered, do `print sys.plugins` from the textmode UI. To add a plugin, do `append sys.plugins <name>`.
+
 ## Command plugin hooks
 You can add arbitrary commands to Mailpile. See [[Command plugins]]
 
