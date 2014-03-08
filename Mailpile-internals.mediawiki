@@ -5,6 +5,7 @@
 ** [[Search engine hooks]]
 * [[Mailboxes]]
 * [[Tags]]
+* [[Filters]]
 * [[Event Log]]
 * [[APIs]]
 ** [[Plugin API]]

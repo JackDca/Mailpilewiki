@@ -4,6 +4,10 @@ and many other things.
 
 Some tags are "user visible", others are used internally by the app.
 
+Tags may be assigned to messages manually by the user, automatically by
+Mailpile internals or via [[Filters]].
+
+
 ## Setting tag attributes
 
 You can set tag attributes through the command line using 'set', if you know
