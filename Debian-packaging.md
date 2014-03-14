@@ -2,9 +2,7 @@
 
 ### Generating DEB packages ###
 
-You first need to generate a changelog.
-The following command uses an empty changelog message,
-this will probably be changed in the future.
+You first need to generate a changelog, then create a `.deb` package.
 
 ```bash
 scripts/create-debian-changelog.py #May take some time
