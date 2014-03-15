@@ -26,12 +26,15 @@ Use one of the following two commands:
     sudo make debian-dev  # Does an apt-get install for requirements
 
 If you get this error you might want to install the _build-essential_ package (sudo apt-get install build-essential).
-`ERROR:  Error installing therubyracer:`
-	`ERROR: Failed to build gem native extension.`
 
-        `/usr/bin/ruby1.8 extconf.rb`
-`extconf.rb:1:in `require': no such file to load -- mkmf (LoadError)`
-	`from extconf.rb:1`
+`ERROR:  Error installing therubyracer:
+	ERROR: Failed to build gem native extension.
+
+        /usr/bin/ruby1.8 extconf.rb
+extconf.rb:1:in `require': no such file to load -- mkmf (LoadError)
+	from extconf.rb:1`
+
+
 
 ### 3. Configure Mailpile!
 
