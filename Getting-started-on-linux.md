@@ -29,7 +29,9 @@ If you get the following error you might want to install the _build-essential_ p
 `
 ERROR:  Error installing therubyracer:
 	ERROR: Failed to build gem native extension.
+
         /usr/bin/ruby1.8 extconf.rb
+
 extconf.rb:1:in require: no such file to load -- mkmf (LoadError)
 	from extconf.rb:1
 `
