@@ -28,8 +28,8 @@ endpoints be used for automation.
     /api/0/contact/importers/
     /api/0/contact/list/      [--lines]/[<terms>]/
                               ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
-    /api/0/filter/list/       [<search>|=<id>]/
-    /api/0/help/              [<command-group>|variables]/
+    /api/0/filter/list/       [<search>|=<id>|@<type>]/
+    /api/0/help/              [<command-group>]/
     /api/0/help/splash/
     /api/0/help/urlmap/
     /api/0/help/variables/
