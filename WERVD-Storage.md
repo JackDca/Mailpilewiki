@@ -55,14 +55,14 @@ to disk and automatic detection and recovery from corruption.
 
 ### Encryption and File Format
 
-The encryption used is AES-256-GCM, with a per-file nonce. The file
+The encryption used is AES-256-CBC, with a per-file nonce. The file
 format embeds the encryption scheme, so this can be changed at a later
 date. The file content is stored as base64 data (base64 encoded after
 encryption), with a simple header and footer delimiting the beginning
 and end of the data, as follows:
 
     -----BEGIN MAILPILE ENCRYPTED DATA-----
-    cipher: aes-256-gcm
+    cipher: aes-256-cbc
     nonce: NONCE-STRING
 
     ...BASE64-ENCODED-DATA...
