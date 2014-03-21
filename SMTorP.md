@@ -22,15 +22,27 @@ summit hackdays (Reykjavík, Feb 20th & 21st, 2014) validating that the idea
 is at least quite simple to implement. To test it yourself:
 
 1. Install Tor and the Python socksipy or socksipychain module
-2. [Configure Tor for a hidden service mapping](https://www.torproject.org/docs/tor-hidden-service) `something.onion:25` to `localhost:33412`
+2. [Configure Tor for a hidden service mapping](https://www.torproject.org/docs/tor-hidden-service)
+   `something.onion:25` to `localhost:33412`
 3. Enable the smtp_server plugin:
 
     mailpile> append sys.plugins smtp_server
 
 4. Restart Mailpile.
+5. Set the STMP server port to the port used above:
+
+    mailpile> set sys.smtpd.port = 33412
+
+6. Restart Mailpile again.
 
 You should now be able to send mail to `foo@bar.onion`, and receive
 incoming on the Tor hidden service domain configured in step 2.
+
+**WARNING:** This exposes the built-in SMTP server to the Tor network,
+anyone who knows (or guesses?) your .onion address may connect to the
+SMTP server and wreak havoc.  The SMTP server is currently known to be
+a security hole, see https://github.com/pagekite/Mailpile/issues/532
+for details and progress on this issue.
 
 
 ## High level goals
