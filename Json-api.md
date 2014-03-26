@@ -1,2 +1,1 @@
-
-See doc/URLS.md for details.
+See [the URLs list](https://github.com/pagekite/Mailpile/wiki/URLS) for details.
