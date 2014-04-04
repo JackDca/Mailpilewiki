@@ -28,11 +28,16 @@ endpoints be used for automation.
     /api/0/contact/importers/
     /api/0/contact/list/      [--lines]/[<terms>]/
                               ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
+    /api/0/crypto/gpg/searchkey/<terms>/
+                                ?q=[search terms]
+    /api/0/eventlog/          [incomplete]/[wait]/[<count>]/[<field>=<val>/...]/
+                              ?private_data=[var:value]&source=[source class]&flag=[require a flag]&flags=[match all flags]&since=[wait for new data?]&data=[var:value]&incomplete=[incomplete events only?]&wait=[wait for new data?]
     /api/0/filter/list/       [<search>|=<id>|@<type>]/
     /api/0/help/              [<command-group>]/
     /api/0/help/splash/
     /api/0/help/urlmap/
     /api/0/help/variables/
+    /api/0/jsapi/
     /api/0/message/           [raw]/<message>/
                               ?mid=[metadata-ID]
     /api/0/message/download/  <msgs>/<att>/[><fn>]/
@@ -42,7 +47,7 @@ endpoints be used for automation.
     ... POST only: mid=[message-id]
     /api/0/page/
     /api/0/search/            [@<start>]/<terms>/
-                              ?q=[search terms]&start=[start position]&end=[end position]&order=[sort order]
+                              ?q=[search terms]&start=[start position]&full=[return all metadata]&end=[end position]&order=[sort order]
     /api/0/search/address/    [<terms>]/
                               ?q=[search terms]&count=[number of results]&offset=[offset results]
     /api/0/settings/          <var>/
@@ -55,6 +60,13 @@ endpoints be used for automation.
                               ?@contactemail=[e-mail address]&@contactname=[Contact name]
     /api/0/contact/addline/   <email>/<lines>/
     /api/0/contact/remove/    <email>/
+    /api/0/crypto/gpg/importkey/<key_file>/
+                                ?key_data=[Contents of public key to be imported]&key_file=[Location of file containing the public key]
+    /api/0/crypto/gpg/receivekey/<keyid>/
+                                 ?keyid=[ID of key to fetch]
+    /api/0/crypto/nicknym/getkey/<address>/[<keytype>]/[<server>]/
+                                 ?keytype=[What type of key to import (defaults to OpenPGP)]&server=[The Nicknym server to use (defaults to autodetect)]&address=[The nick/address to fetch a key for]
+    /api/0/crypto/nicknym/refreshkeys/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/compose/   [ephemeral]/
@@ -119,11 +131,18 @@ endpoints be used for automation.
     /contact/importers/
     /contact/list/
     /contact/remove/
+    /crypto/gpg/importkey/
+    /crypto/gpg/receivekey/
+    /crypto/gpg/searchkey/
+    /crypto/nicknym/getkey/
+    /crypto/nicknym/refreshkeys/
+    /eventlog/
     /filter/list/
     /help/
     /help/splash/
     /help/urlmap/
     /help/variables/
+    /jsapi/
     /message/
     /message/attach/
     /message/compose/
