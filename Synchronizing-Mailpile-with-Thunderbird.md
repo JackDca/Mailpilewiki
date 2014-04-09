@@ -1,4 +1,4 @@
-A lot of people use Thunderbird (or Icedove) as their main mail application, and may wish to use Thunderbird as their mail importer and frontend during this phase in the development of Mailpile. There are two things Mailpile can import from Thunderbird presently: Thunderbird's mboxes, which contain mail, and it's Mork databases, which are contact address books.
+A lot of people use Thunderbird (or Icedove) as their main mail application, and may wish to use Thunderbird as their mail importer and frontend during this phase in the development of Mailpile. There are two things Mailpile can import from Thunderbird presently: Thunderbird's mboxes, which contain mail, and its Mork databases, which are contact address books.
 
 ## Finding your profile
 Your Thunderbird data resides in your Thunderbird profile directory. On Windows, that will be `\AppData\Roaming\Thunderbird\Profiles\<Profile name>\`, on MacOS you can find it in either `~/Library/Thunderbird/Profiles/<Profile name>/` or `~/Library/Application Support/Thunderbird/Profiles/<Profile name>/`, and on most other systems it will be in `~/.thunderbird/<Profile name>`.
