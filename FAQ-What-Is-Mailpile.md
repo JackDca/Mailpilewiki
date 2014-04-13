@@ -20,11 +20,11 @@ Yes, your data would still be copied to Gmail, Yahoo, or Hotmail's servers (as w
 
 ### How much does Mailpile cost?
 
-Mailpile is free of charge, you just download it and use it. It is also free of advertisements. Development is supported by voluntary donations from our community, from people like yourself who want a more secure and privacy friendly solution for e-mail. We accept donations here: https://www.mailpile.is/donate/
+Mailpile is free of charge, you just download it and use it. It is also free of advertisements. Development is supported by voluntary donations from our community, from people like yourself who want a more secure and privacy friendly solution for e-mail. We accept donations here: [https://www.mailpile.is/donate/](https://www.mailpile.is/donate/)
 
 ### I am a techie, can I change how Mailpile works?
 
-Yes, Mailpile is 100% Free, Open Source Software. You can find the source code online and make any changes you please here: https://github.com/pagekite/Mailpile
+Yes, Mailpile is 100% Free, Open Source Software. You can find the source code online and make any changes you please here: [https://github.com/pagekite/Mailpile](https://github.com/pagekite/Mailpile)
 
 ### If anyone can view the code & change Mailpile, doesn't that make it less secure?
 
