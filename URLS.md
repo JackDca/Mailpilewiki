@@ -46,6 +46,9 @@ endpoints be used for automation.
     /api/0/message/unthread/
     ... POST only: mid=[message-id]
     /api/0/page/
+    /api/0/plugins/           [<plugins>]/
+    /api/0/plugins/disable/   <plugin>/
+    /api/0/plugins/load/      <plugin>/
     /api/0/search/            [@<start>]/<terms>/
                               ?q=[search terms]&start=[start position]&full=[return all metadata]&end=[end position]&order=[sort order]
     /api/0/search/address/    [<terms>]/
@@ -154,6 +157,9 @@ endpoints be used for automation.
     /message/update/
     /message/update/send/
     /page/
+    /plugins/
+    /plugins/disable/
+    /plugins/load/
     /search/
     /search/address/
     /settings/
