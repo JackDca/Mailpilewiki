@@ -8,6 +8,7 @@
 * [[Filters]]
 * [[Event Log]]
 * [[APIs]]
+** [[Plugins]] (New)
 ** [[Plugin API]]
 *** [[Search engine plugins]]
 *** [[Contact plugins]]
