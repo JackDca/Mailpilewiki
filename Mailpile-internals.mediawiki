@@ -9,7 +9,7 @@
 * [[Event Log]]
 * [[APIs]]
 ** [[Plugins]] (New)
-** [[Plugin API]]
+** [[Plugin API]] (Old -- being phased out)
 *** [[Search engine plugins]]
 *** [[Contact plugins]]
 *** [[Command plugins]]
