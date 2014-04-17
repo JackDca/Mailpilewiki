@@ -1,5 +1,3 @@
-## The basics ##
-
 Commands are the basic building block of the Mailpile back-end application.
 Most commands are both exposed to the user on the CLI, and to the web
 interface as HTML pages or as REST API endpoints.
@@ -14,13 +12,12 @@ A new command is registered with the plugin interface using
 
 Coding examples may be found in `mailpile/plugins/demos.py`.
 
-
-### A basic Command:
+## A basic Command:
 
 FIXME: insert md5sumCommand from demos.py
 
 
-### Command attributes
+## Command attributes
 
 All command classes have a few standard attributes which describe their
 function to the rest of the app (and the user), including preferences for how
@@ -29,12 +26,12 @@ default go into the event log.
 
 The base `Command` class defines reasonable defaults for most attributes.
 
-#### Required attributes:
+### Required attributes:
 
 * `SYNOPSIS = ('opt-char', 'cli-name', 'api-name', 'parameters')`
 * `ORDER = ('category' string, order int)`
 
-#### Optional:
+### Optional:
 
 * `HTTP_CALLABLE = ('GET', 'POST', 'PUT', 'DELETE', ...)`
 ...
