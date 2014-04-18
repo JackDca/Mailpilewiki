@@ -6,7 +6,7 @@ The new Mailpile plugin architecture allows you to create and install plugin pac
 
 When you decide to make a plugin, you will normally have some functionality in mind. It could be expanding on any number of Mailpile's features or providing entirely new features. For instance, a plugin might add a new way to visualize your inbox, or support importing contacts from a new type of file format or online service. It could also add support for a calendar, instant messaging, or something else entirely new to Mailpile. The sky is not the limit!
 
-The first thing to do is to make a directory for your plugin `plugins/your-awesome-thing` or copy our `demos` folder and rename it. Then start poking around. Most things should become clear, for everything else, read on...
+The first thing to do is to make a directory for your plugin `plugins/my-awesome-plugin` or copy our `demos` folder and rename it. Then start poking around. Most things should become clear, for everything else, read on...
 
 ## Plugin layout
 
@@ -23,7 +23,7 @@ A manifest file is a valid strict JSON file, with one exception: a line where th
 So, as a barebones example, your manifest file could be:
     
     {
-        "name": "My plugin",
+        "name": "my-awesome-plugin",
         "author": "J. Random Hacker <jrh@example.com>",
         "code": {
             "javascript": [],
