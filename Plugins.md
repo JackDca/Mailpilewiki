@@ -25,7 +25,6 @@ So, as a barebones example, your manifest file could be:
     {
         "name": "My plugin",
         "author": "J. Random Hacker <jrh@example.com>",
-        
         "code": {
             "javascript": [],
             "python": [],
