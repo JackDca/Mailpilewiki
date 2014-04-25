@@ -5,13 +5,15 @@ When listing shortcuts, if we say "ctrl+c" it means "hold down ctrl and press c"
 | Shortcut | Description                                                              |
 | -------- | ------------------------------------------------------------------------ |
 |  /       | Focus search box                                                         |
-|  c       | Compose new message                                                      |
+| c        | Compose new message                                                      |
 | g i      | Go to tag:Inbox                                                          |
 | g c      | Go to contacts list                                                      |
 | g n c    | Add a new contact                                                        |
 | g n m    | Compose new message                                                      |
 | g t      | Go to tag (an input box will pop up)                                     |
-| s        | Moves selected messages to Spam                                          |
-| d        | Moves selected messages to Trash                                         |
 | t        | Open tag editor modal                                                    |
+| d        | Moves selected messages to Trash                                         |
+| s        | Moves selected messages to Spam                                          |
+| r        | Marks selected messages as Read                                          |
+| u        | Marks selected messages as Unread                                        |
 | esc      | Break out of whichever sequence or mode you're in                        |
