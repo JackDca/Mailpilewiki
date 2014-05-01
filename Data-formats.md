@@ -1,3 +1,5 @@
+## API command output
+* [[PGP import commands]]
 
 ## Mailbox formats
 * Maildir
