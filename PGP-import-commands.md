@@ -10,7 +10,7 @@ PGP import commands all return four items in the result structure:
 Most of these statistics are not useful in most cases but may be of interest in edge cases. They are mostly included for completeness, since we get these statistics anyway from the GnuPG result.
 
 ```json
-  "results": {
+{
    "count": 2, 
    "imported": 0, 
    "imported_rsa": 0, 
@@ -25,7 +25,7 @@ Most of these statistics are not useful in most cases but may be of interest in 
    "sec_read": 0, 
    "skipped_new_keys": 0, 
    "unchanged": 2
-  }, 
+}
 ```
 
  * count: How many keys were processed
@@ -52,8 +52,10 @@ Imported and updated contain lists of details, where each entry is like so:
     "details": 0, 
     "details_text": "unchanged", 
     "fingerprint": "B2216FD2779AE5B59D79743CD5DC2A79C2E4AE92"
-   }, 
+   }
 ```
+
+`details_text` contains a rough description of what happened. `fingerprint` contains the key's fingerprint.
 
 The `details` field conforms to the details field in [GnuPG's IMPORT_OK status][1], which is an integer field comprised of these values OR'd together:
 
@@ -66,7 +68,13 @@ The `details` field conforms to the details field in [GnuPG's IMPORT_OK status][
 
 ## Failed
 
-...
+The failed structure is very similar to the Updated/Imported structure, but the `details` field is different, conforming to [GnuPG's IMPORT_PROBLEM status][1]:
+
+ * 0 : No specific reason given.
+ * 1 : Invalid Certificate.
+ * 2 : Issuer Certificate missing.
+ * 3 : Certificate Chain too long.
+ * 4 : Error storing certificate.
 
 
  [1]: https://gitorious.org/gnupg/mainline/source/927377bc91288d121a7d8bdbb3c32d8fc728e9fb:doc/DETAILS
