@@ -7,6 +7,8 @@ PGP import commands all return four items in the result structure:
 
 ## Results
 
+Most of these statistics are not useful in most cases but may be of interest in edge cases. They are mostly included for completeness, since we get these statistics anyway from the GnuPG result.
+
 ```json
   "results": {
    "count": 2, 
@@ -25,6 +27,21 @@ PGP import commands all return four items in the result structure:
    "unchanged": 2
   }, 
 ```
+
+ * count: How many keys were processed
+ * imported: How many keys were imported as new
+ * imported_rsa: How many of the newly imported keys were RSA keys
+ * no_userids: Number of keys without a User ID
+ * not_imported: Number of keys specifically not imported
+ * num_revoked: Number of keys that were revoked through the action
+ * num_signatures: Number of new signatures seen
+ * num_subkeys: Number of new subkeys seen
+ * num_uids: Number of User ID's imported
+ * sec_dups: Private key duplicates seen
+ * sec_imported: Private keys imported
+ * sec_read: Private keys processed
+ * skipped_new_keys: New keys which were ignored
+ * unchanged: How many keys were left unchanged
 
 ### Imported, Updated
 
