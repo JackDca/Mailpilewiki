@@ -30,9 +30,11 @@ endpoints be used for automation.
                               ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
     /api/0/crypto/gpg/searchkey/<terms>/
                                 ?q=[search terms]
+    /api/0/crypto_policy/     [<emailaddresses>]/
     /api/0/eventlog/          [incomplete]/[wait]/[<count>]/[<field>=<val>/...]/
                               ?private_data=[var:value]&source=[source class]&flag=[require a flag]&flags=[match all flags]&since=[wait for new data?]&data=[var:value]&incomplete=[incomplete events only?]&wait=[wait for new data?]
     /api/0/filter/list/       [<search>|=<id>|@<type>]/
+                              ?search=[Text to search for]&type=[Filter type]&id=[Filter ID]
     /api/0/help/              [<command-group>]/
     /api/0/help/splash/
     /api/0/help/urlmap/
@@ -53,7 +55,9 @@ endpoints be used for automation.
                               ?q=[search terms]&count=[number of results]&offset=[offset results]
     /api/0/settings/          <var>/
                               ?var=[section.variable]
-    /api/0/tag/list/          [<wanted>|!<wanted>]/[...]/
+    /api/0/tags/              [<wanted>|!<wanted>]/[...]/
+    /api/0/tags/add/          <tag>/
+    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[label color]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[tag icon]
 
 ### POST
 
@@ -63,19 +67,25 @@ endpoints be used for automation.
     /api/0/contact/remove/    <email>/
     /api/0/crypto/gpg/importkey/<key_file>/
                                 ?key_data=[Contents of public key to be imported]&key_file=[Location of file containing the public key]
+    /api/0/crypto/gpg/importkeyfrommail/<mid>/
+                                        ?att=[Attachment ID]&mid=[Message ID]
     /api/0/crypto/gpg/receivekey/<keyid>/
                                  ?keyid=[ID of key to fetch]
     /api/0/crypto/nicknym/getkey/<address>/[<keytype>]/[<server>]/
                                  ?keytype=[What type of key to import (defaults to OpenPGP)]&server=[The Nicknym server to use (defaults to autodetect)]&address=[The nick/address to fetch a key for]
     /api/0/crypto/nicknym/refreshkeys/
+    /api/0/crypto_policy/set/ <email/address>/none|sign|encrypt|sign-encrypt|default/
+                              ?policy=[new policy]&email=[contact email]
+    /api/0/filter/list/       [<search>|=<id>|@<type>]/
+                              ?search=[Text to search for]&type=[Filter type]&id=[Filter ID]
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/compose/   [ephemeral]/
-    ... POST only: body=[..]&to=[..]&from=[..]&cc=[..]&encryption=[..]&bcc=[..]&mid=[metadata-ID]&subject=[..]
+    ... POST only: body=[..]&from=[..]&cid=[canned response metadata-ID]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
     /api/0/message/forward/   [att|ephemeral]/<messages>/
-                              ?atts=[forward attachments]&ephemeral=[ephemerality]&mid=[metadata-ID]
+                              ?atts=[forward attachments]&ephemeral=[ephemerality]&mid=[metadata-ID]&cid=[canned response metadata-ID]
     /api/0/message/reply/     [all|ephemeral]/<messages>/
-                              ?reply_all=[reply to all]&ephemeral=[ephemerality]&mid=[metadata-ID]
+                              ?reply_all=[reply to all]&ephemeral=[ephemerality]&mid=[metadata-ID]&cid=[canned response metadata-ID]
     /api/0/message/send/      <messages>/[<emails>]/
     ... POST only: to=[recipients]&mid=[metadata-ID]
     /api/0/message/unthread/
@@ -92,9 +102,10 @@ endpoints be used for automation.
     ... POST only: var=[section.variables]
     /api/0/tag/               <[+|-]tags>/<msgs>/
     ... POST only: add=[tags]&del=[tags]&mid=[message-ids]
-    /api/0/tag/add/           <tag>/
-    ... POST only: parent=[parent tag ID]&label_color=[label color]&name=[tag name]&template=[tag template type]&display=[tag display type]&label=[display as label in search results, or not]&search_terms=[magic search terms associated with this tag]&slug=[tag slug]&icon=[tag icon]
-    /api/0/tag/delete/        <tag>/
+    /api/0/tags/add/          <tag>/
+    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[label color]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[tag icon]
+    /api/0/tags/delete/       <tag>/
+    ... POST only: tag=[tag(s) to delete]
 
 ### UPDATE
 
@@ -115,7 +126,9 @@ endpoints be used for automation.
 ### DELETE
 
     /api/0/contact/remove/    <email>/
-    /api/0/tag/delete/        <tag>/
+    /api/0/tags/delete/       <tag>/
+    ... POST only: tag=[tag(s) to delete]
+
 
 
 ## Pretty shortcuts (HTML output)
@@ -137,10 +150,13 @@ endpoints be used for automation.
     /contact/list/
     /contact/remove/
     /crypto/gpg/importkey/
+    /crypto/gpg/importkeyfrommail/
     /crypto/gpg/receivekey/
     /crypto/gpg/searchkey/
     /crypto/nicknym/getkey/
     /crypto/nicknym/refreshkeys/
+    /crypto_policy/
+    /crypto_policy/set/
     /eventlog/
     /filter/list/
     /help/
@@ -170,9 +186,17 @@ endpoints be used for automation.
     /settings/set/
     /settings/unset/
     /tag/
+<<<<<<< HEAD
     /tag/add/
     /tag/delete/
     /tag/list/
 
 [?1034h
+=======
+    /tags/
+    /tags/add/
+    /tags/delete/
+
+
+>>>>>>> 1d609f4fdcff5b5d8b577c5cd1f0731d0974ffde
 <!-- TestResults(failed=0, attempted=46) -->

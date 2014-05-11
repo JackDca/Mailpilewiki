@@ -180,6 +180,9 @@ Possible situations:
    * Not encrypted. Unknown signing key.
    * Not encrypted. Good signature.
 
+## Original Icons
+
+The following icons have been designed originally for Mailpile and are open & free for anyone to use for relevant crypto UI feedback in other applications! The more applications which adopt the same (or similar) icons, the better this will be for the user experience (and understanding of encryption) as they will already have an understanding of meaning as they move from app to app.
 
 ![Signature Icons](https://brennannovak.com/uploads/images/designs/Mailpile_Icons_Signatures.png)
 

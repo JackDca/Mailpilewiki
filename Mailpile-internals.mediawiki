@@ -8,7 +8,8 @@
 * [[Filters]]
 * [[Event Log]]
 * [[APIs]]
-** [[Plugin API]]
+** [[Plugins]] (New)
+** [[Plugin API]] (Old -- being phased out)
 *** [[Search engine plugins]]
 *** [[Contact plugins]]
 *** [[Command plugins]]
