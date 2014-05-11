@@ -43,11 +43,12 @@ endpoints be used for automation.
     /api/0/message/download/  <msgs>/<att>/[><fn>]/
     /api/0/message/draft/     [<messages>]/
                               ?mid=[metadata-ID]
-    /api/0/message/unthread/
-    ... POST only: mid=[message-id]
     /api/0/page/
+    /api/0/plugins/           [<plugins>]/
+    /api/0/plugins/disable/   <plugin>/
+    /api/0/plugins/load/      <plugin>/
     /api/0/search/            [@<start>]/<terms>/
-                              ?q=[search terms]&start=[start position]&full=[return all metadata]&end=[end position]&order=[sort order]
+                              ?qr=[search refinements]&end=[end position]&q=[search terms]&start=[start position]&full=[return all metadata]&order=[sort order]
     /api/0/search/address/    [<terms>]/
                               ?q=[search terms]&count=[number of results]&offset=[offset results]
     /api/0/settings/          <var>/
@@ -72,11 +73,13 @@ endpoints be used for automation.
     /api/0/message/compose/   [ephemeral]/
     ... POST only: body=[..]&to=[..]&from=[..]&cc=[..]&encryption=[..]&bcc=[..]&mid=[metadata-ID]&subject=[..]
     /api/0/message/forward/   [att|ephemeral]/<messages>/
-                              ?mid=[metadata-ID]
+                              ?atts=[forward attachments]&ephemeral=[ephemerality]&mid=[metadata-ID]
     /api/0/message/reply/     [all|ephemeral]/<messages>/
-                              ?mid=[metadata-ID]
+                              ?reply_all=[reply to all]&ephemeral=[ephemerality]&mid=[metadata-ID]
     /api/0/message/send/      <messages>/[<emails>]/
     ... POST only: to=[recipients]&mid=[metadata-ID]
+    /api/0/message/unthread/
+    ... POST only: mid=[message-id]
     /api/0/message/update/    <messages>/<<filename>/
     ... POST only: body=[..]&file-data=[file data]&from=[..]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
     /api/0/message/update/send/
@@ -98,6 +101,8 @@ endpoints be used for automation.
     /api/0/contact/addline/   <email>/<lines>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
+    /api/0/message/unthread/
+    ... POST only: mid=[message-id]
     /api/0/message/update/    <messages>/<<filename>/
     ... POST only: body=[..]&file-data=[file data]&from=[..]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
     /api/0/message/update/send/
@@ -111,6 +116,7 @@ endpoints be used for automation.
 
     /api/0/contact/remove/    <email>/
     /api/0/tag/delete/        <tag>/
+
 
 ## Pretty shortcuts (HTML output)
 
@@ -154,6 +160,9 @@ endpoints be used for automation.
     /message/update/
     /message/update/send/
     /page/
+    /plugins/
+    /plugins/disable/
+    /plugins/load/
     /search/
     /search/address/
     /settings/
@@ -164,3 +173,6 @@ endpoints be used for automation.
     /tag/add/
     /tag/delete/
     /tag/list/
+
+[?1034h
+<!-- TestResults(failed=0, attempted=46) -->
