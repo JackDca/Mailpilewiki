@@ -19,7 +19,7 @@ sudo python get-pip.py
 ```
 
 
-Install latest version of ‘lxml’ using Static Dependancies:  
+Install latest version of ‘lxml’ using Static Dependencies:  
 ```
 sudo STATIC_DEPS=true pip install lxml  
 ```
