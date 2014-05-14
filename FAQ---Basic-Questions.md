@@ -14,6 +14,10 @@ When Mailpile is ready, that should be an option, yes.
 
 There is no such thing! Mailpile is software you run on you computer, not an e-mail service provider. So you can just use the e-mail addresses you have already, or sign up for a new one somewhere.
 
+### Can I get a cool @mailpile.is email address?
+
+No, unfortunately those are currently only for our core team members & company. This may change in the future, or it may not. Absolutely no promises on this!
+
 ### Can I still Donate?
 
 Yes, we would love for you to [support us](https://mailpile.is/donate/).
