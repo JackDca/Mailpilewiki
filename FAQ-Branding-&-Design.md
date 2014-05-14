@@ -20,4 +20,4 @@ We thought more natural tones would humanize the user experience and make compli
 
 ### Your font looks a bit fuzzy in my browser
 
-Our font is currently still being developed and released under a fully open & free license- the SIL Open Font License (OFL)
+Our font is currently still being developed. Currently, the "bold" weight is being generated in the browser, this is not a good way to do things (and looks really terrible in FireFox). Once we finish creating an actually bold weight webfont this will improve dramatically. The "mailpile" font will be released under a fully open & free license- the SIL Open Font License (OFL)
