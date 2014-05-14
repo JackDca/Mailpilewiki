@@ -69,3 +69,7 @@ We like this idea, and we would like to implement it at some point, but it's not
 ### Will you support multiple email accounts, not multiple user accounts (different people), this is multiple email accounts for one person.
 
 Yes, this feature is being developed presently.
+
+### Will messages be sent via SMTP from my regular address
+
+Yes, absolutely, Mailpile is an email client that interoperates with the standard email protocol SMTP.
