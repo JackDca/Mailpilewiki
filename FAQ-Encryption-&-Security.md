@@ -122,9 +122,9 @@ Mailpile decrypts incoming e-mails, index them, and re-encrypts them. The search
 
 The e-mail body will be encrypted. We are trying to find ways to make most of the metadata encrypted as well, but some of it can't be because of how e-mail works.
 
-### Is Mailpile going to send GPG encrypted email, where the mail body is encrypted, but all the headers and the metadata are not?
+### Is Mailpile going to send PGP encrypted email, where the mail body is encrypted, but all the headers and the metadata are not?
 
-Yes. We are experimenting with ways to encrypt headers as well using standard GPG + SMTP protocols, but nothing concrete is implemented.
+Yes. We are experimenting with ways to encrypt headers as well using standard PGP + SMTP protocols, but nothing concrete is implemented.
 
 ### Or are you planning to somehow also encrypt the metadata (like in Bitmessage)? Would that even be possible with email?
 
