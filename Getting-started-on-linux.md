@@ -25,7 +25,7 @@ Use one of the following two commands:
     cd Mailpile
     sudo make debian-dev  # Does an apt-get install for requirements
 
-If you get the following error you might want to install _Ruby_ (`sudo apt-get install ruby`) and/or the _build-essential_ package (`sudo apt-get install build-essential`).
+If you get the following error you might want to install _build-essential_ package (`sudo apt-get install build-essential`) and then _Ruby_ (`sudo apt-get install ruby`).
 ```
 ERROR:  Error installing therubyracer:
 	ERROR: Failed to build gem native extension.
