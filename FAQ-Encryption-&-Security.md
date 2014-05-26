@@ -1,34 +1,34 @@
 ### Is Mailpile an encrypted email service?
 
-We are not a service, we are an email client. But Mailpile does support strong encryption.
+Mailpile is not an email service, it is an email client. But Mailpile does support strong encryption.
 
-### What Is your PGP public key?
+### What is your PGP public key?
 
 Standby...
 
 ### Can you please include *insert-some-random-encrypted-service*.
 
-Yah, we'll get right on that- after we get the widely adopted protocols supported robustly ;)
+Yeah, we'll get right to that - after we get the widely adopted protocols supported robustly ;)
 
-### I was looking for private email server that can hide my email address from everyone that I haven't mailed to, does your service provide this? 
+### I was looking for a private email server that can hide my email address from everyone that I haven't mailed to, does your service provide this? 
 
 Nope. That's actually impossible. If anybody tells you they can do this, they are probably lying. Sorry!
 
-### Is  it possible to delete message that you send to someone, but you don't  want them to keep in their account after certain period?  (If not it  should be developed)
+### Is  it possible to delete a message that you send to someone, but you don't want them to keep in their account after certain period? (If not it should be developed).
 
-No, that isn't possible. You can't un-tell somebody something. You can ask them nicely to delete the mail, but if they decide not to, you can't make them. Sorry. Nobody is going to be able to develop that feature in a way that is guaranteed to work, ever. This isn't James Bond.
+No, that isn't possible. You can't un-tell somebody something. You can ask them nicely to delete the mail, but if they decide not to, you can't make them. Sorry. Nobody is going to be able to develop that feature in a way that is guaranteed to work, ever. This isn't a James Bond movie.
 
-### Can  you create a pseudonym email address that only recipient can see to  identify us and send us message to, but it does not reveal my actual  email address?
+### Can you create a pseudonym email address that only the recipient can see to identify us and send us message to, but it does not reveal my actual email address?
 
-That's not really part of the intended use of Mailpile. Somebody might provide this kind of service though - it sounds useful!
+That's not really a part of the intended use of Mailpile. Somebody might provide this kind of service though - it sounds useful!
 
 ### How will you prevent governments from accessing your user database?
 
-Simple: We will not have a user database.
+Simple: We will not have a user database. We do not have any server infrastructure that contains user information. Users install the Mailpile client on their own computers. We do not track people that want to use Mailpile.
 
-### How safe is it to store e-mail metadata in RAM? 
+### How safe is it to store email metadata in RAM (Random-access memory)? 
 
-It's pretty safe. If your computer is compromised, the storage is probably compromised anyway. One attack it exposes you to that storing the metadata on the hard drive doesn't (assuming your hard drive is encrypted!) is a coldboot attack. If you need to be worried about the coldboot attack, you probably need to worry about a lot bigger things than whether Mailpile's metadata is secure anyway.
+It's pretty safe. If your computer is compromised, the storage is probably compromised anyway and you will have bigger things to worry about than your email account.
 
 ### Will it, by default, deploy using encrypted configuration data? 
 
@@ -36,7 +36,7 @@ Yes. Currently this is a configuration option which is turned off by default, bu
 
 ### Would it possible to add support for one-time passwords?
 
-This sounds reasonable. There are a lot of two-factor authentication methods we may consider implementing, but we've not nailed anything down right now.
+This sounds reasonable. There are a lot of two-factor authentication methods we may consider implementing.
 
 ### How secure is the database? Is it stored on an encrypted volume? 
 
@@ -44,17 +44,17 @@ Yes. All configuration data, including the search index, will be encrypted by de
 
 ### How are attachments stored? Are they encrypted, as well? 
 
-They are stored wherever your mail is stored. If that's secure, the attachments are secure. We will provide methods to secure your e-mail, although really you should be using full disk encryption!
+They are stored wherever your email is stored. If that's secure, the attachments are secure. We will provide methods to secure your email, although we recommend you should be using a full disk encryption!
 
-### Will search work with encrypted files? Or, they are residing on some encrypted file system, and seem un-encrypted to it? 
+### Will search work with encrypted files? Or, are they residing on some encrypted file system, and seem un-encrypted to it? 
 
-Mailpile decrypts incoming e-mails, indexes them, and reencrypts them. The search index is stored encrypted, and the terms are stored as hashes. Good enough?
+Mailpile decrypts incoming emails, indexes them, and re-encrypts them. The search index is stored encrypted, and the terms are stored as hashes. Good enough?
 
-### Does Mailpile have no weak points when it comes to privacy/ security? How can they be closed?
+### Does Mailpile have no weak points when it comes to privacy/security? How can they be closed?
 
-Yes. E-mail metadata is hard to secure, because the standards don't really allow for keeping it all secret. We can't do much about that. Also, if the recipient of your e-mail doesn't have a publicly available encryption key, you can't send them encrypted e-mail. Sorry, that's the way public key cryptography works.
+Yes. Email metadata is hard to secure, because the standards don't really allow for keeping it all secret. We can't do much about that. Also, if the recipient of your email doesn't have a publicly available encryption key, you can't send them encrypted email. Sorry, that's the way public key cryptography works.
 
-### The decrypted message is vulnerable/ visible on compromised system? Can it be obfuscated?
+### The decrypted message is vulnerable/visible on compromised system? Can it be obfuscated?
 
 If your system is compromised, you have a very big problem that Mailpile can't really help you solve. We will try to do what we can, but endpoint security is very important.
 
