@@ -2,7 +2,7 @@
 
 Yes. We have been developing Mailpile to support this sort of functionality.
 
-### You used bad words in your video and i didn't like it.
+### You used bad words in your video and I didn't like it.
 
 We apologize you took offensive to some of our branding and creative choices, we were just trying to have fun.
 
