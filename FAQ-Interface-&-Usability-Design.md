@@ -6,9 +6,9 @@ We haven't discussed that, so no. However, it is an open source project so if yo
 
 Yes, this is currently implemented. However, our design is slightly more "conversation" looking that single line snippets.
 
-### How  do we make it easy enough for our elderly parents to use?
+### How do we make it easy enough for our elders to use?
 
-We will do our best to grandma proof everything in Mailpile. That'll of course take years of experimenting and 
+We will do our best to grandma proof everything in Mailpile.
 
 ### Will there be any similarities to Eudora?
 
@@ -18,22 +18,22 @@ None of our team are Eudora users, but we strive to provide all the features pop
 
 Mailpile runs inside a web browser using HTML, CSS, and Javascript which 99% of the time is identical on both Mac and Windows. 
 
-### PGP should be made simple. Does Mailpile's interface do this?
+### PGP encryption should be made simple. Does Mailpile's interface do this?
 
-Yes. That is our goal :)
+Yes! That is our goal :)
 
-### Will the interface inform users if an email they received was encrypted or not?
+### Will Mailpile inform users if an email they received was encrypted or not?
 
-Yes, our interface currently does this, as well as emails that are partially encrypted.
+Yes, Mailpile currently does this, as well as emails that are partially encrypted.
 
-### Will the composing interface make it easy to choose weather I want to encrypt or not encrypt an email?
+### Will the composing interface make it easy to choose whether I want to encrypt or not encrypt an email?
 
 Yes, we have a put a lot of time into thinking about and designing this to be intuitive.
 
-### Is installation going to be a simple double click icon that once installed just opens a browser and loads mailpile?
+### Is installing Mailpile going to be a simple double-click icon that once installed just opens a browser and loads Mailpile?
 
-Yes, that is the goal. Perhpas even a headless instance of webkit that runs separately than your normal browser.
+Yes, that is the goal. Perhaps even a headless instance of web kit that runs separately on your normal browser.
 
-### Why isn't there more access to PGP via the web interface?
+### Why isn't there more access to PGP encryption via the web interface?
 
-Because, Alpha. We are definitely going to expose more of our PGP interface to the web UI like adding, signing and deleting of keys as well as other things. But, development just takes time :)
+Because, this is an Alpha release. We are definitely going to expose more of our PGP encryption interface to the web user interface like adding, signing and deleting of keys as well as other things. Development is in progress.
