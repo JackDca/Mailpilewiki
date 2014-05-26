@@ -1,10 +1,10 @@
-### Will there be Open Source Smilies/Emoticons available in MailPile?
+### Will there be Open Source Smilies/Emoticons available in Mailpile?
 
 We haven't discussed that, so no. However, it is an open source project so if you want to make emoticons then you can.
 
 ### Do you have any plans to implement threaded conversations, like gmail? 
 
-Yes, this is currently implemented. However, our design is slightly more "conversation" looking that single line snippets.
+Yes, this is currently implemented. However, our design is slightly more "conversation" style that single line snippets.
 
 ### How do we make it easy enough for our elders to use?
 
@@ -36,4 +36,4 @@ Yes, that is the goal. Perhaps even a headless instance of web kit that runs sep
 
 ### Why isn't there more access to PGP encryption via the web interface?
 
-Because, this is an Alpha release. We are definitely going to expose more of our PGP encryption interface to the web user interface like adding, signing and deleting of keys as well as other things. Development is in progress.
+This is an Alpha release. We are definitely going to expose more of our PGP encryption interface to the web user interface like adding, signing and deleting of keys as well as other things. Development is in progress.
