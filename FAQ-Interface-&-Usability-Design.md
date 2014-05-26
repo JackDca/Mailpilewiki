@@ -36,4 +36,4 @@ Yes, that is the goal. Perhaps even a headless instance of web kit that runs sep
 
 ### Why isn't there more access to PGP encryption via the web interface?
 
-This is an Alpha release. We are definitely going to expose more of our PGP encryption interface to the web user interface like adding, signing and deleting of keys as well as other things. Development is in progress.
+This is an alpha release. We are definitely going to expose more of our PGP encryption interface to the web user interface like adding, signing and deleting of keys as well as other things. Development is in progress.
