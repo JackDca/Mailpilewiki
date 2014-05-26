@@ -66,13 +66,13 @@ We plan to provide support for that.
 
 Yes!
 
-### Will Maipile support address aliases for incoming mail? (132txche6763fhjf@domain.onion = green_leaf_dude@domain.onion) 
+### Will Mailpile support address aliases for incoming mail? (132txche6763fhjf@domain.onion = green_leaf_dude@domain.onion) 
 
 That's really up to the mail server to decide. Mailpile is a mail client, not a mail server. Sorry!
 
-### Isn't e-mail forwarding a possible breach of security? 
+### Isn't email forwarding a possible breach of security? 
 
-Yes, it is. It's also unavoidable. We can't prevent people from forwarding information - even if we were to do all sorts of magic to make it impossible in Mailpile, somebody could still write down your e-mail on a postcard and send it to a friend. This is called the analog gap. The only solution is, don't send secrets in e-mail to people you don't trust.
+Yes, it is. It's also unavoidable. We can't prevent people from forwarding information - even if we were to do all sorts of magic to make it impossible in Mailpile, somebody could still write down your email on a postcard and send it to a friend. This is called the analog gap. The only solution is, don't send secrets in email to people you don't trust.
 
 ### How will this service compare with something like Hushmail which claims to offer message en/decryption in browser as well as IMAP (if one pays).
 
@@ -80,21 +80,21 @@ Hushmail stores your email data on their servers. Mailpile does not have servers
 
 ### Is MailPile a viable non-centralized solution to issues like those faced by other privacy focused email companies like Lavabit or Silent Circle?
 
-Yes, this is one of our core beliefes and underlying design principles.
+Yes, this is one of our core beliefs and underlying design principles.
 
 ### What happens when you are communicating with people who are still hosted by Google or a self hosted insecure server? Do they need to implement something too? 
 
-People can continue using Gmail or their acamdemic institutions email "server" as Mailpile is just the "client" that allows for sending of encrypted messages.
+People can continue using gmail or their acamdemic institutions email "server" as Mailpile is just the "client" that allows for sending of encrypted messages.
 
 ### Does everyone need to be on your system (and using Mailpile) to be truly secure?
 
-In order to send encrypted email all recipients need to have public & private PGP keys and be encrypting their messages. Many other email clients allow people to send PGP encrypted emails-  Hopefully, Mailpile is the easiest to use ;)
+In order to send encrypted email all recipients need to have public & private PGP keys and be encrypting their messages. Many other email clients allow people to send PGP encrypted emails. Hopefully, Mailpile is the easiest to use ;)
 
 ### You don't mention anything about secure public key distribution. Is this a problem you plan to tackle?
 
 We plan to attach users public keys with outgoing emails. Additionally, since some instances of Mailpile will be accessible over the web, that makes for interesting new opportunities for sharing of keys.
 
-### If  I write an e-mail from my Mailpile to a friend's Gmail, how does the encryption prevent his inbox from scaning the contents of my e-mail ?
+### If I write an email from my Mailpile to a friend's gmail, how does the encryption prevent his inbox from scanning the contents of my email?
 
 As long as both people use encryption, even if one or both people have @gmail.com addresses, Gmail cannot read encrypted email data even if the data ends up being stored on Gmail's servers.
 
@@ -102,7 +102,7 @@ As long as both people use encryption, even if one or both people have @gmail.co
 
 No. We do not have servers and we do not store users private keys. You install our software on your computer which keeps your key nice, safe, and under your control.
 
-### Will Mailpile function similar to Lavabit and use different passwords for IMAP connections that are not related with privatekey password used to to decrypt mails?
+### Will Mailpile function similar to Lavabit and use different passwords for IMAP connections that are not related with private key password used to to decrypt mails?
 
 No. Mailpile is entirely different than Lavabit.
 
@@ -110,11 +110,11 @@ No. Mailpile is entirely different than Lavabit.
 
 We are uncertain about this at the moment.
 
-### Do the mails stay encrypted in your servers or are they stored in plaintext? 
+### Do the mails stay encrypted in your servers or are they stored in plain text? 
 
-We don't have servers, so no.
+We don't have servers, so no. We do not store your emails. Messages are stored on your computer and encrypted with Open PGP. This does not include headers and metadata. However, Mailpile will encrypt metadata on your disc using AES-256-CBC at the moment, with a plan to move to AES-256-GCM in the future for tagging purposes. The keys for the AES are stored in the configuration file, which is PGP encrypted. 
 
-### If emails are encrypted, how do you intend to implement a searching function? 
+### If e-mails are encrypted, how do you intend to implement a searching function? 
 
 Mailpile decrypts incoming e-mails, index them, and re-encrypts them. The search index is stored and also encrypted as well as the terms which are stored as hashes. Good enough?
 
@@ -122,13 +122,13 @@ Mailpile decrypts incoming e-mails, index them, and re-encrypts them. The search
 
 The e-mail body will be encrypted. We are trying to find ways to make most of the metadata encrypted as well, but some of it can't be because of how e-mail works.
 
-### Is Mailpile going to send PGP encrypted email, where the mail body is encrypted, but all the headers and the metadata are not?
+### Is Mailpile going to send PGP encrypted e-mail, where the mail body is encrypted, but all the headers and the metadata are not?
 
-Yes. We are experimenting with ways to encrypt headers as well using standard PGP + SMTP protocols, but nothing concrete is implemented.
+Yes. We are experimenting with ways to encrypt headers as well using standard PGP + SMTP protocols.
 
-### Or are you planning to somehow also encrypt the metadata (like in Bitmessage)? Would that even be possible with email?
+### Or are you planning to somehow also encrypt the metadata (like in Bitmessage)? Would that even be possible with e-mail?
 
-We're going to try and encrypt all the metadata using PGP + SMTP, but email still requires that some of the metadata be unencrypted so mail servers know where to deliver it to. We plan on integrating Bitmessage before 1.0
+We're going to try and encrypt all the metadata using PGP + SMTP, but e-mail still requires that some of the metadata be un-encrypted so that mail servers will know where to deliver it to. We plan on integrating Bitmessage before 1.0
 
 ### Will you use the Perfect Forward Secrecy in your mail ?
 
@@ -146,6 +146,6 @@ We aren't providing a sending service. Our e-mail client can't obfuscate IP addr
 
 Yes we search & create keys. We are not sure yet about automatically submitting to keyservers.
 
-### Does Mailpile support sending SMIME emails?
+### Does Mailpile support sending SMIME e-mails?
 
 No.  We are working on pgp/mime first, getting the metaphors and the UI right before we add alternate encryption schemes. S/MIME is also generally based on PKI which the general consumer may not have easy access to. We expect it'll be supported in the future.
