@@ -32,7 +32,7 @@ Not yet, but this is a good idea! We will think about it.
 
 ### How do I get updates about your project?
 
-We have an IRC channel on Freenode, #mailpile. This is the easiest to get hold of us and ask questions. Otherwise you can follow us on Twitter. Maybe in the future we'll consider having an email address. 
+We have an IRC channel on Freenode, #mailpile. This is the easiest to get hold of us and ask questions. Otherwise you can follow us on Twitter. Maybe in the future we'll consider having a mailing list. 
 
 ### Regarding accessibility, what happens when my computer is offline?
 
