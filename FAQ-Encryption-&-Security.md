@@ -4,7 +4,7 @@ Mailpile is not an email service, it is an email client. But Mailpile does suppo
 
 ### What is your PGP public key?
 
-Standby...
+Our team PGP key is downloadble from here: https://www.mailpile.is/files/team@mailpile.is.asc
 
 ### Can you please include *insert-some-random-encrypted-service*.
 
