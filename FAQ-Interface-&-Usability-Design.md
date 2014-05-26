@@ -1,4 +1,4 @@
-### Will there be Open Source Smilies/Emoticons available in Mailpile?
+### Will there be Open Source Smileys/Emoticons available in Mailpile?
 
 We haven't discussed that, so no. However, it is an open source project so if you want to make emoticons then you can.
 
@@ -32,7 +32,7 @@ Yes, we have a put a lot of time into thinking about and designing this to be in
 
 ### Is installing Mailpile going to be a simple double-click icon that once installed just opens a browser and loads Mailpile?
 
-Yes, that is the goal. Perhaps even a headless instance of web kit that runs separately on your normal browser.
+Yes, that is the goal. Perhaps even a headless instance of a web kit that runs separately on your normal browser.
 
 ### Why isn't there more access to PGP encryption via the web interface?
 
