@@ -2,9 +2,9 @@
 
 Yes, we use "Tags" instead of folders, but they function similarly. We also have a filters feature that works with Tags.
 
-### Is there the ability to sync contact information with an external contact manager like google contacts?
+### Is there the an ability to synchronize contact information with an external contact manager like Google contacts?
 
-We will support importing of contacts from Google Contacts, but not synchronizing back to Google. However, someone may make a plugin to do so
+We will support importing of contacts from Google Contacts, but not synchronizing back to Google. However, someone may make a plugin to do so.
 
 ### Will there be POP and IMAP support?
 
@@ -18,7 +18,7 @@ Not yet, no. But in the future yes.
 
 Perhaps, but we are not excited about Apple's App Store policies as well as their known involvement with the NSA.
 
-### I'd like to write a MailPile app... Can I do that?
+### I'd like to write a Mailpile app... Can I do that?
 
 Sure you can. But realize that you're writing with pre-alpha code or alpha code.
 
@@ -28,7 +28,7 @@ We think this is REALLY cool, hopefully our community will help us make awesome 
 
 ### For the Linux / Unix geeks, like me, will there be command line utilities or interface?
 
-Yes, absolutely, this currently exists as much of our team of linux / unix geeks.
+Yes, absolutely, this currently exists as much of our team of Linux / Unix geeks.
 
 ### Can I interact with Mailpile via XML-RPC?
 
@@ -40,7 +40,7 @@ Yes, this is currently implemented.
 
 ### Make sure users can set different SMTP ports for outgoing mail as most ISPs block port 25
 
-Uses can specify this from the "Settings" interface.
+Users can specify this from the "Settings" interface.
 
 ### Make users should be allowed to choose rather or not SSL is enabled. SSL should be either a self signed key which Mailpile makes, or a key the user provides.
 
@@ -54,7 +54,7 @@ We are not sure how much we want to develop towards supporting Apple's heavily w
 
 Yes, once POP & IMAP is implemented we will support this feature.
 
-### Have the option to auto port forward using NAT-PMP/UPnP and possibly offer a free DNS record on mailpile.is that  is used as a dynamic dns so users can access their mail by going to mrgecko.mailpile.is as an example.
+### Have the option to auto port forward using NAT-PMP/UPnP and possibly offer a free DNS record on mailpile.is that is used as a dynamic DNS so users can access their mail by going to mrgecko.mailpile.is as an example.
 
 This is an interesting idea that we are considering.
 
@@ -64,4 +64,4 @@ Inbox zero is a noble goal. Is that what you meant? We hope to encourage & work 
 
 ### Any plans to provide secure email accounts similar to what Lavabit did?
 
-No plans to do what Lavabit did as they were a centralized solution. Decentralization is one of our main end goals. We are considering offering services (relays, servers) that make the sending of email more secure + allow for decentralization + are sustainable + user friendly
+No plans to do what Lavabit did as they were a centralized solution. Decentralization is one of our main end goals. We are considering offering services (relays, servers) that make the sending of email more secure + allow for decentralization + are sustainable + user friendly.
