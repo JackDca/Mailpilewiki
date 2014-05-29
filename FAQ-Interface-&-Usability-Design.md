@@ -37,3 +37,7 @@ Yes, that is the goal. Perhaps even a headless instance of a web kit that runs s
 ### Why isn't there more access to PGP encryption via the web interface?
 
 This is an alpha release. We are definitely going to expose more of our PGP encryption interface to the web user interface like adding, signing and deleting of keys as well as other things. Development is in progress.
+
+### I do not want automatically grouped conversations. I cannot track this way. Does your program do that too?
+
+The conversations are threaded, but we are considering if we will change that in the future.
