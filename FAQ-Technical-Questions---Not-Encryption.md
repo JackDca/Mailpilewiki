@@ -73,3 +73,7 @@ Yes, this feature is in development.
 ### Will messages be sent via SMTP from my regular address?
 
 Yes, absolutely, Mailpile is an email client that inter-operates with the standard email protocol SMTP.
+
+### I have the server up and running exchange is set to journal mail to a specific account.  Where in mailpile do I specify that account to poll  emails?
+
+We do not have any experience with setting Mailpile up with exchange servers. Please find our wiki on GitHub where you can try to find out how to get started with this.
