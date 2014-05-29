@@ -65,3 +65,7 @@ Inbox zero is a noble goal. Is that what you meant? We hope to encourage & work 
 ### Any plans to provide secure email accounts similar to what Lavabit did?
 
 No plans to do what Lavabit did as they were a centralized solution. Decentralization is one of our main end goals. We are considering offering services (relays, servers) that make the sending of email more secure + allow for decentralization + are sustainable + user friendly.
+
+### Can you backup the mails? / Since I understand they are stored in the computer the backup would be very important. Could the backup be automatic?
+
+The idea is to decentralize emails and not to collect them and store them.  This is why Mailpile is an email client and not an email server. The users are supposed to store their emails themselves in their computers or on USB sticks, so that they will have full ownership and power over their emails, meaning they are not stored with a 3rd party. Therefore, people will have to make and store the backups themselves. For automatic backups you could probably find a software that would do that for you on your computer.
