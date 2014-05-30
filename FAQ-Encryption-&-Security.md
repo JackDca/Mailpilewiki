@@ -149,3 +149,7 @@ Yes we search & create keys. We are not sure yet about automatically submitting 
 ### Does Mailpile support sending SMIME e-mails?
 
 No.  We are working on pgp/mime first, getting the metaphors and the UI right before we add alternate encryption schemes. S/MIME is also generally based on PKI which the general consumer may not have easy access to. We expect it'll be supported in the future.
+
+### I send a lot of email, when it arrives on there servers is it decrypted or does decryption take place on the computer of the person who is supposed to receive it?
+
+You do not have any control over how the recipients of your mail is going to PGP decrypt the encrypted emails they receive from you, since the setup of emails can vary a lot.
