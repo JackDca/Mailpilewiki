@@ -41,3 +41,7 @@ This is an alpha release. We are definitely going to expose more of our PGP encr
 ### I do not want automatically grouped conversations. I cannot track this way. Does your program do that too?
 
 The conversations are threaded, but we are considering if we will change that in the future.
+
+### I love your mail client do you know its cpanel ready?
+
+We are currently quite far from having a cpanel, but we plan to have it in the future. At the moment we are working hard on our Beta which is planned for this summer.
