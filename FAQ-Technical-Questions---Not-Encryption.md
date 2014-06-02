@@ -77,3 +77,7 @@ Yes, absolutely, Mailpile is an email client that inter-operates with the standa
 ### I have the server up and running exchange is set to journal mail to a specific account.  Where in mailpile do I specify that account to poll  emails?
 
 We do not have any experience with setting Mailpile up with exchange servers. Please find our wiki on GitHub where you can try to find out how to get started with this.
+
+### I have a dedicated server with openbsd and postfix, I have apache, php, mysql. I can use Mailpile to give my users access webmail?
+
+Once we have a stable release (our Beta release is planned for end of July this year) you should be  able to download the Mailpile client and store it on your server.
