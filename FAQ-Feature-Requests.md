@@ -69,3 +69,7 @@ No plans to do what Lavabit did as they were a centralized solution. Decentraliz
 ### Can you backup the mails? / Since I understand they are stored in the computer the backup would be very important. Could the backup be automatic?
 
 The idea is to decentralize emails and not to collect them and store them.  This is why Mailpile is an email client and not an email server. The users are supposed to store their emails themselves in their computers or on USB sticks, so that they will have full ownership and power over their emails, meaning they are not stored with a 3rd party. Therefore, people will have to make and store the backups themselves. For automatic backups you could probably find a software that would do that for you on your computer.
+
+### Will it be possible to send an encrypted email to several recipients at once?
+
+Yes it is possible to send an encrypted mail to several recipients at once. It is encrypted with multiple different keys. It should be possible in the Alpha version already, but if it turns out to be bugged, then wait for the Beta version that is planned for release at the end of July 2014.
