@@ -1,3 +1,7 @@
+### What is Mailpile? Is it an email service?
+
+Mailpile is an email client used for encrypting/decrypting emails and not an email service. Mailpile does currently not issue its own email accounts/addresses. You can use your existing email address on top of Mailpile. If your existing email service stores your emails on  their servers, then they will not be able to read the encrypted emails. The Mailpile client is used for sending/receiving, managing, organizing and storing emails on your computer/USB/cloud. 
+
 ### Is Mailpile real?
 
 Yes, and so are we!
