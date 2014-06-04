@@ -136,7 +136,6 @@ endpoints be used for automation.
     ... POST only: tag=[tag(s) to delete]
 
 
-
 ## Pretty shortcuts (HTML output)
 
     /           Redirects to /in/inbox/ for now.  (FIXME)
@@ -195,17 +194,9 @@ endpoints be used for automation.
     /settings/set/
     /settings/unset/
     /tag/
-<<<<<<< HEAD
-    /tag/add/
-    /tag/delete/
-    /tag/list/
-
-[?1034h
-=======
     /tags/
     /tags/add/
     /tags/delete/
 
 
->>>>>>> 1d609f4fdcff5b5d8b577c5cd1f0731d0974ffde
 <!-- TestResults(failed=0, attempted=46) -->
