@@ -22,14 +22,18 @@ endpoints be used for automation.
 ### GET (also accept POST)
 
     /api/0/contact/           [<email>]/
-    /api/0/contact/add/       <msgs>/
-                              ?@contactemail=[e-mail address]&@contactname=[Contact name]
-    /api/0/contact/import/    [<parameters>]/
-    /api/0/contact/importers/
-    /api/0/contact/list/      [--lines]/[<terms>]/
+    /api/0/contacts/          [--lines]/[<terms>]/
                               ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
+    /api/0/contacts/add/      <msgs>/
+    ... POST only: mid=[Message ID]&email=[e-mail address]&name=[Contact name]
+    /api/0/contacts/import/   [<parameters>]/
+    /api/0/contacts/importers/
+    /api/0/crypto/gpg/keylist/<address>/
+                              ?address=[E-mail address]
     /api/0/crypto/gpg/searchkey/<terms>/
                                 ?q=[search terms]
+    /api/0/crypto/gpg/statistics/<address>/
+                                 ?address=[E-mail address]
     /api/0/crypto_policy/     [<emailaddresses>]/
     /api/0/eventlog/          [incomplete]/[wait]/[<count>]/[<field>=<val>/...]/
                               ?private_data=[var:value]&source=[source class]&flag=[require a flag]&flags=[match all flags]&since=[wait for new data?]&data=[var:value]&incomplete=[incomplete events only?]&wait=[wait for new data?]
@@ -57,20 +61,22 @@ endpoints be used for automation.
                               ?var=[section.variable]
     /api/0/tags/              [<wanted>|!<wanted>]/[...]/
     /api/0/tags/add/          <tag>/
-    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[label color]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[tag icon]
+    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[03-gray-dark]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[icon-tag]
 
 ### POST
 
-    /api/0/contact/add/       <msgs>/
-                              ?@contactemail=[e-mail address]&@contactname=[Contact name]
-    /api/0/contact/addline/   <email>/<lines>/
-    /api/0/contact/remove/    <email>/
+    /api/0/contacts/add/      <msgs>/
+    ... POST only: mid=[Message ID]&email=[e-mail address]&name=[Contact name]
+    /api/0/contacts/addline/  <email>/<lines>/
+    /api/0/contacts/remove/   <email>/
     /api/0/crypto/gpg/importkey/<key_file>/
                                 ?key_data=[Contents of public key to be imported]&key_file=[Location of file containing the public key]
     /api/0/crypto/gpg/importkeyfrommail/<mid>/
                                         ?att=[Attachment ID]&mid=[Message ID]
     /api/0/crypto/gpg/receivekey/<keyid>/
                                  ?keyid=[ID of key to fetch]
+    /api/0/crypto/gpg/signkey/<keyid>/[<signingkey>]/
+                              ?signingkey=[The key to sign with]&keyid=[The key to sign]
     /api/0/crypto/nicknym/getkey/<address>/[<keytype>]/[<server>]/
                                  ?keytype=[What type of key to import (defaults to OpenPGP)]&server=[The Nicknym server to use (defaults to autodetect)]&address=[The nick/address to fetch a key for]
     /api/0/crypto/nicknym/refreshkeys/
@@ -103,13 +109,13 @@ endpoints be used for automation.
     /api/0/tag/               <[+|-]tags>/<msgs>/
     ... POST only: add=[tags]&del=[tags]&mid=[message-ids]
     /api/0/tags/add/          <tag>/
-    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[label color]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[tag icon]
+    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[03-gray-dark]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[icon-tag]
     /api/0/tags/delete/       <tag>/
     ... POST only: tag=[tag(s) to delete]
 
 ### UPDATE
 
-    /api/0/contact/addline/   <email>/<lines>/
+    /api/0/contacts/addline/  <email>/<lines>/
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]
     /api/0/message/unthread/
@@ -125,7 +131,7 @@ endpoints be used for automation.
 
 ### DELETE
 
-    /api/0/contact/remove/    <email>/
+    /api/0/contacts/remove/   <email>/
     /api/0/tags/delete/       <tag>/
     ... POST only: tag=[tag(s) to delete]
 
@@ -143,16 +149,19 @@ endpoints be used for automation.
 *These accept the same arguments as the API calls above.*
 
     /contact/
-    /contact/add/
-    /contact/addline/
-    /contact/import/
-    /contact/importers/
-    /contact/list/
-    /contact/remove/
+    /contacts/
+    /contacts/add/
+    /contacts/addline/
+    /contacts/import/
+    /contacts/importers/
+    /contacts/remove/
     /crypto/gpg/importkey/
     /crypto/gpg/importkeyfrommail/
+    /crypto/gpg/keylist/
     /crypto/gpg/receivekey/
     /crypto/gpg/searchkey/
+    /crypto/gpg/signkey/
+    /crypto/gpg/statistics/
     /crypto/nicknym/getkey/
     /crypto/nicknym/refreshkeys/
     /crypto_policy/
