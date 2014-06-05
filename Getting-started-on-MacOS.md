@@ -42,6 +42,28 @@ cd Mailpile
 sudo pip install -r requirements.txt  
 ```
 
+If you run into an error like
+```
+    clang: warning: unknown argument: '-mno-fused-madd' [-Wunused-command-line-argument-hard-error-in-future]
+```
+it is because you have a newer version of the Apple LLVM compiler in Xcode 5.1 that is stricter about flags, so prefix your build commands with this:
+
+```
+ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future 
+```
+
+e.g., 
+
+```
+ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future  python setup.py build --static-deps --libxml2-version=2.8.0  --libxslt-version=1.1.24  13ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future  python setup.py build --static-deps --libxml2-version=2.8.0  --libxslt-version=1.1.24  
+```
+
+and
+
+```
+sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future  pip install -r requirements.txt
+```
+
 
 [**UGLY HACK WARNING** - Mailpile calls `python2` when opening, but in OS X this binary/symbolic link does not exist, instead we call `python` or `python2.X` directly.  For this reason, we must accommodate Mailpile by creating a symbolic link in the `usr/bin/` directory ]
 
