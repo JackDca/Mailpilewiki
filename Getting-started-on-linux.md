@@ -4,7 +4,7 @@ as Fedora), but you will need to use different commands to install and
 configure the dependencies.
 
 To install Mailpile on Debian or Ubuntu, please follow these steps (last
-tested 27.01.2014 on Ubuntu 12.04).
+tested 07.06.2014 on Ubuntu 14.04).
 
 
 ### 1. Clone the source repository:
