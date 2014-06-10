@@ -25,5 +25,5 @@
 
 * [[SMTorP]] SMTP over Tor network
 * [[Super Contacts]] Auto updating address book
-* [[Social Messaging]] Archiving format social media messages & chat
+* [[Social Messaging]] Format social media messages & chat
 * [Microformats](http://microformats.org) Used in various capacities
