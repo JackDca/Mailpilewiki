@@ -19,7 +19,9 @@
 * [[Packaging]]
 * [[Security]]
 
-### Protocols & Standards
+### Emerging Protocols & Standards
 
 * [[SMTorP]] SMTP over Tor network
 * [[Super Contacts]] Auto updating address book
+* [[Social Messages]] Archiving format social media messages
+* [Microformats](http://microformats.org) Used in various capacities
