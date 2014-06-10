@@ -4,7 +4,7 @@ Email, being beautifully decentralized, makes for interesting opportunities & so
 
 **DRAFTS WORKS IN PROGRESS**
 
-* I e-mail you, my key and VCard are attached and a header says "I am a Mailpile compatible address book"
+* I e-mail you, my PGP key and VCard are attached and a header says "I am a Mailpile compatible address book"
 * * This could happen A) always, B) manually or C) based on some clever heuristics
 * * Automatically attach details to messages sent to new people we haven't contacted before
 * * Include a tickbox in the composer to manually toggle that on or off.
