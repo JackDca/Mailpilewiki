@@ -1,3 +1,5 @@
+![Social Messaging](https://raw.github.com/wiki/pagekite/Mailpile/images/Social-Messaging.png)
+
 We've been [creating a plugin](https://github.com/mailpile/social-archiver) that downloads social media messages from Facebook (and eventually Twitter) and formats the messages so they can be imported into Mailpile or other standards compliant email applications.
 
 Private conversations on social media (and chat clients) are usually many short messages in close succession. This is a fundamentally different type of conversation than the bulk of email conversations (longer and further spaced in time). However, the metadata around the two conversations is nearly identical, so identical that Facebook's Conversation API spits how data that looks like email and has the attribute `email:653983917@facebook.com` to represent a participant.
