@@ -2,7 +2,7 @@ Modern social networks like Facebook & Twitter solve the problem of displaying t
 
 Email, being beautifully decentralized, makes for interesting opportunities & solutions for this problem. The easiest solution such as: immediately sending emails that updating everyone in your address when you change anything, is not good due to the highly spammy nature. After some discussion, we have outlined a lose flow that we think solves this problem in a persistent (but not spammy way) while maintaining the beautifully decentralized nature of email.
 
-**DRAFTS WORKS IN PROGRESS**
+**DRAFT / WORK IN PROGRESS**
 
 * I e-mail you, my PGP key and VCard are attached and a header says "I am a Mailpile compatible address book"
     * This could happen a) always, b) manually, or c) based on some clever heuristics
