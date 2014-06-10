@@ -1,3 +1,5 @@
+![Mailpile Wiki & Docs](https://raw.github.com/wiki/pagekite/Mailpile/images/Wiki-Docs)
+
 ### Using Mailpile
 
 * Release notes:
