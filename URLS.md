@@ -22,13 +22,13 @@ endpoints be used for automation.
 
 ### GET (also accept POST)
 
-    /api/0/contact/           [<email>]/
     /api/0/contacts/          [--lines]/[<terms>]/
                               ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
     /api/0/contacts/add/      <msgs>/
     ... POST only: mid=[Message ID]&email=[e-mail address]&name=[Contact name]
     /api/0/contacts/import/   [<parameters>]/
     /api/0/contacts/importers/
+    /api/0/contacts/view/     [<email>]/
     /api/0/crypto/gpg/keylist/<address>/
                               ?address=[E-mail address]
     /api/0/crypto/gpg/searchkey/<terms>/
@@ -148,13 +148,13 @@ endpoints be used for automation.
 
 *These accept the same arguments as the API calls above.*
 
-    /contact/
     /contacts/
     /contacts/add/
     /contacts/addline/
     /contacts/import/
     /contacts/importers/
     /contacts/remove/
+    /contacts/view/
     /crypto/gpg/importkey/
     /crypto/gpg/importkeyfrommail/
     /crypto/gpg/keylist/
