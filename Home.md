@@ -18,3 +18,8 @@
 * [[Privacy]]
 * [[Packaging]]
 * [[Security]]
+
+### Protocols & Standards
+
+* [[SMTorP]] SMTP over Tor network
+* [[Super Contacts]] Auto updating address book
