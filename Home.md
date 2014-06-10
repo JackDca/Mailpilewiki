@@ -1,4 +1,4 @@
-![Mailpile Wiki & Docs](https://raw.github.com/wiki/pagekite/Mailpile/images/Wiki-Docs)
+![Mailpile Wiki & Docs](https://raw.github.com/wiki/pagekite/Mailpile/images/Wiki-Docs.png)
 
 ### Using Mailpile
 
