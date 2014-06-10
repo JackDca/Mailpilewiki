@@ -1,6 +1,6 @@
-We have been [creating a plugin](https://github.com/mailpile/social-archiver) that downloads social media messages from Facebook (and eventually Twitter) and allows those messages to be imported into a Mailpile.
+We've been [creating a plugin](https://github.com/mailpile/social-archiver) that downloads social media messages from Facebook (and eventually Twitter) and formats the messages so they can be imported into Mailpile or other standards compliant email applications.
 
-Conversations on social media platforms (and chat clients) usually consist of many short messages in short succession. This is a fundamentally different type of conversation than the bulk of email conversations. That said, the metadata around the two types of conversations are nearly identical, so identical that Facebook's Conversation API spits how data that looks like email and uses the data attribute `email:653983917@facebook.com` to represent people in a conversation.
+Private conversations on social media (and chat clients) are usually many short messages in close succession. This is a fundamentally different type of conversation than the bulk of email conversations (longer and further spaced in time). However, the metadata around the two conversations is nearly identical, so identical that Facebook's Conversation API spits how data that looks like email and has the attribute `email:653983917@facebook.com` to represent a participant.
 
 ### UNIX Mbox Format Messages
 
