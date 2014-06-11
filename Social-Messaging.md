@@ -39,9 +39,9 @@ One downside is, this is less intuitive to normal people browsing their filesyst
 
 The data that Facebook spits out for conversation from id looks like `653983917@facebook.com` Twitter IDs do not resemble this structure at all, but can be forced to do so. Jabber addresses look like email addresses. All that is needed for nice standards compliant recording of these values is to prepend the Name and < > around the address.
 
-* Brennan Novak <653983917@facebook.com>
-* Brennan Novak <17958179@twitter.com>
-* Brennan Novak <bnvk@jabber.ccc.de>
+* `Brennan Novak <653983917@facebook.com>`
+* `Brennan Novak <17958179@twitter.com>`
+* `Brennan Novak <bnvk@jabber.ccc.de>`
 
 
 ### UNIX Mbox Format Messages
