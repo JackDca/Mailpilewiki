@@ -15,24 +15,24 @@ How to store personal messages downloaded to a local disk. There are a few goals
 
 Organization by date is the first most obvious idea
 
-/2014/05/conversation-id.file
-/2014/05/25/conversation-id.file
+* `/2014/05/conversation-id.file`
+* `/2014/05/25/conversation-id.file`
 
 This would scale nicely for importing data from multiple different services
 
-/2014/05/facebook-conversation-id.file
-/2014/05/twitter-conversation-id.file
+* `/2014/05/facebook-conversation-id.file`
+* `/2014/05/twitter-conversation-id.file`
 
 Another direction may be to organize based on conversation or contact id at the highest level, then cascade into more granular date directories.
 
-/contact-id/2014/05/
-/facebook-contact-id/2014/05/
+* `/contact-id/2014/05/`
+* `/facebook-contact-id/2014/05/`
 
 One downside is, this is less intuitive to normal people browsing their filesystem and seeing long strings of numbers compared to the date hierarchy. However, many of these social sites have usernames of the person(s) in a thread, which are more human
 
-/rickjames/2014/05/conversation-id.file
-/rickjames/2014/05/facebook-conversation-id.file
-/rickjames-salliejoe-1202033566/facebook-conversation-id.file (third segment is a user with no username)
+* `/rickjames/2014/05/conversation-id.file`
+* `/rickjames/2014/05/facebook-conversation-id.file`
+* `/rickjames-salliejoe-1202033566/facebook-conversation-id.file (third segment is a user with no username)`
 
 
 ### The "From" Value
