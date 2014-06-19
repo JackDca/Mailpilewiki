@@ -2,31 +2,33 @@ This document outlines the details of the implementation of PGP in Mailpile, inc
 
 We have several goals for Mailpile's security model that explain the use of PGP:
 
- * *Opportunistic end-to-end message security*
+ * **Opportunistic end-to-end message security**
    * A third party should not be able to read messages.
- * *Message verifiability*
+ * **Message verifiability**
    * It should be possible to verify that a message is authentic and has not been tampered with.
- * *Simple key exchange with implicit trust on first use (TOFU)*
+ * **Simple key exchange with implicit trust on first use (TOFU)**
    * As the biggest problem is not MITM attacks against keys in transit, but that almost nobody uses in encryption.
- * *Easy key discoverability in the case of missing encryption keys*
+ * **Easy key discoverability in the case of missing encryption keys**
    * Because people use a lot of methods to distribute public keys.
- * *Key validation/invalidation with explicit trust/distrust settings*
+ * **Key validation/invalidation with explicit trust/distrust settings**
    * Because we sometimes want to be sure about things.
- * *Seamless key revocation*
+ * **Seamless key revocation**
    * Because sometimes keys are revoked.
- * *Seamless key rollovers*
+ * **Seamless key rollovers**
    * Because sometimes new keys are issued.
- * *Per-recipient crypto policy management*
+ * **Per-recipient crypto policy management**
    * Because sometimes not everybody wants to receive encrypted e-mail all the time, even if they might sometimes.
 
 We also have several non-goals:
 
- * *Deniability*
-   - In practice, denying having sent e-mail does not hold up in court. This is because courts don't care so much about cryptographic proof as they care about proof beyond reasonable doubt. As do most people, in practice. We therefore make no special effort to provide deniability to messaging. If you require deniability, don't use e-mail at all.
- * *Anonymity*
-   - E-mail is generally not anonymous, although it may be pseudonymous. If you wish to use e-mail anonymously, consider using [[SMTorP]] to obscure your origin and make a creative pseudonym generation plugin. Or simply use another communications protocol that is better suited to anonymity.
- * *Perfect forward secrecy*
-   - Perfect forward secrecy does not practically apply to e-mail /in storage/, as people have an expectation of being able to read old e-mails, regardless of age. It is reasonable to expect forward secrecy for e-mail /in transit/, but this obligation falls to TLS. It is not a consideration of PGP, and in fact, if somebody is in a position to hijack your PGP key, they are more than likely to also have access to your e-mail storage anyway.
+ * **Deniability**
+   * In practice, denying having sent e-mail does not hold up in court. This is because courts don't care so much about cryptographic proof as they care about proof beyond reasonable doubt. As do most people, in practice. We therefore make no special effort to provide deniability to messaging. If you require deniability, don't use e-mail at all.
+ * **Anonymity**
+   * E-mail is generally not anonymous, although it may be pseudonymous. If you wish to use e-mail anonymously, consider using [[SMTorP]] to obscure your origin and make a creative pseudonym generation plugin. Or simply use another communications protocol that is better suited to anonymity.
+ * **Perfect forward secrecy**
+   * Perfect forward secrecy does not practically apply to e-mail /in storage/, as people have an expectation of being able to read old e-mails, regardless of age. It is reasonable to expect forward secrecy for e-mail /in transit/, but this obligation falls to TLS. It is not a consideration of PGP, and in fact, if somebody is in a position to hijack your PGP key, they are more than likely to also have access to your e-mail storage anyway.
+ * **Support for keysigning and web of trust**
+   * The Web of Trust leaks information, creates a historical record, is complicated for people to understand, nigh impossible to visualise, and in practice does not work. See below.
 
 
 ## Overall design
