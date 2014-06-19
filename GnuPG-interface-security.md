@@ -350,14 +350,11 @@ The following icons have been designed originally for Mailpile and are open & fr
 
 ## Notes
 
-### Regarding the web of trust
+### Regarding the Web of Trust
 
-Ella recommends against using it, because the WoT generates a
-persistent and public social graph that can be mined by adversaries.
+We recommend against using the Web of Trust (WoT), because it generates a persistent and public social graph that can be mined by adversaries. And a historic record. And it does not work.
 
-And a historic record.
-
-And it does not work.
+If you disagree with us, fine. But we're not implementing support for the Web of Trust in Mailpile's core.
 
 ### Regarding choices and options
 
