@@ -1,16 +1,23 @@
-
 This document outlines the details of the implementation of PGP in Mailpile, including backend interactions, frontend UI specifications, and overall policy.
 
 We have several goals for Mailpile's security model that explain the use of PGP:
 
- * *Opportunistic end-to-end message security* - a third party should not be able to read messages.
- * *Message verifiability* - it should be possible to verify that a message is authentic and has not been tampered with.
- * *Simple key exchange with implicit trust on first use (TOFU)* - as the biggest problem is not MITM attacks against keys in transit, but that almost nobody uses in encryption.
- * *Easy key discoverability in the case of missing encryption keys* - because people use a lot of methods to distribute public keys.
- * *Key validation/invalidation with explicit trust/distrust settings* - because we sometimes want to be sure about things.
- * *Seamless key revocation* - because sometimes keys are revoked.
- * *Seamless key rollovers* - because sometimes new keys are issued.
- * *Per-recipient crypto policy management* - because sometimes not everybody wants to receive encrypted e-mail all the time, even if they might sometimes.
+ * *Opportunistic end-to-end message security*
+   * A third party should not be able to read messages.
+ * *Message verifiability*
+   * It should be possible to verify that a message is authentic and has not been tampered with.
+ * *Simple key exchange with implicit trust on first use (TOFU)*
+   * As the biggest problem is not MITM attacks against keys in transit, but that almost nobody uses in encryption.
+ * *Easy key discoverability in the case of missing encryption keys*
+   * Because people use a lot of methods to distribute public keys.
+ * *Key validation/invalidation with explicit trust/distrust settings*
+   * Because we sometimes want to be sure about things.
+ * *Seamless key revocation*
+   * Because sometimes keys are revoked.
+ * *Seamless key rollovers*
+   * Because sometimes new keys are issued.
+ * *Per-recipient crypto policy management*
+   * Because sometimes not everybody wants to receive encrypted e-mail all the time, even if they might sometimes.
 
 We also have several non-goals:
 
