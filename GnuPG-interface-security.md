@@ -18,6 +18,10 @@ We have several goals for Mailpile's security model that explain the use of PGP:
    * Because sometimes new keys are issued.
  * **Per-recipient crypto policy management**
    * Because sometimes not everybody wants to receive encrypted e-mail all the time, even if they might sometimes.
+ * **Proper user diagnosis of failures, including unexpected new keys**
+ * **Easy per-message crypto-management**
+ * **Seamless key publication when desired**
+ * **Follow standard practices when possible and not contradicted**
 
 We also have several non-goals:
 
@@ -77,9 +81,9 @@ The lookup methods are:
 | Nicknym[lm1]                         | 10                   |
 | DNS PKA[lm2]                         | 9                    |
 | draft-wouters-dane-openpgp-02[lm3]   | 9                    |
-| keybase.io                           | 5                    |
 | Received keys in E-mail              | 3                    |
 | OpenPGP header in E-mail             | 2                    |
+| keybase.io                           | 1                    |
 | PGP Keyservers                       | 1                    |
 
 A key discovered through multiple lookup methods gets additive bonus, but never higher than 20. 
@@ -88,9 +92,9 @@ The reason Nicknym gets the highest score is that the Nicknym protocol guarantee
 
 DNS PKA and draft-wouters-dane-openpgp-02 both operate on the same principle, of DNS records containing references to keys. These are more easily spoofed than Nicknym servers, but are still reasonably authoritative.
 
-keybase.io is somewhat like a "supercharged keyserver". Although it has much the same security properties as a PGP keyserver, the fact that keys are managed by keybase users makes it somewhat more trustworthy in practice.
-
 Keys received by E-mail are practically speaking the core of the TOFU model we're advocating, but we'd like to err on the side of caution when only a single instance of a key has been received for a given e-mail address, specially in the case where multiple instances of an erroneous key may have been received. This should also be implemented in such a way as to ignore keys on messages which are tagged as spam.
+
+keybase.io is somewhat like a "supercharged keyserver". Although it has much the same security properties as a PGP keyserver, the fact that keys are managed by keybase users may make it somewhat more trustworthy in practice, but since we don't know that yet.
 
 PGP keyservers are not very trustworthy, but are quite ubiquitous and useful. We give it a low trust score here, but may give it extra points with the bonuses below.
 
