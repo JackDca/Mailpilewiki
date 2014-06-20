@@ -19,9 +19,13 @@ We have several goals for Mailpile's security model that explain the use of PGP:
  * **Per-recipient crypto policy management**
    * Because sometimes not everybody wants to receive encrypted e-mail all the time, even if they might sometimes.
  * **Proper user diagnosis of failures, including unexpected new keys**
+   * Make sure users know when things are going wrong, or might be going wrong.
  * **Easy per-message crypto-management**
+   * Make sure users can choose on an e-mail by e-mail basis whether to sign, encrypt, or what else.
  * **Seamless key publication when desired**
+   * To make keys more publicly available.
  * **Follow standard practices when possible and not contradicted**
+   * Even though we do things slightly differently than GnuPG's standard practices, we try to do so in a way that doesn't muddle up the keychain or cause trouble for power users who are using GnuPG elsewhere in a different context.
 
 We also have several non-goals:
 
