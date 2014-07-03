@@ -55,3 +55,7 @@ Well, if we have a billion users, according to the default 3-10 day window, we'r
 ## Display
 
 Mailpile operates an analytics.mailpile.is website, which displays usage graphs and other data. It floors reported data to the closest 10, so as not to show that Mailpile usage in certain countries is lower than 10, as this may expose social graph information. Obviously the flaw here is that Mailpile is actually receiving more granular data than is being displayed, but not by much.
+
+## Draft implementation
+
+ * Draft implementation available at https://github.com/mailpile/analytics
