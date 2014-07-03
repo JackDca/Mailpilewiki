@@ -64,7 +64,7 @@ There is also a live demo accessible on <https://www.mailpile.is/demos/>.
    * Clearer indication which parts of a message will be encrypted or signed
    * Much improved logic for choosing which e-mail (user profile) is suggested by default for sending
    * The code which sends e-mail has been revamped to properly handle errors and retry as necessary
- * ** Importing/syncing mail **
+ * **Importing/syncing mail**
    * New architecture, based on the concept of "mail sources"
    * Partial native IMAP support (on-line, read-only) is now in place
    * The SMTorP proof-of-concept server now limits resource usage and implements a form of hashcash to rate limit spam
