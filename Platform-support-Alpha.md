@@ -4,3 +4,4 @@
 | Raspbian wheezy    | Yes    |       | [busla](https://github.com/busla) |
 | Debian 7 Wheezy    | Yes    |       | [lazlo](https://github.com/lazlolazlolazlo) |
 | [NixOS](http://nixos.org) | Yes    |       | [iElectric](https://github.com/iElectric) |
+| Linux Mint 17      | Yes    |       | [Videl](https://github.com/Videl) |
