@@ -27,4 +27,5 @@
 * [[SMTorP]] SMTP over Tor network
 * [[Super Contacts]] Auto updating address book
 * [[Social Messaging]] Format social media messages & chat
+* [[LEAP Integration]]
 * [Microformats](http://microformats.org) Used in various capacities
