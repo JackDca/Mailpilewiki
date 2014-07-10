@@ -14,7 +14,7 @@ xcode-select --install
 Download and Install PIP for Python:  
 ```
 cd /tmp  
-curl -o get-pip.py https://raw.github.com/pypa/pip/master/contrib/get-pip.py  
+curl -L -o get-pip.py https://raw.github.com/pypa/pip/master/contrib/get-pip.py  
 sudo python get-pip.py  
 ```
 
