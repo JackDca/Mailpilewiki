@@ -35,6 +35,8 @@ Expected by Mailpile 1.0:
 
 **Note:** This section describes the mail source configuration as of 2014-07-30, please consult the definition in `mailpile/defaults.py` if any time has passed.
 
+Mail source configurations are part of the larger Mailpile configuration tree.  Each mail source is a named dictionary (object in javascript lingo) under `sources`.  So typical CLI references to mail source attributes might look like so `sources.imap.name` or `sources.mygmail.discovery`.
+
 Below is the current mail source spec. The bottom of this section has some real-life examples of correctly configured mail sources.
 
         'name':            (_('Source name'), str, ''),
