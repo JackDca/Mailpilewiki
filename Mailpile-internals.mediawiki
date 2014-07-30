@@ -3,7 +3,9 @@
 * [[Search engine]]
 ** [[Search index]]
 ** [[Search engine hooks]]
-* [[Mailboxes]]
+* Incoming E-mail
+** [[Mail sources]]
+** [[Mailboxes]]
 * [[Tags]]
 * [[Filters]]
 * [[Event Log]]
