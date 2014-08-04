@@ -77,7 +77,7 @@ Usually, the discovery policy should be set to `unknown`, so new mailboxes will 
                             ['unknown', 'ignore', 'read', 'move', 'sync'],
                             'ignore'),
             'local':       (_('Local mailbox path'), str, ''),
-            'process_new': (_('Is a source of new mail'), bool, True),
+            'process_new': (_('Will mark new mail as new'), bool, True),
             'primary_tag': (_('A tag representing this mailbox'), str, ''),
             'apply_tags':  (_('Tags applied to messages'), str, []),
         }, {})
