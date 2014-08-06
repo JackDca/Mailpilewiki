@@ -1,5 +1,19 @@
 This page documents the `data` section of some of the more interesting events.
 
+To look at some live data, try these URLs:
+
+* `/api/0/eventlog/incomplete/` (for in-progress events only)
+* `/api/0/eventlog/?source=mailpile.mail_source.imap.ImapMailSource
+
+Or on the CLI,
+
+   mailpile> help/urlmap eventlog
+   ...
+   mailpile> eventlog incomplete
+   ...
+
+------------------------------------------------------------------------------
+
 ## mailpile.mail_source.*
 
 All Mailpile mail sources will record their internal state in an "incomplete" event.  Thus the state of any mail source can be examined via. the event log.  The following sections are standard in all Mail Source events.
