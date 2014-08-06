@@ -16,6 +16,8 @@ Each configured Mail Source gets a dedicated thread, which implements its own sc
 
 In order to prevent mail source activity from overloading the app's responsiveness, all mail sources will attempt to acquire the `GLOBAL_RESCAN_LOCK` before performing any intensive operations (so we only ever have one mail source update active at any given time), and all mail sources are expected to periodically invoke `play_nice_with_threads()` to release the GIL.
 
+Events communicate their internal state to the UI and the rest of the app by using the [[Event Log]] mechanism. The Mail Source specific `data` sections are explained in [[Events of Note]].
+
 
 ## Supported source types
 
