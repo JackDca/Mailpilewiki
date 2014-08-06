@@ -1,4 +1,4 @@
-This page documents the `data` section of some of the more interesting events.
+This page documents the `data` section of some of the more interesting events in the [[Event Log]].
 
 To look at some live data, try these URLs:
 
