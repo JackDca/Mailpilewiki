@@ -58,10 +58,9 @@ The second section, `rescans`, gives a summary of the recent rescan operations a
 2. the count of messages added to the index (or -1 if there was an error)
 3. a human readable description
 4. a dictionary describing the final state in machine-readable form:
-
-** `updated` = how many messages were updated
-** `added` = how many messages were added
-** `complete` = whether the rescan was considered complete or not.
+   * `updated` = how many messages were updated
+   * `added` = how many messages were added
+   * `complete` = whether the rescan was considered complete or not.
 
 
 ## mailpile.mail_source.imap.*
@@ -74,8 +73,8 @@ The IMAP Mail Source (and other network sources such as POP3 in the future) will
      }, 
 
 * The `error` attribute is a list of two items:
-** The first is the error state, one of: False, "network", "auth", "timeout" and "imap"
-** the second item is a human readable description of the problem
+   * The first is the error state, one of: False, "network", "auth", "timeout" and "imap"
+   * the second item is a human readable description of the problem
 * The `live` event is True if the connection is currently in a usable state, otherwise False
 
 (An error state of False means there was no error.  Usually `live` will be true in this case.)
