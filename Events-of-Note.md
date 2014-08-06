@@ -16,7 +16,7 @@ Or on the CLI,
 
 ## mailpile.mail_source.*
 
-All Mailpile mail sources will record their internal state in an "incomplete" event.  Thus the state of any mail source can be examined via. the event log.  The following sections are standard in all Mail Source events.
+All Mailpile [[mail sources]] will record their internal state in an "incomplete" event.  Thus the state of any mail source can be examined via. the event log.  The following sections are standard in all Mail Source events.
 
      "id": <the mail source ID>, 
      "mailbox_state": { ... },
@@ -40,7 +40,7 @@ The final section, `copying`, appears if mail was (or is being) copied from a so
 
 ## mailpile.mail_source.* / mailpile.commands.Rescan
 
-The `data` section of these events will contain two subsections, `rescan` and `rescans`, pertaining to what happened during the process of reading new mail (indexing for the search engine, initial tagging, etc.)  These data sections look like so:
+The `data` section of these events ([[Mail sources]] and the `rescan` command) will contain two subsections, `rescan` and `rescans`, pertaining to what happened during the process of reading new mail (indexing for the search engine, initial tagging, etc.)  These data sections look like so:
 
      "rescan": {
          "added": 0, 
@@ -79,7 +79,7 @@ The second section, `rescans`, gives a summary of the recent rescan operations a
 
 ## mailpile.mail_source.imap.*
 
-The IMAP Mail Source (and other network sources such as POP3 in the future) will record information about network activity on its event, like so:
+The IMAP [[Mail Sources]] (and other network sources such as POP3 in the future) will record information about network activity on its event, like so:
 
      "connection": {
          "error": [false, "Nothing is wrong"], 
