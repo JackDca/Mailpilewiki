@@ -1,6 +1,14 @@
 # Mailpile's Event Log
 
-*This document is a work in progress*
+This document is a problem statement and high level architectural overview.
+
+Some hints for the impatient:
+
+* See [[Events of Note]] for examples of some interesting events
+* The `/api/0/eventlog/` method is the way non-Pythonic code polls, waits or searches for events
+* The code lives in `mailpile/eventlog.py` and `mailpile/plugins/eventlog.py`
+* Internally, the event log is an attribute of the global ConfigManager (usually `session.config.event_log`)
+
 
 ## Problems to solve:
 
