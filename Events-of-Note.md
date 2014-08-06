@@ -58,6 +58,7 @@ The second section, `rescans`, gives a summary of the recent rescan operations a
 2. the count of messages added to the index (or -1 if there was an error)
 3. a human readable description
 4. a dictionary describing the final state in machine-readable form:
+
 ** `updated` = how many messages were updated
 ** `added` = how many messages were added
 ** `complete` = whether the rescan was considered complete or not.
