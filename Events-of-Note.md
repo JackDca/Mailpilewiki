@@ -19,7 +19,8 @@ Or on the CLI,
 All Mailpile [[mail sources]] will record their internal state in an "incomplete" event.  Thus the state of any mail source can be examined via. the event log.  The following sections are standard in all Mail Source events.
 
      "id": <the mail source ID>, 
-     "mailbox_state": { ... },
+     "mailbox_state": { ... <internal state> ... },
+     "have_unknown": true,
      "copying": {
          "batch_size": 5, 
          "complete": true, 
@@ -30,9 +31,15 @@ All Mailpile [[mail sources]] will record their internal state in an "incomplete
          "total": 0
      }, 
 
+**`have_unknown` - need configuration**
+
+The `have_unknown` flag, if present and set to True, is a signal to the user interface that this Mail Source has discovered a new source mailbox, and the user should visit the configuration interface to enable downloads/syncing/whatever.
+
+(This data can also be seen by perusing the `mailbox` section of the [[mail sources]] configuration and searching for mailboxes with a policy of "unknown", but it is announced here so event listeners can subscribe to the event.)
+
 **`copying` - progress info**
 
-The final section, `copying`, appears if mail was (or is being) copied from a source mailbox to a local mailbox. It shows statistics which can be used to generate a progress-bar or otherwise inform the user about in-progess copies.
+The `copying` section appears if mail was (or is being) copied from a source mailbox to a local mailbox. It shows statistics which can be used to generate a progress-bar or otherwise inform the user about in-progess copies.
 
 * The `running` attribute tells us whether the copy is still in progress or whether it has finished.
 * If `complete` is true, then that means all known mail has been copied (or downloaded).
