@@ -1,4 +1,4 @@
-This page documents some of the more interesting events that can be found in the event log.
+This page documents the `data` section of some of the more interesting events.
 
 ## mailpile.mail_source.*
 
@@ -16,7 +16,7 @@ All Mailpile mail sources will record their internal state in an "incomplete" ev
          "total": 0
      }, 
 
-### `copying` - progress info
+**`copying` - progress info**
 
 The final section, `copying`, appears if mail was (or is being) copied from a source mailbox to a local mailbox. It shows statistics which can be used to generate a progress-bar or otherwise inform the user about in-progess copies.
 
@@ -44,7 +44,7 @@ The `data` section of these events will contain two subsections, `rescan` and `r
          ...
      ]
 
-### `rescan` - progress info
+**`rescan` - progress info**
 
 The first, `rescan`, describes the most recent rescan operation, which may still be in progress. This can be used to generate a progress bar.
 
@@ -52,7 +52,7 @@ The `running` attribute will be True if the operation is still running.
 
 The `complete` attribute will be True if all known messages have been processed.
 
-### `rescans` - history
+**`rescans` - history**
 
 The second section, `rescans`, gives a summary of the recent rescan operations and how they went.  Each entry in the history is a list of four values; the Mailbox ID, the count of messages added to the index (or -1 if there was an error), a human readable description and finally a dictionary describing the final state in machine-readable form: how many messages were updated, how many were added, and whether the rescan was considered complete or not.
 
