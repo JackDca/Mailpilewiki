@@ -9,6 +9,7 @@
 * [[Tags]]
 * [[Filters]]
 * [[Event Log]]
+** [[Events of Note]]
 * [[APIs]]
 ** [[Plugins]] (New)
 ** [[Plugin API]] (Old -- being phased out)
