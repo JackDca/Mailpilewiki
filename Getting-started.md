@@ -70,7 +70,7 @@ This allows easy, sandboxed usage.
 
 You can build a docker image:
 
-    $ docker build -t mailpile scripts/docker/
+    $ docker build -t mailpile .
 
 and run it:
 
