@@ -11,7 +11,7 @@ Mailpile internals or via [[Filters]].
 ## Setting tag attributes
 
 You can set tag attributes through the command line using 'set', if you know
-the tag's _tid_ value: `set tag.tid.field = value`.
+the tag's _tid_ value: `set tags.tid.field = value`.
 
 ## Tag metadata
 
