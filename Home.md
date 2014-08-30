@@ -6,6 +6,7 @@
    * [[Alpha II Release, July 2014|Release-Notes-201406-Alpha-II]]
    * [[Alpha Release, January 2014|Release-Notes-201401-Alpha]]
 * [[Getting Started]]
+* [[Troubleshooting]]
 * [[Keyboard shortcuts]]
 * [[Frequently Asked Questions]]
 
