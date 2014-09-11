@@ -1,3 +1,4 @@
+* [[Security roadmap]]
 * [[Threat model]]
 * [[GnuPG interface security]]
 * [[Key management]]
