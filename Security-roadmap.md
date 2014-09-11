@@ -150,12 +150,15 @@ Our strategy for handling key expiration and revocation is incomplete at this ti
 
 * Implement secure deleting of mail
 * Implement native support for off-site backups (e.g. upload encrypted data to an IMAP server)
-* Implement content sanitizaton
+* Implement content (attachment) sanitizaton
 * Implement HTML mail sanitization and sandboxing
-* Implement DIME
-* Implement LEAP
 * Enable opportunistic use of SMTorP by default
-* Implement "secure UI" which disables insecure protocols
+* Implement "secure UI mode" which disables insecure protocols
 * Implement remote access protocols, so Mailpile can be left running on secure hardware in a secure location
 * Implement automated test suites which test and verify the key aspects of Mailpile's security systems, to prevent regressions
+
+### Post 1.0 security ideas
+
+* Implement DIME
+* Implement LEAP
 
