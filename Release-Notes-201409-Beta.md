@@ -8,13 +8,17 @@ See the [release blog post](https://mailpile.is/blog/2014-09-13_Mailpile_Beta.ht
 
 ## Getting the release
 
-The code can be downloaded like so:
+Pre-built packages:
+
+* Live demo: <https://www.mailpile.is/demos/>
+* Windows: [HTTPS download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.exe), [Bittorrent download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.exe.torrent)
+* Mac OS X: [HTTPS download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.dmg), [Bittorrent download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.dmg.torrent)
+
+[The source code](https://github.com/pagekite/Mailpile):
 
     git clone -b release/beta https://github.com/pagekite/Mailpile.git
 
 This branch may receive minor updates (bug-fixes) over the next couple of weeks, but core development will continue on the master branch. Please see the Getting Started page for further details.
-
-There is also a live demo accessible on <https://www.mailpile.is/demos/>.
 
 ## Highlights of this release
 
