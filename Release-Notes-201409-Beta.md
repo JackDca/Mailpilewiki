@@ -31,6 +31,7 @@ This branch may receive minor updates (bug-fixes) over the next couple of weeks,
 * An interactive user-friendly setup procedure
 * Native Windows and Mac packages
 * Native support for downloading mail using the IMAP protocol
+* New interfaces for discovering and importing PGP keys
 * We have published a [[Security Roadmap]], explaining the how, why and when of Mailpile security
 
 This release builds on our earlier progress:
