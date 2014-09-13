@@ -6,6 +6,8 @@ This release is a **technology preview release**, meant for developers, very pat
 
 See the [release blog post](https://mailpile.is/blog/2014-09-13_Mailpile_Beta.html) for details.
 
+**Note:** Please consult the list of known issues below before filing bugs! Thanks!
+
 ## Getting the release
 
 Pre-built packages:
