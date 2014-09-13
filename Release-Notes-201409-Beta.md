@@ -1,5 +1,3 @@
-# DRAFT DRAFT DRAFT - RELEASE IS STILL IN PROGRESS :-)
-
 ![](https://www.mailpile.is/img/logo-275x200.png)
 
 The Beta release of Mailpile is available for download from github, with pre-built packages availble for Windows and Mac OS X.
