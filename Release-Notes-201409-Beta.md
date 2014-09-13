@@ -15,8 +15,8 @@ See the [release blog post](https://mailpile.is/blog/2014-09-13_Mailpile_Beta.ht
 Pre-built packages:
 
 * Live demo: <https://www.mailpile.is/demos/>
-* Windows: [HTTPS download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.exe), [Bittorrent download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.exe.torrent)
-* Mac OS X: [HTTPS download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.dmg), [Bittorrent download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta-1.dmg.torrent)
+* Windows: [HTTPS download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe), [Bittorrent download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.torrent)
+* Mac OS X: [HTTPS download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg), [Bittorrent download](https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.torrent)
 
 [The source code](https://github.com/pagekite/Mailpile):
 
