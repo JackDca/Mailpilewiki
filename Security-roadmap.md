@@ -140,7 +140,7 @@ Our strategy for handling key expiration and revocation is incomplete at this ti
 * Incremental improvements (bugfixes) to all Beta security deliverables
 * Fully implement TOFU key validation and ad-hoc key distribution
 * Implement 1st draft of historic security profiling, to enable automatic opportunistic encryption
-   * Fully integrate Tor for anonymized communication with key servers (and Gravatar, and others)
+* Fully integrate Tor for anonymized communication with key servers (and Gravatar, and others)
 * Finalize SMTorP specification
 * Improve compatibility of Mailpile's OpenPGP implementation with Google's end-to-end, Mailvelope and other active e-mail crypto projects
 * Implement internal API for content sanitzation
