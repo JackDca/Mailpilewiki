@@ -71,3 +71,12 @@ Known issues in the beta release:
    * Image support (thumbnail generation) is broken on most Macs
    * It is currently only possible to run one instance of the app at a time (without manual tweaks)
    * The Windows launcher crashes after shutting down the python app (#889)
+
+## Changes since the Alphas
+
+A few things have changed since our Alpha releases, which may catch long-time users or testers off guard:
+
+* The `~/.mailpile` folder, although still used has been moved by default to `~/.share/local/Mailpile` on Linux, `~/Library/Application Support/Mailpile/` on the Mac and a similarly appropriate location on Windows.
+* A GnuPG key is required for the Beta to work and will be created if you do not already have one
+
+Migration from a very old configuration may not work well, so if you do not have any critical data in your pile, then removing the `~/.mailpile/` folder before upgrading to the Beta is recommended.
