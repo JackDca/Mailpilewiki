@@ -4,7 +4,7 @@ The Beta release of Mailpile is available for download from github, with pre-bui
 
 This release is a **technology preview release**, meant for developers, very patient early adopters, usability testers and our community of translators. It might also be useful for reading and writing e-mail, you never know!
 
-See the [release blog post](https://mailpile.is/blog/2014-09-13_Mailpile_Beta.html) for details.
+See the [release blog post](https://www.mailpile.is/blog/2014-09-13_Mailpile_Beta_Release.html) for details.
 
 **Note:** Please consult the list of known issues below before filing bugs! Thanks!
 
