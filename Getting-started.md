@@ -1,4 +1,4 @@
-**Note:** Mailpile is currently only released in source form, from our Github repository.
+**IMPORTANT:** The information on this page is partially out of date!  The Beta release includes a web based configuration wizard, so usually you just start app and go with the flow in your browser.
 
 ## Quickstart
 
