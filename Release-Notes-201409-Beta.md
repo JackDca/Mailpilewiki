@@ -76,7 +76,7 @@ Known issues in the beta release:
 
 A few things have changed since our Alpha releases, which may catch long-time users or testers off guard:
 
-* The `~/.mailpile` folder, although still used has been moved by default to `~/.share/local/Mailpile` on Linux, `~/Library/Application Support/Mailpile/` on the Mac and a similarly appropriate location on Windows.
 * A GnuPG key is required for the Beta to work and will be created if you do not already have one
+* The `~/.mailpile` folder is no longer the default location for Mailpile's data, we now use platform-specific defaults: `~/.share/local/Mailpile` on Linux, `~/Library/Application Support/Mailpile/` on the Mac and a similarly appropriate location on Windows. The old folder will be used if it exists already, but new installations will not create it anymore.
 
 Migration from a very old configuration may not work well, so if you do not have any critical data in your pile, then removing the `~/.mailpile/` folder before upgrading to the Beta is recommended.
