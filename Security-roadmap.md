@@ -91,7 +91,7 @@ The public-facing interfaces of Mailpile (if any) must also be secure against in
 
 This requires detecting and repairing on-disk corruption, as well as having secure backups of all data, including the public and private key material. Users need to be educated and assisted with this.
 
-### Goals 3.x: Remote acces
+### Goals 3.x: Remote access
 
 Storage Privacy, Storage Integrity and Availability, in today's world of smartphones and ubiquitous Internet access, also imply that many Mailpile instances will need to be reachable from the public Internet so users can interact with their mail even though they are not carrying it on their own person.
 
