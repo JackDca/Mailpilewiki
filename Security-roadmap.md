@@ -161,5 +161,5 @@ Our strategy for handling key expiration and revocation is incomplete at this ti
 
 * Implement DIME
 * Implement LEAP
-* GPG Smartcard support ([#926](https://github.com/pagekite/Mailpile/issues/926))
+* PGP Smartcard support ([#926](https://github.com/pagekite/Mailpile/issues/926))
 
