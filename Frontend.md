@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 # Front-End Development
 
 Here are some notes about the current build process to work on the front-end code of Mailpile. This is a  rough draft of front-end documentation but it will be more fleshed out soon.
