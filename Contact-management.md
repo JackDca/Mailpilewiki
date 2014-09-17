@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 Contacts are stored on disk as [RFC6350](https://tools.ietf.org/html/rfc6350) compliant VCARDs.
 
 Base code for Contacts is in mailpile/plugins/contacts.py
