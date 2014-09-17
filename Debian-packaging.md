@@ -1,4 +1,6 @@
-### Debian packaging is considered experimental!
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
+***Debian packaging is considered experimental!***
 
 ### Generating DEB packages ###
 
