@@ -1,8 +1,12 @@
-## UPDATE (Beta Release)
+![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
 
-We now have a 1-click installer for Mac OS that provides some native integration, we suggest using that. Please download from [our website](https://www.mailpile.is/download/)
+Please download the MacOS installer from [our website](https://www.mailpile.is/download/)
 
-However, if you want to help develop Mailpile by submitting pull requests, then some of these instructions might still be relevant. We will work to update this procedure as soon as possible!
+It should be relatively straightforward.
+
+# Tips for developers using MacOS
+
+If you want to help develop Mailpile by submitting pull requests, then some of these instructions might still be relevant. We will work to update this procedure as soon as possible!
 
 ### Leopard 10.6.8
 Mailpile depends on lxml, which is a binder for two C libraries (libxml2 and libxslt). The GCC compiler needs to be installed on your os for those dependencies to work but is unfortunately not included with MacOS 10.6.8.
