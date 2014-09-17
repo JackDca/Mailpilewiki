@@ -3,6 +3,8 @@
 **This page is obsolete, and dates back to a terrible time in the past when Mailpile didn't support fetching mail natively. It should be disregarded for almost all users now, although some technical users may find it interesting.**
 
 
+***
+
 This page describes how to configure Ubuntu or Debian to download your
 e-mail from a remote server. These instructions probably apply to other
 operating systems as well, but the commands for installing software
