@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 This page documents the `data` section of some of the more interesting events in the [[Event Log]].
 
 To look at some live data, try these URLs:
