@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 **NOTE: This document needs to be updated to reflect the new API path structure and command structure.**
 
 This guide is here to help you figure out how Mailpile is designed. It is not a 
