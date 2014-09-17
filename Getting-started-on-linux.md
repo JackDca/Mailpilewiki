@@ -1,3 +1,5 @@
+![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
+
 Mailpile is best tested on recent Debian-derived distributions,
 including Ubuntu.  It also works just fine on other modern distros (such
 as Fedora), but you will need to use different commands to install and
