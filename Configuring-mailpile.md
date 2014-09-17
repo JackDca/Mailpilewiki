@@ -2,7 +2,7 @@
 Once you've got Mailpile running on your machine, from Mailpile's command line interface, do the following:
 
 1. `setup`  -- run the setup command to instantiate the absolute basics
-2. Point your web browser at http://localhost:33411
+2. Point your web browser at [http://localhost:33411](http://localhost:33411)
 3. Use the GUI installer that you see from accessing the above URL
 
 
