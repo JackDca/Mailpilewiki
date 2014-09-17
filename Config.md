@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 # Mailpile configuration draft spec (2013-10-11)
 
 The goals for the new configuration system are:
@@ -113,4 +115,3 @@ In the Python code, this structure would be manipulated like so:
    * We need to choose a configuration file format
    * We will want to be able to import/export/backup settings
    * We will want a "safe export@ that doesn't leak passwords etc
-
