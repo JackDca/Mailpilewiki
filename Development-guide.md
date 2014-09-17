@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 New to Mailpile development? Want to contribute? Thinking of writing a plugin?
 Read on...
 
