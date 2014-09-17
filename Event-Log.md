@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 # Mailpile's Event Log
 
 This document is a problem statement and high level architectural overview.
