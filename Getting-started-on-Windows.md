@@ -1,10 +1,12 @@
-## UPDATE (Beta Release)
+![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
 
-We now have a 1-click installer for Windows that provides some native integration, we suggest using that. Please download from [our website](https://www.mailpile.is/download/)
+Please download the Windows installer from [our website](https://www.mailpile.is/download/). 
 
-However, if you want to help develop Mailpile by submitting pull requests that would be awesome. We need to create documentation about how to best setup a dev version of Mailpile in Windows.
+**This documentation needs expanding.**
 
-### Old notes
+# Tips for developers using Windows
+
+If you want to help develop Mailpile by submitting pull requests that would be awesome. We need to create documentation about how to best setup a dev version of Mailpile in Windows.
 
 Download links used to resolve dependencies:
 
