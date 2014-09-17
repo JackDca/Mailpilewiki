@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 Filters are a generic mechanism for automatically adding or removing [[Tags]]
 to messages that have just been discovered.
 
