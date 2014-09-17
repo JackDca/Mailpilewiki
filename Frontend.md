@@ -48,7 +48,10 @@ Another thing of note is the CSS is compiled using LESS
 
 This is the most fancy modern approach to icons- it works in all the modern browsers. To use this type of icon copy the contents of Font-Icons/fonts folder into your public assets folder and then copy the contents of style.css into your existing CSS files. Then you easily display an icon where ever you want with a simple class like this:
 
-<span class="icon-user"></span>
+```<span class="icon-user"></span>```
 The full list of these class names is in Font-Icons/index.html. In this file you will see there is another method of displaying these icons, but I've always preffered the .class method.
 
 These were created with a free tool called Ico Moon http://icomoon.io in order to add or update to this icon font import the file Font-Icons.json once inside the app update additional .svg files saved at 48x48px then export. The interface is quite intuitive and easy to use.
+
+# See also
+ * [[Frontend Dependencies]]
