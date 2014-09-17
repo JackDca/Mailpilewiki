@@ -1,3 +1,5 @@
+![Technical guide](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 Commands are the basic building block of the Mailpile back-end application.
 Most commands are both exposed to the user on the CLI, and to the web
 interface as HTML pages or as REST API endpoints.
