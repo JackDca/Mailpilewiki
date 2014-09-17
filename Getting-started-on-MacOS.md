@@ -2,7 +2,7 @@
 
 Please download the MacOS installer from [our website](https://www.mailpile.is/download/)
 
-It should be relatively straightforward.
+**This documentation needs expanding.**
 
 # Tips for developers using MacOS
 
