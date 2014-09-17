@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 Currently the way front-end plugin code will interact / be stored with backend python plugins is highly undetermined and subject to much change. The following represents the current state of things, but please be aware that the footing might be pulled from under you at any moment.
 
 ## UI hooks
