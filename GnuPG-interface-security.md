@@ -1,3 +1,5 @@
+![Security](https://github.com/pagekite/Mailpile/wiki/images/page-security.png)
+
 This document outlines the details of the implementation of PGP in Mailpile, including backend interactions, frontend UI specifications, and overall policy.
 
 We have several goals for Mailpile's security model that explain the use of PGP:
