@@ -54,13 +54,13 @@ We put this command without this did magic
 
 `mailpile> set profiles.0.name = Your Real Name`
 
-# Basic: Send mail in the clear over port 25
+Basic: Send mail in the clear over port 25
 
 `mailpile> set profiles.0.route = smtp://user:password@smtphost.com:25`
 
 or
 
-# Better: Send mail using TLS over the submission port, 587
+Better: Send mail using TLS over the submission port, 587
 
 `mailpile> set profiles.0.route = smtptls://user:password@smtphost.com:587`
 
