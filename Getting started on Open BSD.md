@@ -7,12 +7,15 @@ Well, then let's start with the packages you need to have installed.
 We get as root and we move to the temporary directory
 
 `su`
+
 `cd /tmp`
 
 Then we needed packages install, The command can change according to the current versions, look in the current versions of OpenBSD FTP server
 
 `pkg_add git curl python-2.7.6p0 py-setuptools-1.1.6v0 py-lxml-2.3.2 py-libxml-2.9.1 py-libxslt-1.1.28`
+
 `curl -L -o get-pip.py https://raw.github.com/pypa/pip/master/contrib/get-pip.py`
+
 `python get-pip.py`
 
 After installing these basic needs, put the following command
@@ -46,18 +49,23 @@ We put this command without this did magic
 `./mp`
 
 `mailpile> setup`
+
 `mailpile> set profiles.0.email = yourmail@domain.com`
+
 `mailpile> set profiles.0.name = Your Real Name`
 
-`# Basic: Send mail in the clear over port 25`
+# Basic: Send mail in the clear over port 25
+
 `mailpile> set profiles.0.route = smtp://user:password@smtphost.com:25`
 
 or
 
-`# Better: Send mail using TLS over the submission port, 587`
+# Better: Send mail using TLS over the submission port, 587
+
 `mailpile> set profiles.0.route = smtptls://user:password@smtphost.com:587`
 
 `./mp --set sys.http_host=0.0.0.0`
+
 `./mp --www`
 
 I hope you serve, I'm already researching how to use virtual domains and mailpile rid of roundcube. 
