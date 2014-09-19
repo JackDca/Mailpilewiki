@@ -23,7 +23,7 @@ Use one of the following two commands:
 
 ### 2. Install the requirements:
 
-    sudo apt-get install make
+    sudo apt-get install make python-jinja2 python-lxml python-pgpdump
     cd Mailpile
     sudo make debian-dev  # Does an apt-get install for requirements
 
