@@ -4,7 +4,7 @@ Mailpile is not an email service, it is an email client. But Mailpile does suppo
 
 ### What is your PGP public key?
 
-Our team PGP key is downloadble from here: https://www.mailpile.is/files/team@mailpile.is.asc
+Our team PGP key is downloadable from here: https://www.mailpile.is/files/team@mailpile.is.asc
 
 ### Can you please include *insert-some-random-encrypted-service*.
 
@@ -62,7 +62,7 @@ If your system is compromised, you have a very big problem that Mailpile can't r
 
 We plan to provide support for that.
 
-### Will it work when residing on an in-Tor server? 
+### Will it work when residing on a in-Tor server? 
 
 Yes!
 
@@ -84,7 +84,7 @@ Yes, this is one of our core beliefs and underlying design principles.
 
 ### What happens when you are communicating with people who are still hosted by Google or a self hosted insecure server? Do they need to implement something too? 
 
-People can continue using gmail or their acamdemic institutions email "server" as Mailpile is just the "client" that allows for sending of encrypted messages.
+People can continue using gmail or their academic institutions email "server" as Mailpile is just the "client" that allows for sending of encrypted messages.
 
 ### Does everyone need to be on your system (and using Mailpile) to be truly secure?
 
@@ -132,7 +132,7 @@ We're going to try and encrypt all the metadata using PGP + SMTP, but email stil
 
 ### Will you use the Perfect Forward Secrecy in your mail ?
 
-We can't actually guarantee that without breaking a vital part of email's functionality: people want to be able to read their old emails. If we implemented PFS, then nobody could ever view their archives. We consider this an antifeature, so we won't even try. Instead, we're going to just try to protect your email as well as we can while it is in transit (using PGP and opportunistic SSL), and as well as we can when it is at rest (using PGP, mostly).
+We can't actually guarantee that without breaking a vital part of email's functionality: people want to be able to read their old emails. If we implemented PFS, then nobody could ever view their archives. We consider this an anti-feature, so we won't even try. Instead, we're going to just try to protect your email as well as we can while it is in transit (using PGP and opportunistic SSL), and as well as we can when it is at rest (using PGP, mostly).
 
 ### Will you implement start TLS in your email system?
 
@@ -145,7 +145,7 @@ We aren't providing a sending service. Our email client can't obfuscate IP addre
 ### How does Mailpile know what key to use for a recipient?
 When you add or edit a contact, select the “Find Encryption Keys” button. Mailpile will then search a public key server for a matching key and add the key to the contact. In the beta version, Mailpile selects the first matching key at server hkp://subset.pool.sks-keyservers.net.
 
-### How can I add a key to the keyserver?
+### How can I add a key to the key server?
 
 If the recipient’s key is not already on the server(s) searched by Mailpile, you (or anyone else) can submit a public key directly to the server at http://subset.pool.sks-keyservers.net/.
 
