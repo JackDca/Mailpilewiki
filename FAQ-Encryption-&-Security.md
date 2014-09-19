@@ -114,33 +114,33 @@ We are uncertain about this at the moment.
 
 We don't have servers, so no. We do not store your emails. Messages are stored on your computer and encrypted with Open PGP. This does not include headers and metadata. However, Mailpile will encrypt metadata on your disc using AES-256-CBC at the moment, with a plan to move to AES-256-GCM in the future for tagging purposes. The keys for the AES are stored in the configuration file, which is PGP encrypted. 
 
-### If e-mails are encrypted, how do you intend to implement a searching function? 
+### If emails are encrypted, how do you intend to implement a searching function? 
 
-Mailpile decrypts incoming e-mails, index them, and re-encrypts them. The search index is stored and also encrypted as well as the terms which are stored as hashes. Good enough?
+Mailpile decrypts incoming emails, index them, and re-encrypts them. The search index is stored and also encrypted as well as the terms which are stored as hashes. Good enough?
 
 ### So what exactly will be encrypted and what about the metadata?
 
-The e-mail body will be encrypted. We are trying to find ways to make most of the metadata encrypted as well, but some of it can't be because of how e-mail works.
+The email body will be encrypted. We are trying to find ways to make most of the metadata encrypted as well, but some of it can't be because of how email works.
 
-### Is Mailpile going to send PGP encrypted e-mail, where the mail body is encrypted, but all the headers and the metadata are not?
+### Is Mailpile going to send PGP encrypted email, where the mail body is encrypted, but all the headers and the metadata are not?
 
 Yes. We are experimenting with ways to encrypt headers as well using standard PGP + SMTP protocols.
 
-### Or are you planning to somehow also encrypt the metadata (like in Bitmessage)? Would that even be possible with e-mail?
+### Or are you planning to somehow also encrypt the metadata (like in Bitmessage)? Would that even be possible with email?
 
-We're going to try and encrypt all the metadata using PGP + SMTP, but e-mail still requires that some of the metadata be un-encrypted so that mail servers will know where to deliver it to. We plan on integrating Bitmessage before 1.0
+We're going to try and encrypt all the metadata using PGP + SMTP, but email still requires that some of the metadata be un-encrypted so that mail servers will know where to deliver it to. We plan on integrating Bitmessage before 1.0
 
 ### Will you use the Perfect Forward Secrecy in your mail ?
 
-We can't actually guarantee that without breaking a vital part of e-mail's functionality: people want to be able to read their old e-mails. If we implemented PFS, then nobody could ever view their archives. We consider this an antifeature, so we won't even try. Instead, we're going to just try to protect your e-mail as well as we can while it is in transit (using PGP and opportunistic SSL), and as well as we can when it is at rest (using PGP, mostly).
+We can't actually guarantee that without breaking a vital part of email's functionality: people want to be able to read their old emails. If we implemented PFS, then nobody could ever view their archives. We consider this an antifeature, so we won't even try. Instead, we're going to just try to protect your email as well as we can while it is in transit (using PGP and opportunistic SSL), and as well as we can when it is at rest (using PGP, mostly).
 
-### Will you implement start TLS in your e-mail system?
+### Will you implement start TLS in your email system?
 
-Of course. Although we do urge all e-mail providers to provide TLS natively, because, while opportunistic encryption is better than no encryption, it's way better to support always-on encryption.
+Of course. Although we do urge all email providers to provide TLS natively, because, while opportunistic encryption is better than no encryption, it's way better to support always-on encryption.
 
-### Will you hide the IP when send an e-mail with your service?
+### Will you hide the IP when send an email with your service?
 
-We aren't providing a sending service. Our e-mail client can't obfuscate IP addresses - but if you route your mail through Tor or a Mixmaster, it might improve things for you.
+We aren't providing a sending service. Our email client can't obfuscate IP addresses - but if you route your mail through Tor or a Mixmaster, it might improve things for you.
 
 ### How does Mailpile know what key to use for a recipient?
 When you add or edit a contact, select the “Find Encryption Keys” button. Mailpile will then search a public key server for a matching key and add the key to the contact. In the beta version, Mailpile selects the first matching key at server hkp://subset.pool.sks-keyservers.net.
@@ -149,7 +149,7 @@ When you add or edit a contact, select the “Find Encryption Keys” button. Ma
 
 If the recipient’s key is not already on the server(s) searched by Mailpile, you (or anyone else) can submit a public key directly to the server at http://subset.pool.sks-keyservers.net/.
 
-### Does Mailpile support sending SMIME e-mails?
+### Does Mailpile support sending SMIME emails?
 
 No.  We are working on pgp/mime first, getting the metaphors and the UI right before we add alternate encryption schemes. S/MIME is also generally based on PKI which the general consumer may not have easy access to. We expect it'll be supported in the future.
 
