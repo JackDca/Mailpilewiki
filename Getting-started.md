@@ -10,7 +10,7 @@ The quickest way to get up and running, is to follow one of the following guides
 * [[Getting started on Linux]]
 * [[Getting started on MacOS]]
 * [[Getting started on Windows]]
-* [[Getting started on OpenBSD]]
+* [Getting started on OpenBSD](https://github.com/pagekite/Mailpile/wiki/Getting-started-on-Open-BSD)
 
 When that is done, the following guides will help you configure the software and get started using it:
 
