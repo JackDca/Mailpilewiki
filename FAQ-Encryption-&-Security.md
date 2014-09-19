@@ -142,9 +142,12 @@ Of course. Although we do urge all e-mail providers to provide TLS natively, bec
 
 We aren't providing a sending service. Our e-mail client can't obfuscate IP addresses - but if you route your mail through Tor or a Mixmaster, it might improve things for you.
 
-### Does Mailpile automatically search for recipients keys or generate new keys which is then submited to the public key servers?
+### How does Mailpile know what key to use for a recipient?
+When you add or edit a contact, select the “Find Encryption Keys” button. Mailpile will then search a public key server for a matching key and add the key to the contact. In the beta version, Mailpile selects the first matching key at server hkp://subset.pool.sks-keyservers.net.
 
-Yes we search & create keys. We are not sure yet about automatically submitting to keyservers.
+### How can I add a key to the keyserver?
+
+If the recipient’s key is not already on the server(s) searched by Mailpile, you (or anyone else) can submit a public key directly to the server at http://subset.pool.sks-keyservers.net/.
 
 ### Does Mailpile support sending SMIME e-mails?
 
