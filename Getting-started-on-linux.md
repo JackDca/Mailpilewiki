@@ -23,11 +23,11 @@ Use one of the following two commands:
 
 ### 2. Install the requirements:
 
-    sudo apt-get install make python-jinja2 python-lxml python-pgpdump
+    sudo apt-get install make
     cd Mailpile
     sudo make debian-dev  # Does an apt-get install for requirements
 
-If you get the following error you might want to install _build-essential_ package (`sudo apt-get install build-essential`) and then _Ruby_ (`sudo apt-get install ruby`).
+If you get the following error you might want to install used python packages (`sudo apt-get install make python-jinja2 python-lxml python-pgpdump`), _build-essential_ package (`sudo apt-get install build-essential`) and then _Ruby_ (`sudo apt-get install ruby`).
 ```
 ERROR:  Error installing therubyracer:
 	ERROR: Failed to build gem native extension.
