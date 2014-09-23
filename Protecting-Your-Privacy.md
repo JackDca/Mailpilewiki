@@ -1,8 +1,6 @@
-Mailpile doesn't yet know how to read and index encrypted e-mail, but it
-will in the future.  In the future Mailpile may also know how to log on to
-your remote IMAP and POP3 accounts and download or index remote mail.
-This means for sensitive messages, the search index becomes a potential
-security risk, as does the configuration file.  More broadly, easy access
+![Security](https://github.com/pagekite/Mailpile/wiki/images/page-security.png)
+
+Mailpile indexes your encrypted mail, and has access to your mail sources. This means for sensitive messages, the search index becomes a potential security risk, as does the configuration file.  More broadly, easy access
 to all your communications can be a privacy risk in and of itself:
 consider the search `naked att:jpg` as an example.  It is almost certainly
 worth taking steps to protect your Mailpile.
