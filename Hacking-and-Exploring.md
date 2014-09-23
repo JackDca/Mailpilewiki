@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 ### Code structure ###
 
 Mailpile's python code lives in `mailpile/`.
