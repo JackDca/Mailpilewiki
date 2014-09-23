@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 The most important command Mailpile supports is the `search` command.
 The second most important is probably `help`. :-)
 
