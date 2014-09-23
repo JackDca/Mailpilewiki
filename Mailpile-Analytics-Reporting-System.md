@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 This is a proposal for a Mailpile Analytics Reporting System, which reports back usage in an anonymized, nontrackable way. This provides us with some kind of idea of how many users Mailpile has and where, roughly, they are. This can help us with Mailpile's fundraising and promotion, as well as just generally making it easier to gauge our impact and make reasonable assumptions about where to focus our development acivities. Having this kind of information is useful, but we want to be very sure that were not violating people's privacy by doing this kind of collection. We can do this by collecting very small amounts of information that is not personally identifiable, but is sufficient to give us some kind of ideas of where we stand. As a design guideline, we want to acheive a similar level of anonymity as Tor does with its CollecTor system. 
 
 We want to know:
