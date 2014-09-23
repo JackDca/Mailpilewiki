@@ -1,3 +1,5 @@
+![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
+
 WAT? Mailpile is an amazing email client made with much love, care, and awesomeness- why would you ever want to uninstall Mailpile? Well, OK, we are still a little rough around the edges. For example, we have not even had a proper beta release yet. So, if you want to delete your install we understand
 
 ## Uninstalling on Windows
