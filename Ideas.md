@@ -1,4 +1,4 @@
-# A pile of ideas
+![Features](https://github.com/pagekite/Mailpile/wiki/images/page-features.png)
 
 These are random ideas that may or may not make sense.  Most of them
 were in one way or another inspired by conversations at FSCONS 2011/2012.
