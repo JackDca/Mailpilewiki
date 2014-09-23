@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 Searching is all about disk seeks.
 
 Mailpile tries to keep seeks to a minimum: any single-keyword search can
