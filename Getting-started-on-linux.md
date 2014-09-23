@@ -36,6 +36,10 @@ You can run Mailpile directly using the command:
 
 This should drop you into the Mailpile shell in the terminal and open up a new tab or window on your default browser that you can use to configure Mailpile and start using it.
 
+ * [[Configuring Mailpile]]
+ * [[Using Mailpile's command line]]
+ * [[Troubleshooting]]
+
 If you want to configure Mailpile to launch automatically on startup, consider adding it to either your window system config (if you're running it on a personal computer for instance), or to your init scripts (if you're using Mailpile on a server).
 
 ## Configuring Mailpile
