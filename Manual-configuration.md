@@ -9,7 +9,7 @@ Once you've got Mailpile running on your machine, from Mailpile's command line i
 3. Use the GUI installer that you see from accessing the above URL
 
 ## Running from an alternative config directory
-By default, Mailpile reads its config from `~/.mailpile`
+By default, Mailpile reads its config from `.local/share/Mailpile/` (Or `~/.mailpile` in previous versions, which presence will still be tested for backward compatibility)
 
 You can override this by setting the `$MAILPILE_HOME` environment variable, for example:
 
