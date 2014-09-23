@@ -4,63 +4,39 @@ Mailpile is developed and tested most heavily on Debian and Debian-based distrib
 
 ## Installing from source
 
-## Configuring Mailpile
+### 1. Clone the source repository
 
+You will need `git` installed on your system. When it is up, clone the repository:
 
-## Old stuff that will lead you down blind alleys and cause you harm
-
-**IGNORE THIS IT IS BEING CANNIBALIZED!**
-
-Mailpile is best tested on recent Debian-derived distributions,
-including Ubuntu.  It also works just fine on other modern distros (such
-as Fedora), but you will need to use different commands to install and
-configure the dependencies.
-
-To install Mailpile on Debian or Ubuntu, please follow these steps (last
-tested 07.06.2014 on Ubuntu 14.04).
-
-
-### 1. Clone the source repository:
-
-Use one of the following two commands:
-
-    # The alpha release branch (technical preview)
-    git clone -b release/alpha https://github.com/pagekite/Mailpile.git
-
-    # The main development branch
     git clone https://github.com/pagekite/Mailpile.git
 
-(If those fail, try `sudo apt-get install git` first.)
+This will clone the main development branch of Mailpile. If you want to clone a specific branch, specify it like so:
 
-### 2. Install the requirements:
+    git clone -b branchname https://github.com/pagekite/Mailpile.git
 
-    sudo apt-get install make
-    cd Mailpile
-    sudo make debian-dev  # Does an apt-get install for requirements
+A [full list of existing branches is available on Github](https://github.com/pagekite/Mailpile/branches). Generally you'll want the highest version number available.
 
-If you get the following error you might want to install used python packages (`sudo apt-get install python-jinja2 python-lxml python-pgpdump`), _build-essential_ package (`sudo apt-get install build-essential`) and then _Ruby_ (`sudo apt-get install ruby`).
-```
-ERROR:  Error installing therubyracer:
-	ERROR: Failed to build gem native extension.
+### 2. Install the requirements
 
-        /usr/bin/ruby1.8 extconf.rb
-extconf.rb:1:in `require': no such file to load -- mkmf (LoadError)
-	from extconf.rb:1
+Mailpile requires a number of different packages in order to run. Specifically:
 
-```
+ * GnuPG _(preferably on the 1.x branch for now, as Mailpile doesn't currently act as a GPG Agent)_
+ * OpenSSL
+ * Python 2.x
 
+And everything that's listed in `requirements.txt` (which can be auto-installed if you have PIP, by running `pip install -r requirements.txt`.
 
+If all is well, you should now be able to run Mailpile.
 
-### 3. Configure Mailpile!
+### 3. Running Mailpile
 
-You should now be able to run Mailpile on and access the built-in CLI:
+You can run Mailpile directly using the command:
 
     ./mp
 
-### 4. Installing on a Personal Computer
+This should drop you into the Mailpile shell in the terminal and open up a new tab or window on your default browser that you can use to configure Mailpile and start using it.
 
-Access the GUI interface in your web browser at `http://localhost:33411` you should be presented with an intuitive setup flow that guides you through configuring your Mailpile. The first step you should see when loading the above URL asks you configure your language.
+If you want to configure Mailpile to launch automatically on startup, consider adding it to either your window system config (if you're running it on a personal computer for instance), or to your init scripts (if you're using Mailpile on a server).
 
-### 5. Installing on a Web Server (network access)
+## Configuring Mailpile
 
-You will need to configure your server's network settings to allow HTTP access to port `33411` which is where Mailpile's HTTP server is serving the application. There are a few ways to do this and we will be providing better documentation about this soon!
