@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 ## FIXMES
 
 * This encryption needs to be optional, not everyone values security vs.
