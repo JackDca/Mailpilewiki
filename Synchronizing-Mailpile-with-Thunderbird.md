@@ -1,3 +1,7 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
+**This is a technical method of synchronizing with Thunderbird. If you use the mail sources setup, you can achieve the same result in a much simpler way. This documentation might help if you're trying to do something weird.**
+
 A lot of people use Thunderbird (or Icedove) as their main mail application, and may wish to use Thunderbird as their mail importer and frontend during this phase in the development of Mailpile. There are two things Mailpile can import from Thunderbird presently: Thunderbird's mboxes, which contain mail, and its Mork databases, which are contact address books.
 
 ## Finding your profile
