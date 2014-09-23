@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 There are demos of the plugin API in `mailpile/plugins/demos.py`
 
 If you want to know which plugins are currently registered, do `print sys.plugins` from the textmode UI. To add a plugin, do `append sys.plugins <name>`.
