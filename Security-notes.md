@@ -1,3 +1,5 @@
+![Security](https://github.com/pagekite/Mailpile/wiki/images/page-security.png)
+
 # Misc Security Notes
 
 (These are misellaneous security notes, collected during and
