@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 # Mail sources
 
 Mailpile's Mail Sources take care of importing mail into Mailpile's local storage and adding to the index. Mail sources can represent remote servers (IMAP, POP3, ...) or local sources such as a Thunderbird installation or Unix mail spool.
