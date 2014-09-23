@@ -1,5 +1,16 @@
 ![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
 
+Mailpile is developed and tested most heavily on Debian and Debian-based distributions, but should work fine on any modern distribution (Fedora, Mandriva, even Arch if you are so inclined). There may be [packages available for your system](https://www.mailpile.is/download/). If not, consider [[submitting packages]].
+
+## Installing from source
+
+## Configuring Mailpile
+
+
+## Old stuff that will lead you down blind alleys and cause you harm
+
+**IGNORE THIS IT IS BEING CANNIBALIZED!**
+
 Mailpile is best tested on recent Debian-derived distributions,
 including Ubuntu.  It also works just fine on other modern distros (such
 as Fedora), but you will need to use different commands to install and
