@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 **THIS IS A WORK IN PROGRESS, PLEASE ADD COMMENTS IF ANYTHING IS UNCLEAR - ... or clarify, of course**
 
 The new Mailpile plugin architecture allows you to create and install plugin packages that live outside the Mailpile source tree. This allows you to extend the functionality of Mailpile in a lot of ways. This documentation is intended to help you get started with the creation of Mailpile plugins, but we also suggest looking at the demo plugins shipped with Mailpile in `plugins/demos/`.
