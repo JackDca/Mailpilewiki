@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 Mailpile has a built-in web server and will eventually include a proper
 web-based interface for searching, reading and composing e-mail.
 
