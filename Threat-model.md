@@ -1,3 +1,5 @@
+![Security](https://github.com/pagekite/Mailpile/wiki/images/page-security.png)
+
 # Threat Model
 
 A preliminary round of requirements threat modeling, using the [Trike
