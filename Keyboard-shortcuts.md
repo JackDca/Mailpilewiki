@@ -32,5 +32,7 @@ When listing shortcuts, if we say "ctrl+c" it means "hold down ctrl and press c"
 | u        | Marks selected messages as Unread                                        |
 | up       | focus previous message                                                   |
 | down     | focus next message                                                       |
+| left     | go to previous page                                                      |
+| right    | go to next page                                                          |
 | shift    | ??                                                               |  wip  |
 | esc      | Break out of whichever sequence or mode you're in                        |
