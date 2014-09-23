@@ -1,3 +1,5 @@
+![Features](https://github.com/pagekite/Mailpile/wiki/images/page-features.png)
+
 ![Super Contacts](https://raw.github.com/wiki/pagekite/Mailpile/images/Super-Contacts.png)
 
 Social networks like Facebook & Twitter solve the problem of displaying the most recently up to date contact info, avatars, and email addresses by centralizing all of the relevant profile data each time a client requests anything. Since decentralization is one of Mailpiles core goals, creating a centralized contact syncing server is out of the question. This is also why we're not using CardDav. _Note, we will probably end up supporting CardDav with a plugin, as there is demand for it._
