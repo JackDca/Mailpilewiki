@@ -1,3 +1,5 @@
+![Security](https://github.com/pagekite/Mailpile/wiki/images/page-security.png)
+
 # The Mailpile Security Objectives and Roadmap
 
 ## What is this?
