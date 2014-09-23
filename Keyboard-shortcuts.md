@@ -1,3 +1,5 @@
+![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
+
 Mailpile has built in keyboard shortcuts. We use keychains, so sometimes multi-key combos will get you results you're looking for.
 
 When listing shortcuts, if we say "ctrl+c" it means "hold down ctrl and press c", but if we say "c b" it means "press c and then press b". So "+" implies simultaneity, whereas a space implies consecutiveness. 
