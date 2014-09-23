@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 PGP import commands all return four items in the result structure:
 
  * `results`: a statistical overview of what happened
