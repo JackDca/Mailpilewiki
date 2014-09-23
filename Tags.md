@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 Tags are a central concept in Mailpile's design. Tagging of messages is used
 in various ways to denote status, context, importance, display properties
 and many other things.
