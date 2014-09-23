@@ -1,4 +1,4 @@
-![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+![Features](https://github.com/pagekite/Mailpile/wiki/images/page-features.png)
 
 |      Platform      | Works? | Notes | Reported by |
 | ------------------ | ------ | ----- | ----------- |
