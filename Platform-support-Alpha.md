@@ -1,3 +1,5 @@
+![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+
 |      Platform      | Works? | Notes | Reported by |
 | ------------------ | ------ | ----- | ----------- |
 | Ubuntu Linux 12.04 | Yes    |       | Mailpile team |
