@@ -1,6 +1,28 @@
 ![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
 
-Please download the MacOS installer from [our website](https://www.mailpile.is/download/)
+# Installing the Mailpile Beta on OS X
+
+1. Please download the OS X installer from [our website](https://www.mailpile.is/download/).
+
+2. Once downloaded, open the installer from your Downloads directory. When the Mailpile folder opens, drag the Mailpile.app application icon into your Applications directory.
+
+    ![Install Mailpile](https://github.com/haraldnagel/Mailpile-OS-X-screenshots/blob/master/0.4.0/Mailpile-dmg.png)
+
+3. Now, launch Mailpile by navigating to your Applications directory or selecting it in Launchpad.
+
+4. You may see a Gatekeeper dialog box shown below if you have not changed the default security settings.
+
+    ![Gatekeeper alert](https://github.com/haraldnagel/Mailpile-OS-X-screenshots/blob/master/0.4.0/Gatekeeper-warning.png)
+
+   In order to run Mailpile you will need to alter the default Gatekeeper security settings in the Security & Privacy System Preferences pane. Once in Security & Privacy, you may need to click the lock icon at the bottom and provide your password before you may select the "Anywhere" option. For more information about this option and its security implications you can review [Gatekeeper documentation](http://support.apple.com/kb/HT5290) from Apple. Note: after you run Mailpile once, you should be able to move this option back to "Mac App Store and identified developers" without further issue.
+
+    ![Security and Privacy](https://github.com/haraldnagel/Mailpile-OS-X-screenshots/blob/master/0.4.0/Security-and-Privacy-Anywhere.png)
+    
+5. At this point you should be able to follow the Mailpile configuration wizard.
+
+6. Mailpile also provides a convenient menu bar icon for quick access.
+
+    ![Mailpile menu bar icon](https://github.com/haraldnagel/Mailpile-OS-X-screenshots/blob/master/0.4.0/Mailpile-menu.png)
 
 **This documentation needs expanding.**
 
