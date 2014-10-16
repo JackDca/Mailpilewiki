@@ -17,7 +17,7 @@ To uninstall Mailpile do the following:
 
 * Delete your main `Mailpile` folder, you know the thing that downloaded from Github
 * Delete your `.mailpile` folder, it lives in your home directory.
-    * On *nix system that is usually `/home/username/.local/share/mailpile`
+    * On *nix system that is usually `/home/username/.local/share/Mailpile`
     * On a Mac that is `/Users/username/.mailpile`
     * On a Windows `C:\Documents\Users\username\.mailpile`
 
