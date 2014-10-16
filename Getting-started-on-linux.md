@@ -22,7 +22,7 @@ Mailpile requires a number of different packages in order to run. Specifically:
 
  * GnuPG _(preferably on the 1.x branch for now, as Mailpile doesn't currently act as a GPG Agent)_
  * OpenSSL
- * Python 2.x
+ * Python 2.7+
 
 And everything that's listed in `requirements.txt` (which can be auto-installed if you have PIP, by running `pip install -r requirements.txt`.
 
