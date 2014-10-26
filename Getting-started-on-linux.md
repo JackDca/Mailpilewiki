@@ -24,7 +24,12 @@ Mailpile requires a number of different packages in order to run. Specifically:
  * OpenSSL
  * Python 2.7+
 
-And everything that's listed in `requirements.txt` (which can be auto-installed if you have PIP, by running `pip install -r requirements.txt`.
+And everything that's listed in `requirements.txt` (which can be auto-installed if you have PIP, by running `sudo pip install -r requirements.txt`. If you want to use PIP, you need to install these dependencies too:
+
+ * python-dev
+ * libxml2-dev
+ * libxslt-dev
+ * libz-dev
 
 If all is well, you should now be able to run Mailpile.
 
