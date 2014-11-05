@@ -2,9 +2,7 @@
 
 Mailpile is developed and tested most heavily on Debian and Debian-based distributions, but should work fine on any modern distribution (Fedora, Mandriva, even Arch if you are so inclined). There may be [packages available for your system](https://www.mailpile.is/download/). If not, consider [[submitting packages]].
 
-## Installing from source
-
-### 1. Clone the source repository
+## 1. Clone the source repository
 
 You will need `git` installed on your system. When it is up, clone the repository:
 
@@ -16,7 +14,7 @@ This will clone the main development branch of Mailpile. If you want to clone a 
 
 A [full list of existing branches is available on Github](https://github.com/pagekite/Mailpile/branches). Generally you'll want the highest version number available.
 
-### 2. Install the requirements
+## 2. Install all the dependencies
 
 Mailpile requires a number of different packages in order to run. Specifically:
 
@@ -33,7 +31,7 @@ And everything that's listed in `requirements.txt` (which can be auto-installed 
 
 If all is well, you should now be able to run Mailpile.
 
-### 3. Running Mailpile
+## 3. Start Running Mailpile
 
 You can run Mailpile directly using the command:
 
@@ -46,6 +44,4 @@ This should drop you into the Mailpile shell in the terminal and open up a new t
  * [[Troubleshooting]]
 
 If you want to configure Mailpile to launch automatically on startup, consider adding it to either your window system config (if you're running it on a personal computer for instance), or to your init scripts (if you're using Mailpile on a server).
-
-## Configuring Mailpile
 
