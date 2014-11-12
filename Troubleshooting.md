@@ -59,7 +59,6 @@ Some examples:
     
     # or this:
     mailpile> print sources.9e6bc04lzz8.password
-    ...
 
 
 ## Backing (and restoring) up downloaded mail
@@ -95,11 +94,9 @@ Examples:
 
     # Disable threading in this session
     mailpile> order rev-flat-date
-    ...
 
     # Search for mail found in that mailbox:
     mailpile> search mailbox:0006
-    ...
 
     # If you want to include messages that have been trashed or marked
     # as spam, you need to do this:
@@ -127,6 +124,8 @@ If you have the feeling that too much or too little mail is being downloaded, yo
 6. Restart Mailpile
 7. Add the backups as a local mailbox (optional)
 8. Rescan your mail
+
+Note that this procedure inevitably will force Mailpile to download your mail all over again. If you have deleted things from the IMAP server, you will lose them permanently unless you make backups. This can be quite annoying, as metadata about those messages will remain in the search index, leading to potentially leading to ghost results.
 
 See above for hints on how to find your Mailpile folder and for the basics on finding your mail source settings.
 
