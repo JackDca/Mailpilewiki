@@ -61,7 +61,7 @@ Some examples:
     mailpile> print sources.9e6bc04lzz8.password
 
 
-## Backing (and restoring) up downloaded mail
+## Backing up (and restoring) downloaded mail
 
 It is a good idea to make a backup of any mail you have downloaded, before performing manual surgery on your Mailpile's mailboxes and mail sources.  The steps are as follows:
 
@@ -71,7 +71,7 @@ It is a good idea to make a backup of any mail you have downloaded, before perfo
 4. Use `export` to make a copy of the mail
 5. Use `add` to re-add the exported mail to your Mailpile (optional)
 
-Note: this procedure applies to any mail you can find with a search, not just mail source data.
+Note: this procedure applies to any mail you can find with a search, not just mail source data - just skip step 1 and use what ever search describes the mail you want backed up / exported.
 
 Examples:
 
@@ -108,6 +108,10 @@ Examples:
     # If you only want to save messages 5, 6 and 11:
     mailpile> export -flat 5 6 11 mbox:/home/user/exported-0006.mbx
 
+    # If you want to back up entire conversations (potentially including
+    # mail not matching the original search query), omit the -flat argument
+    mailpile> export 5 6 11 mbox:/home/user/exported-0006.mbx
+
     # To re-import exported mail, put the mbox file somewhere nice and:
     mailpile> add /path/to/exported-0006.mbx
 
@@ -125,7 +129,7 @@ If you have the feeling that too much or too little mail is being downloaded, yo
 7. Add the backups as a local mailbox (optional)
 8. Rescan your mail
 
-Note that this procedure inevitably will force Mailpile to download your mail all over again. If you have deleted things from the IMAP server, you will lose them permanently unless you make backups. This can be quite annoying, as metadata about those messages will remain in the search index, leading to potentially leading to ghost results.
+Note that this procedure inevitably will force Mailpile to download your mail all over again. If you have deleted things from the IMAP server, you will lose them permanently unless you make backups. This can be quite annoying, as metadata about those messages will remain in the search index, potentially leading to ghost results.
 
 See above for hints on how to find your Mailpile folder and for the basics on finding your mail source settings.
 
