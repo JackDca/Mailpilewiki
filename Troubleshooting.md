@@ -2,7 +2,6 @@
 
 This is currently a catch all page for people who run into issues with new or existing installs of Mailpile that get broken due to upgrading and such! Feel free to submit situations you encounter and how you manage to resolve the issue.
 
-
 # Search index
 
 ## I broke my search index, how to fix it ?
@@ -59,6 +58,15 @@ Some examples:
     
     # or this:
     mailpile> print sources.9e6bc04lzz8.password
+
+
+
+## Checking & Fixing Mailboxes
+
+There is a tool which exists that checks and attempts to fix issues with given mailboxes such as duplicates and such. To use this functionality run the following command whereby `001a` is the mailbox id:
+
+`mailpile> hacks/chkmbx -clean 001a`
+
 
 
 ## Backing up (and restoring) downloaded mail
