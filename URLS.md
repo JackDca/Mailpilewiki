@@ -22,10 +22,15 @@ endpoints be used for automation.
 ### GET (also accept POST)
 
     /api/0/abortabortabort/   ?no_save=[Do not try to save state]
+    /api/0/auth/login/
+    ... POST only: user=[User to authenticate as]&pass=[Password or passphrase]
+    /api/0/auth/logout/       [<session/ID>]/
+    /api/0/cached/            [<cache-id>]/
+                              ?id=[Cache ID of command to redisplay]
     /api/0/contacts/          [--lines]/[<terms>]/
                               ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
     /api/0/contacts/add/      [all]/<msgs>/OR/<email>/=/<name>/
-    ... POST only: mid=[Message ID]&email=[e-mail address]&name=[Contact name]
+    ... POST only: note=[Note about contact]&mid=[Message ID]&email=[E-mail address]&name=[Contact name]
     /api/0/contacts/import/   [<parameters>]/
     /api/0/contacts/importers/
     /api/0/contacts/view/     [<email>]/
@@ -40,14 +45,14 @@ endpoints be used for automation.
                               ?allowremote=[Whether to permit remote key lookups (defaults to true)]&address=[The nick/address to find a key for]
     /api/0/crypto_policy/     [<emailaddresses>]/
     /api/0/eventlog/          [incomplete]/[wait]/[<count>]/[<field>=<val>/...]/
-                              ?private_data=[var:value]&source=[source class]&flag=[require a flag]&flags=[match all flags]&since=[wait for new data?]&data=[var:value]&incomplete=[incomplete events only?]&wait=[seconds to wait for new data]
+                              ?private_data=[var:value]&source=[source class]&flag=[require a flag]&flags=[match all flags]&event_id=[an event ID]&since=[wait for new data?]&data=[var:value]&incomplete=[incomplete events only?]&wait=[seconds to wait for new data]
     /api/0/filter/list/       [<search>|=<id>|@<type>]/
                               ?search=[Text to search for]&type=[Filter type]&id=[Filter ID]
     /api/0/help/              [<command-group>]/
     /api/0/help/splash/
-    /api/0/help/urlmap/
+    /api/0/help/urlmap/       [<prefix>]/
     /api/0/help/variables/
-    /api/0/jsapi/
+    /api/0/jsapi/             ?ts=[Cache busting timestamp]
     /api/0/message/           [raw]/<message>/
                               ?mid=[metadata-ID]
     /api/0/message/download/  <msgs>/<att>/[><fn>]/
@@ -57,30 +62,45 @@ endpoints be used for automation.
     /api/0/profiles/          [--lines]/[<terms>]/
                               ?q=[search terms]&count=[how many to display (default=40)]&offset=[skip how many in the display (default=0)]&format=[lines or mpCard (default)]
     /api/0/profiles/add/      [all]/<msgs>/OR/<email>/=/<name>/
-    ... POST only: mid=[Message ID]&email=[e-mail address]&name=[Contact name]
+    ... POST only: note=[Note about contact]&route_id=[Route ID for sending mail]&mid=[Message ID]&name=[Contact name]&email=[E-mail address]
     /api/0/profiles/choose_from/<MIDs/or/addresses>/
                                 ?no_from=[Ignore From: lines]&mid=[Message ID]&email=[E-mail address]
     /api/0/profiles/view/     <nickname>/
     /api/0/ps/
     /api/0/quitquitquit/
     /api/0/search/            [@<start>]/<terms>/
-                              ?qr=[search refinements]&end=[end position]&q=[search terms]&start=[start position]&full=[return all metadata]&order=[sort order]
+                              ?qr=[search refinements]&end=[end position]&q=[search terms]&start=[start position]&full=[return all metadata]&context=[refine or redisplay an older search]&order=[sort order]
     /api/0/search/address/    [<terms>]/
-                              ?q=[search terms]&count=[number of results]&offset=[offset results]
-    /api/0/settings/          <var>/
-                              ?var=[section.variable]
-    /api/0/setup/check_keychain/?testing=[Yes or No, if testing]
-    /api/0/setup/create_key/  ?testing=[Yes or No, if testing]
-    /api/0/setup/guess_emails/?testing=[Yes or No, if testing]
+                              ?q=[search terms]&count=[number of results]&ms=[deadline in ms]&offset=[offset results]
+    /api/0/settings/          [-short|-secrets|-flat]/<var>/
+                              ?var=[section.variable]&secrets=[Set True to show passwords and other secrets]&short=[Set True to omit unchanged values (defaults)]
+    ... POST only: user=[Authenticate as user]&pass=[Authenticate with password]
+    /api/0/setup/             [do_gpg_stuff]/
+                              ?_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&testing=[Yes or No, if testing]
+    /api/0/setup/configure_key/?_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&testing=[Yes or No, if testing]
+    /api/0/setup/crypto/      ?_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&passphrase_confirm=[Confirm the passphrase]&encrypt_mail=[y/n: encrypt locally stored mail?]&testing=[Yes or No, if testing]&encrypt_misc=[y/n: encrypt plugin and misc data?]&encrypt_index=[y/n: encrypt search index?]&index_encrypted=[y/n: index encrypted mail?]&encrypt_events=[y/n: encrypt event log?]&passphrase=[Specify a passphrase]&choose_key=[Select an existing key to use]&encrypt_vcards=[y/n: encrypt vcards?]
+    /api/0/setup/email_servers/?email=[E-mail address]&_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&testing=[Yes or No, if testing]
+    /api/0/setup/profiles/    ?_path=[Redirect path]
+    ... POST only: note=[Profile note]&advance=[Yes or No, advance setup flow]&name=[Name associated with this e-mail]&route_id=[Route ID for sending mail]&testing=[Yes or No, if testing]&pass=[Password for remote accounts]&email=[Create a profile for this e-mail address]
+    /api/0/setup/welcome/     ?_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&testing=[Yes or No, if testing]&language=[Language selection]
     /api/0/tags/              [<wanted>|!<wanted>]/[...]/
     /api/0/tags/add/          <tag>/
-    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[03-gray-dark]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[icon-tag]
+    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[the color of the label]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[icon-tag]
 
 ### POST
 
+    /api/0/auth/login/
+    ... POST only: user=[User to authenticate as]&pass=[Password or passphrase]
+    /api/0/auth/logout/       [<session/ID>]/
     /api/0/contacts/add/      [all]/<msgs>/OR/<email>/=/<name>/
-    ... POST only: mid=[Message ID]&email=[e-mail address]&name=[Contact name]
+    ... POST only: note=[Note about contact]&mid=[Message ID]&email=[E-mail address]&name=[Contact name]
     /api/0/contacts/remove/   <email|x-mailpile-rid>/
+    ... POST only: rid=[delete by x-mailpile-rid]&email=[delete by e-mail]
     /api/0/crypto/gpg/importkey/<key_file>/
                                 ?key_data=[Contents of public key to be imported]&key_file=[Location of file containing the public key]
     /api/0/crypto/gpg/importkeyfrommail/<mid>/
@@ -89,6 +109,8 @@ endpoints be used for automation.
                                  ?keyid=[ID of key to fetch]
     /api/0/crypto/gpg/signkey/<keyid>/[<signingkey>]/
                               ?signingkey=[The key to sign with]&keyid=[The key to sign]
+    /api/0/crypto/keyimport/  <address>/<fingerprint,...>/<origins/...>/
+    ... POST only: fingerprints=[List of fingerprints we want]&origins=[List of origins to search]&address=[The nick/address to find a key for]
     /api/0/crypto_policy/set/ <email/address>/none|sign|encrypt|sign-encrypt|default/
                               ?policy=[new policy]&email=[contact email]
     /api/0/eventlog/cancel/   all|<eventIDs>/
@@ -97,63 +119,91 @@ endpoints be used for automation.
     ... POST only: event_id=[Event ID]
     /api/0/filter/list/       [<search>|=<id>|@<type>]/
                               ?search=[Text to search for]&type=[Filter type]&id=[Filter ID]
+    /api/0/groups/addlines/   <email>/<[[<NR>]=]line>/.../
+    ... POST only: name=[Line name]&value=[Line value]&replace=[int=replace line by number]&replace_all=[If nonzero, replaces all lines]&rid=[update by x-mailpile-rid]&email=[update by e-mail]
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]&name=[(ignored)]
     /api/0/message/compose/   [ephemeral]/
-    ... POST only: body=[..]&from=[..]&cid=[canned response metadata-ID]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
+    ... POST only: body=[..]&from=[..]&cid=[canned response metadata-ID]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&attachment=[..]&attach-pgp-pubkey=[..]&subject=[..]
     /api/0/message/forward/   [att|ephemeral]/<messages>/
                               ?atts=[forward attachments]&ephemeral=[ephemerality]&mid=[metadata-ID]&cid=[canned response metadata-ID]
     /api/0/message/reply/     [all|ephemeral]/<messages>/
                               ?reply_all=[reply to all]&ephemeral=[ephemerality]&mid=[metadata-ID]&cid=[canned response metadata-ID]
     /api/0/message/send/      <messages>/[<emails>]/
     ... POST only: to=[recipients]&mid=[metadata-ID]
+    /api/0/message/unattach/  <mid>/<atts>/
+    ... POST only: att=[Attachment IDs or filename]&mid=[metadata-ID]
     /api/0/message/unthread/
     ... POST only: mid=[message-id]
     /api/0/message/update/    <messages>/<<filename>/
-    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&attachment=[..]&attach-pgp-pubkey=[..]&subject=[..]
     /api/0/message/update/send/
-    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&attachment=[..]&attach-pgp-pubkey=[..]&subject=[..]
     /api/0/profiles/add/      [all]/<msgs>/OR/<email>/=/<name>/
-    ... POST only: mid=[Message ID]&email=[e-mail address]&name=[Contact name]
+    ... POST only: note=[Note about contact]&route_id=[Route ID for sending mail]&mid=[Message ID]&name=[Contact name]&email=[E-mail address]
     /api/0/profiles/remove/   <email|x-mailpile-rid>/
+    ... POST only: rid=[delete by x-mailpile-rid]&email=[delete by e-mail]
+    /api/0/rescan/            [full|vcards|vcards:<src>|both|mailboxes|sources|<msgs>]/
+    ... POST only: which=[[full|vcards|vcards:<src>|both|mailboxes|sources|<msgs>]]
+    /api/0/settings/          [-short|-secrets|-flat]/<var>/
+                              ?var=[section.variable]&secrets=[Set True to show passwords and other secrets]&short=[Set True to omit unchanged values (defaults)]
+    ... POST only: user=[Authenticate as user]&pass=[Authenticate with password]
     /api/0/settings/add/      <section.variable>/<value>/
     ... POST only: section.variable=[value|json-string]
     /api/0/settings/set/      <section.variable>/<value>/
-    ... POST only: section.variable=[value|json-string]
+    ... POST only: _section=[common section, create if needed]&section.variable=[value|json-string]
     /api/0/settings/unset/    <var>/
     ... POST only: var=[section.variables]
-    /api/0/setup/test_mailroute/?testing=[Yes or No, if testing]
-    ... POST only: username=[User name]&use_tls=[Use TLS to connect]&host=[Server host name]&password=[Password]&protocol=[IMAP, POP3 or SMTP]&testing=[Yes or No, if testing]&port=[Server port number]
+    /api/0/setup/configure_key/?_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&testing=[Yes or No, if testing]
+    /api/0/setup/crypto/      ?_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&passphrase_confirm=[Confirm the passphrase]&encrypt_mail=[y/n: encrypt locally stored mail?]&testing=[Yes or No, if testing]&encrypt_misc=[y/n: encrypt plugin and misc data?]&encrypt_index=[y/n: encrypt search index?]&index_encrypted=[y/n: index encrypted mail?]&encrypt_events=[y/n: encrypt event log?]&passphrase=[Specify a passphrase]&choose_key=[Select an existing key to use]&encrypt_vcards=[y/n: encrypt vcards?]
+    /api/0/setup/profiles/    ?_path=[Redirect path]
+    ... POST only: note=[Profile note]&advance=[Yes or No, advance setup flow]&name=[Name associated with this e-mail]&route_id=[Route ID for sending mail]&testing=[Yes or No, if testing]&pass=[Password for remote accounts]&email=[Create a profile for this e-mail address]
+    /api/0/setup/test_route/  ?_path=[Redirect path]
+    ... POST only: username=[User name]&advance=[Yes or No, advance setup flow]&protocol=[Messaging protocol]&name=[Route name]&testing=[Yes or No, if testing]&route_id=[ID of existing route]&host=[Host]&command=[Shell command]&password=[Password]&port=[Port]
+    /api/0/setup/welcome/     ?_path=[Redirect path]
+    ... POST only: advance=[Yes or No, advance setup flow]&testing=[Yes or No, if testing]&language=[Language selection]
     /api/0/tag/               <[+|-]tags>/<msgs>/
-    ... POST only: add=[tags]&del=[tags]&mid=[message-ids]
+    ... POST only: add=[tags]&del=[tags]&mid=[message-ids]&context=[search context, for tagging relative results]
     /api/0/tag/later/         <seconds>/<[+|-]tags>/<msgs>/
-    ... POST only: add=[tags]&del=[tags]&mid=[message-ids]
+    ... POST only: add=[tags]&del=[tags]&mid=[message-ids]&context=[search context, for tagging relative results]
     /api/0/tag/tmp/           <seconds>/<[+|-]tags>/<msgs>/
-    ... POST only: add=[tags]&del=[tags]&mid=[message-ids]
+    ... POST only: add=[tags]&del=[tags]&mid=[message-ids]&context=[search context, for tagging relative results]
     /api/0/tags/add/          <tag>/
-    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[03-gray-dark]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[icon-tag]
+    ... POST only: magic_terms=[magic search terms associated with this tag]&label_color=[the color of the label]&name=[tag name]&template=[tag template type]&display=[tag display type]&parent=[parent tag ID]&label=[display as label in search results, or not]&search_terms=[default search associated with this tag]&slug=[tag slug]&icon=[icon-tag]
     /api/0/tags/delete/       <tag>/
     ... POST only: tag=[tag(s) to delete]
+    /api/0/vcards/addlines/   <email>/<[[<NR>]=]line>/.../
+    ... POST only: name=[Line name]&value=[Line value]&replace=[int=replace line by number]&replace_all=[If nonzero, replaces all lines]&rid=[update by x-mailpile-rid]&email=[update by e-mail]
 
 ### UPDATE
 
+    /api/0/groups/addlines/   <email>/<[[<NR>]=]line>/.../
+    ... POST only: name=[Line name]&value=[Line value]&replace=[int=replace line by number]&replace_all=[If nonzero, replaces all lines]&rid=[update by x-mailpile-rid]&email=[update by e-mail]
     /api/0/message/attach/    <messages>/[<path/to/file>]/
     ... POST only: file-data=[file data]&mid=[metadata-ID]&name=[(ignored)]
+    /api/0/message/unattach/  <mid>/<atts>/
+    ... POST only: att=[Attachment IDs or filename]&mid=[metadata-ID]
     /api/0/message/unthread/
     ... POST only: mid=[message-id]
     /api/0/message/update/    <messages>/<<filename>/
-    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&attachment=[..]&attach-pgp-pubkey=[..]&subject=[..]
     /api/0/message/update/send/
-    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&subject=[..]
+    ... POST only: body=[..]&file-data=[file data]&from=[..]&name=[(ignored)]&cc=[..]&encryption=[..]&mid=[metadata-ID]&bcc=[..]&to=[..]&attachment=[..]&attach-pgp-pubkey=[..]&subject=[..]
     /api/0/settings/add/      <section.variable>/<value>/
     ... POST only: section.variable=[value|json-string]
     /api/0/settings/set/      <section.variable>/<value>/
-    ... POST only: section.variable=[value|json-string]
+    ... POST only: _section=[common section, create if needed]&section.variable=[value|json-string]
+    /api/0/vcards/addlines/   <email>/<[[<NR>]=]line>/.../
+    ... POST only: name=[Line name]&value=[Line value]&replace=[int=replace line by number]&replace_all=[If nonzero, replaces all lines]&rid=[update by x-mailpile-rid]&email=[update by e-mail]
 
 ### DELETE
 
     /api/0/contacts/remove/   <email|x-mailpile-rid>/
+    ... POST only: rid=[delete by x-mailpile-rid]&email=[delete by e-mail]
     /api/0/profiles/remove/   <email|x-mailpile-rid>/
+    ... POST only: rid=[delete by x-mailpile-rid]&email=[delete by e-mail]
     /api/0/tags/delete/       <tag>/
     ... POST only: tag=[tag(s) to delete]
 
@@ -170,6 +220,9 @@ endpoints be used for automation.
 *These accept the same arguments as the API calls above.*
 
     /abortabortabort/
+    /auth/login/
+    /auth/logout/
+    /cached/
     /contacts/
     /contacts/add/
     /contacts/import/
@@ -184,6 +237,7 @@ endpoints be used for automation.
     /crypto/gpg/searchkey/
     /crypto/gpg/signkey/
     /crypto/gpg/statistics/
+    /crypto/keyimport/
     /crypto/keylookup/
     /crypto_policy/
     /crypto_policy/set/
@@ -191,6 +245,7 @@ endpoints be used for automation.
     /eventlog/cancel/
     /eventlog/undo/
     /filter/list/
+    /groups/addlines/
     /help/
     /help/splash/
     /help/urlmap/
@@ -204,6 +259,7 @@ endpoints be used for automation.
     /message/forward/
     /message/reply/
     /message/send/
+    /message/unattach/
     /message/unthread/
     /message/update/
     /message/update/send/
@@ -215,22 +271,25 @@ endpoints be used for automation.
     /profiles/view/
     /ps/
     /quitquitquit/
+    /rescan/
     /search/
     /search/address/
     /settings/
     /settings/add/
     /settings/set/
     /settings/unset/
-    /setup/check_keychain/
-    /setup/create_key/
-    /setup/guess_emails/
-    /setup/test_mailroute/
+    /setup/
+    /setup/configure_key/
+    /setup/crypto/
+    /setup/email_servers/
+    /setup/profiles/
+    /setup/test_route/
+    /setup/welcome/
     /tag/
     /tag/later/
     /tag/tmp/
     /tags/
     /tags/add/
     /tags/delete/
+    /vcards/addlines/
 
-
-<!-- TestResults(failed=0, attempted=47) -->
