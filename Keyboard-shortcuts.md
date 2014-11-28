@@ -6,33 +6,35 @@ When listing shortcuts, if we say "ctrl+c" it means "hold down ctrl and press c"
 
 | Shortcut | Description                                                    | comment |
 | -------- | ---------------------------------------------------------------|-------- |
-|  /       | Focus search box                                                         |
-| c        | Compose new message                                                      |
-| g i      | Go to tag:Inbox                                                          |
-| g c      | Go to contacts list                                                      |
-| g n c    | Add a new contact                                                        |
-| g t      | Go to tag (an input box will pop up)                                     |
-| g n t    | Add new tag                                                       | wip  |
-| h        | Open the help                                                            |
-| ctrl+z or ⌘+z | Undo                                                                |
-| space    | select/unselect the current thread                                |  wip |
-| s a      | select all threads                                                       |
-| s b      | select between two threads                                        | wip  |
-| s n      | unselect all threads                                                     |
+|  /       | focus search box                                                         |
+| a c      | show add contact modal                                                   |
+| a t      | show add tag modal                                                       |
+| c        | compose new message                                                      |
+| g i      | go to in:inbox                                                           |
+| g c      | go to contacts list page                                                 |
+| g n c    | go to add new contact page                                               |
+| g t      | go to tags list page                                                     |
+| g n t    | go to add new tag page                                                   |
+| h        | open the help                                                            |
+| ⌘+z or ctrl+z | undo recent action                                           | wip  |
+| space    | select/unselect the current thread                                       |
+| s a      | Select all threads                                                       |
+| s b      | Select between two threads                                        | wip  |
+| s n      | Unselect all threads                                                     |
 | s i      | invert selection                                                         |
 | k        | select the next message                                                  | 
 | j        | select the prev message                                                  | 
 | enter    | open the focused thread                                                  |
 | f        | refresh current search                                                   | 
-| m a      | Archive selected messages                                                |
-| m d      | Moves selected messages to Trash                                         |
-| m s      | Moves selected messages to Spam                                          |
-| t        | Open tag editor modal                                                    |
-| r        | Marks selected messages as Read                                          |
-| u        | Marks selected messages as Unread                                        |
+| m a      | archive selected messages                                                |
+| m d      | moves selected messages to Trash                                         |
+| m s      | moves selected messages to Spam                                          |
+| t        | open tags editor modal                                                   |
+| r        | marks selected messages as Read                                          |
+| u        | marks selected messages as Unread                                        |
 | up       | focus previous message                                                   |
 | down     | focus next message                                                       |
 | left     | go to previous page                                                      |
 | right    | go to next page                                                          |
-| shift    | ??                                                               |  wip  |
-| esc      | Break out of whichever sequence or mode you're in                        |
+| shift    | will allow selecting between 2 points in list                    |  wip  |
+| esc      | break out of whichever input / sequence / mode you're in                 |
