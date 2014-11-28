@@ -15,7 +15,7 @@ Test data lives in `testing/`.
 
 There are a bunch of variables that can be tweaked. For a complete list:
 
-    mailpile> help variables
+    mailpile> help/variables
     ...
 
 To set a variable to some value either run Mailpile with:
