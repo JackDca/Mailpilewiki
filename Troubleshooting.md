@@ -163,3 +163,16 @@ Examples of relevant commands:
 
     # Rescanning your mail (press CTRL-C to abort at any time)
     mailpile> rescan both
+
+## I get an ImportError when running ./mp inside a virtualenv 
+
+    $ ./mp
+    ImportError: No module named jinja2
+
+Check that you're using a recent version of virtualenv (1.7 doesn't work, 1.11 does).
+
+Virtualenv works by overriding the `python` command in your current shell by modifying `PATH`.
+
+Older versions did not override `python2`. The `mp` script specifies `python2` as its interpreter. So with old versions of virtualenv, when your shell invokes `python2` it runs outside of the virtualenv and without your dependencies.
+
+[#1106](https://github.com/mailpile/Mailpile/issues/1106) shows the fix on Ubuntu 12.04
