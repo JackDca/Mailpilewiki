@@ -14,9 +14,7 @@
 
     ![Gatekeeper alert](https://github.com/haraldnagel/Mailpile-OS-X-screenshots/blob/master/0.4.0/Gatekeeper-warning.png)
 
-   In order to run Mailpile you will need to alter the default Gatekeeper security settings in the Security & Privacy System Preferences pane. Once in Security & Privacy, you may need to click the lock icon at the bottom and provide your password before you may select the "Anywhere" option. For more information about this option and its security implications you can review [Gatekeeper documentation](http://support.apple.com/kb/HT5290) from Apple. Note: after you run Mailpile once, you should be able to move this option back to "Mac App Store and identified developers" without further issue.
-
-    ![Security and Privacy](https://github.com/haraldnagel/Mailpile-OS-X-screenshots/blob/master/0.4.0/Security-and-Privacy-Anywhere.png)
+   In order to run Mailpile you can temporarily alter the default Gatekeeper security settings in the Security & Privacy System Preferences pane (see Apple’s [Gatekeeper documentation](http://support.apple.com/kb/HT5290) for more information), but the much easier way is to just right-click the icon, select “Open” from the contextual menu and confirm you want to launch the application (which may require admin authorization). In either case, after you started Mailpile for the first time, you can simply launch it as usual.
     
 5. At this point you should be able to follow the Mailpile configuration wizard.
 
