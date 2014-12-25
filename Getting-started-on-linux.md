@@ -6,11 +6,11 @@ Mailpile is developed and tested most heavily on Debian and Debian-based distrib
 
 You will need `git` installed on your system. When it is up, clone the repository:
 
-    git clone https://github.com/pagekite/Mailpile.git
+    git clone https://github.com/mailpile/Mailpile.git
 
 This will clone the main development branch of Mailpile. If you want to clone a specific branch, specify it like so:
 
-    git clone -b branchname https://github.com/pagekite/Mailpile.git
+    git clone -b branchname https://github.com/mailpile/Mailpile.git
 
 A [full list of existing branches is available on Github](https://github.com/pagekite/Mailpile/branches). Generally you'll want the highest version number available.
 
