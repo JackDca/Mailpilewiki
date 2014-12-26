@@ -12,7 +12,7 @@ This will clone the main development branch of Mailpile. If you want to clone a 
 
     git clone -b branchname https://github.com/mailpile/Mailpile.git
 
-A [full list of existing branches is available on Github](https://github.com/pagekite/Mailpile/branches). Generally you'll want the highest version number available.
+A [full list of existing branches is available on Github](https://github.com/mailpile/Mailpile/branches). Generally you'll want the highest version number available.
 
 ## 2. Install all the dependencies
 
