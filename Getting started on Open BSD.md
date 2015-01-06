@@ -36,7 +36,7 @@ And we clone our repository
 
 We move to our new directory
 
-`cd /Mailpile`
+`cd Mailpile`
 
 We put this command without this did magic
 
