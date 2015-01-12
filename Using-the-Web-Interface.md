@@ -13,7 +13,7 @@ Maybe someday you will build a fancier UI for us. :-)
 If you want to run the web UI without the CLI interface, start the
 program like this:
 
-    $ ./mp --www
+    $ ./mp www
 
 The server listens on `localhost:33411` by default, meaning you cannot
 access it from a different computer (for security reasons). You can change
