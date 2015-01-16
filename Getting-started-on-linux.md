@@ -32,6 +32,9 @@ And everything that's listed in `requirements.txt` (which can be auto-installed 
  * python-lxml
  * python-pgpdump
 
+Under Fedora this yum command might work for installing the dependencies:
+sudo yum install gnupg openssl python-devel libxml2-devel libxslt-devel zlibrary-devel python-jinja2 python3-jinja2 python-lxml python3-lxml python-pgpdump python3-pgpdump
+
 If all is well, you should now be able to run Mailpile.
 
 ## 3. Start Running Mailpile
