@@ -40,6 +40,7 @@ Highlights since the previous Beta:
 * 1st draft of POP3 support
 * An internal result cache was introduced to speed up the web UI and prepare advanced features
 * Usability studies on PGP key management and composition of encrypted mail led to many improvements
+* Rough implementations to improve PGP key management and composition
 * Usability enhancements to viewing message threads & HTML message support (still rough)
 * Usability of the command-line interface was also greatly improved
 * Many, many bug fixes - including the notorious *openssl-eats-all-the-CPU* bug
@@ -66,6 +67,7 @@ Known issues in the Beta II release:
    * Non-ASCII characters in PGP key UIDs are not handled correctly during setup
    * Outgoing TLS (HTTPS, STARTTLS) connections do not validate certificates or prefer good ciphers
    * Encrypted/signed messages with attachments are incompatible with Google's end-to-end and other non-PGP/MIME capable mailers
+   * There is a nasty 5 minute delay on importing new PGP keys before they become actually usable [Issue #1123](https://github.com/mailpile/Mailpile/issues/1123)
 * **E-mail basics**
    * HTML mail is rendered as plain text, which may lose important formatting
    * Rough HTML viewing is implemented, but does not sanitize or check for malicious attachments at all
