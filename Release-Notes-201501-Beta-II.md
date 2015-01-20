@@ -36,6 +36,7 @@ Highlights since the previous Beta:
 
 * We fixed a bug in key generation, where instead of generating 4096 bit PGP keys for new users, we were generating relatively weak 1024 bit keys
 * IMAP support is much improved, but still a work in progress
+* 1st draft of POP3 support
 * An internal result cache was introduced, which speeds up the web interface in many places and lays the foundation for back-end initiated updates to the user interface (to announce new mail, etc.)
 * Many improvements were made to the usability of PGP key management and composition of encrypted mail, based on the outcome of some usability studies
 * Improved the usability of the command-line interfac
