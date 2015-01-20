@@ -40,7 +40,8 @@ Highlights since the previous Beta:
 * 1st draft of POP3 support
 * An internal result cache was introduced to speed up the web UI and prepare advanced features
 * Usability studies on PGP key management and composition of encrypted mail led to many improvements
-* The usability of the command-line interface was also greatly improved
+* Usability enhancements to viewing message threads & HTML message support (still rough)
+* Usability of the command-line interface was also greatly improved
 * Many, many bug fixes - including the notorious *openssl-eats-all-the-CPU* bug
 
 This release builds on our earlier progress:
@@ -67,6 +68,7 @@ Known issues in the Beta II release:
    * Encrypted/signed messages with attachments are incompatible with Google's end-to-end and other non-PGP/MIME capable mailers
 * **E-mail basics**
    * HTML mail is rendered as plain text, which may lose important formatting
+   * Rough HTML viewing is implemented, but does not sanitize or check for malicious attachments at all
    * Messages written by the notmuch mail client may not display correctly
    * MacMaildir (Mail.app) mail sources do not work yet
 * **IMAP**
