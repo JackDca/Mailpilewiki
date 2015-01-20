@@ -36,14 +36,10 @@ Highlights since the previous Beta:
 
 * We fixed a bug in key generation:
      * instead of 4096 bit PGP keys, we were generating relatively weak 1024 bit keys for new users
-* IMAP support is much improved, but still a work in progress
-* 1st draft of POP3 support
-* An internal result cache was introduced to speed up the web UI and prepare advanced features
-* Usability studies on PGP key management and composition of encrypted mail led to many improvements
-* Rough implementations to improve PGP key management and composition
-* Usability enhancements to viewing message threads & HTML message support (still rough)
-* Usability of the command-line interface was also greatly improved
-* Many, many bug fixes - including the notorious *openssl-eats-all-the-CPU* bug
+* Usability studies on PGP key management and working with encrypted mail led to many UI/UX improvements
+* Performance of the web UI was improved
+* IMAP and POP3 support are much improved, but still a work in progress
+* Usability fixes, bug fixes, ...
 
 This release builds on our earlier progress:
 
