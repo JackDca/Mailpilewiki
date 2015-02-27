@@ -4,12 +4,14 @@
 
 Once you've got Mailpile running on your machine, from Mailpile's command line interface, do the following:
 
-1. `setup`  -- run the setup command to instantiate the absolute basics
-2. Point your web browser at [http://localhost:33411](http://localhost:33411)
-3. Use the GUI installer that you see from accessing the above URL
+1. Point your web browser at [http://localhost:33411](http://localhost:33411)
+2. Use the GUI installer that you see from accessing the above URL
+
+A non-web-based setup procedure is in the works. Currently there are too many moving parts and too much of the code is under development to document the entire procedure.
 
 ## Running from an alternative config directory
-By default, Mailpile reads its config from `.local/share/Mailpile/` (Or `~/.mailpile` in previous versions, which presence will still be tested for backward compatibility)
+
+By default, Mailpile reads its config from `.local/share/Mailpile/` (Or `~/.mailpile` in previous versions, which presence will still be tested for backward compatibility).
 
 You can override this by setting the `$MAILPILE_HOME` environment variable, for example:
 
