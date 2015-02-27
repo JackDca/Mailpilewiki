@@ -2,7 +2,7 @@
 
 **Please refer to [[Configuring mailpile]] for an easy guide to Mailpile configuration.**
 
-Once you've got Mailpile running on your machine, from Mailpile's command line interface, do the following:
+Once you've got Mailpile running on your machine, do the following:
 
 1. Point your web browser at [http://localhost:33411](http://localhost:33411)
 2. Use the GUI installer that you see from accessing the above URL
