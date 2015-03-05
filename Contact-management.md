@@ -1,40 +1,146 @@
 ![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
 
-Contacts are stored on disk as [RFC6350](https://tools.ietf.org/html/rfc6350) compliant VCARDs.
+Contacts are stored on disk as [RFC6350](https://tools.ietf.org/html/rfc6350)
+compliant VCARDs.
 
 Base code for Contacts is in mailpile/plugins/contacts.py
 
+
+## How contacts work
+
+Mailpile's contacts are internally built upon the
+[RFC6350](https://tools.ietf.org/html/rfc6350) standard, or VCards.
+
+Internally these data structures are used to represent a few different
+types of data:
+
+   * Profiles (Mailpile owner personalities/identities)
+   * Contacts (People the owner communicates with)
+   * Groups (Groups of Contacts)
+
+Profiles and Contacts share many attributes, the most important of which
+pertain to encryption (keys, preferences) as well as mapping which of a
+users profiles is preferred for communicating with a given contact or
+Internet domain.
+
+At a low level, the trickiest part of contacts is synchronizing the
+different data sources. The Mailpile contacts attempt to provide a
+unified view of various different sources of contact information,
+including:
+
+   * User preferences (manual changes)
+   * User behavior (inferred changes)
+   * The user's GPG key-chain
+   * A Thunderbird Mork database
+   * A CardDAV server
+   * The Gravatar online image database
+   * ... more! ...
+
+Mailpile's contacts make extensive use of the VCard data source and
+synchronization specification for merging all of these disparate sources
+of information into a single VCard.
+
+Many of these data sources are read-only. However, for bidirectional
+synchronization, it may be appropriate to update the GPG key-chain
+and/or CardDAV servers to reflect certain user initiated changes.
+However, in order to prevent infinite loops and unexpected behavior,
+Mailpile should NEVER automatically synchronize data from one external
+source to another. Only manual user-initiated changes are candidates for
+syncing back.
+
+
+## Data merging strategy
+
+The initial pass of data merging is taken care of by the VCard spec's
+built-in features, which allow lines on a card to be associated with
+different data sources and specifies an algorithm for updating the card
+when the source data changes.
+
+However, this only gets us half-way, as once the data is on the card,
+Mailpile frequently has to make a choice about which of multiple e-mail
+addresses, names or encryption keys to use.
+
+In general, we want Mailpile's contacts to have the following
+characteristics:
+
+* User preferences (manual settings) override all others
+   * In particular, a user can edit, suppress or "delete" data,
+     without it reverting/reappearing on sync.
+* When a user has not expressed a preference, updates from
+  remote sources should result in updates to the data present
+  on the card.
+
+
+## Current status
+
+Mailpile's current VCard/Contact implementation is incomplete, in that
+it lacks the following:
+
+* Deleting/suppressing imported data is impossible
+* Existing importers are flawed in that they show only the importer
+  as a source, whereas they should list each individual source entity
+  (e.g. GPG key) separately, so the user can suppress entire sources
+  or simply understand where data comes from.
+* Interfaces for writing data back to sources (sync) are missing.
+* Interfaces for triggering and directing updates from sources (in
+  particular the GPG key chain) are missing.
+
+Impact:
+
+* Changes to keys and settings (e.g. importing keys) are not reflected
+  in the UI in a timely fashion.
+* Users cannot disable or edit their contacts in a meaningful way.
+* Users cannot disable/ignore a key via. the contact manager, they have
+  to go all the way to the key-chain, which won't scale if we ever have
+  multiple key-chains as data sources or multiple types of encryption
+  active at once.
+
+
 ## Importers
+
 * [[VCARD Importer]]
 * [[Mork Importer]]
 * [[CardDAV Importer]]
 * [[GnuPG Contact Importer]]
-* Google Contacts
+* Google Contacts?
 
 ## Exporters
+
 * [[VCARD Exporter]]
 
 ## Synchronization
-Modulo some complexity, import + export = syncrhonization. Let's get import working first.
+
+Modulo some complexity, import + export = syncrhonization. Let's get import
+working first.
 
 ## Field validators
-We want to make sure there's no crud in some fields, because we expect those fields to be actionable. Field validators may therefore be useful.
+
+We want to make sure there's no crud in some fields, because we expect those
+fields to be actionable. Field validators may therefore be useful.
 
 Not done:
 * E-mail field
 * Website field
 * ...?
 
-## Context providers
-A context provider is an import filter which, when provided with certain information about a contact, extracts useful context about the contact to deepen the user's understanding of what the user is doing, who they are, and how best to contact them. 
+## IDEA: Context providers
 
-This is a slightly creepy feature, but actually fairly reasonable considering it is primarily using public info or info that is otherwise available to the Mailpile user in question. Heck, it might even encourage people to think a bit more about privacy...
+A context provider is an import filter which, when provided with certain
+information about a contact, extracts useful context about the contact to
+deepen the user's understanding of what the user is doing, who they are, and
+how best to contact them.
 
-This is not NOT DONE in anyway yet, but here are the API's we're considering about:
+This is a slightly creepy feature, but actually fairly reasonable considering
+it is primarily using public info or info that is otherwise available to the
+Mailpile user in question. Heck, it might even encourage people to think a bit
+more about privacy...
+
+This is not NOT DONE in anyway yet, but here are the API's we're considering
+about:
 
 * Facebook
   * Auth: oauth2 api requests with application specific tokens (HARD)
-  * Can't programaticaly get my "friends" email addresses (for east comparisons), even if they list email address in their profile. 
+  * Can't programaticaly get my "friends" email addresses (for east comparisons), even if they list email address in their profile.
   * Docs: https://developers.facebook.com
   * Available Data:
     * Name
@@ -69,7 +175,7 @@ This is not NOT DONE in anyway yet, but here are the API's we're considering abo
   * Docs: http://en.gravatar.com/site/implement/profiles/
   * Example: http://en.gravatar.com/brennannovak.json or .vcf
 * IndieWeb (Microformats)
-  * Auth: None - simple HTTP requests, hot dog. 
+  * Auth: None - simple HTTP requests, hot dog.
   * Available Data (varies):
     * Name
     * Avatar
