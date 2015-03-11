@@ -22,7 +22,11 @@ Mailpile requires a number of different packages in order to run. Specifically:
  * OpenSSL
  * Python 2.7+
 
-And everything that's listed in `requirements.txt` (which can be auto-installed if you have PIP, by running `sudo pip install -r requirements.txt`). If you don't want to use PIP, you need to install these dependencies:
+Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, you could install the other two packages by running
+
+    sudo apt-get install gnupg openssl
+
+And everything that's listed in [requirements.txt](https://github.com/mailpile/Mailpile/blob/master/requirements.txt) (which can be auto-installed if you have PIP, by running `sudo pip install -r requirements.txt`). If you don't want to use PIP, you need to install these dependencies:
 
  * python-dev
  * libxml2-dev
@@ -31,6 +35,10 @@ And everything that's listed in `requirements.txt` (which can be auto-installed 
  * python-jinja2
  * python-lxml
  * python-pgpdump
+
+On Debian, you could install these packages like this:
+
+    sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev python-jinja2 python-lxml python-pgpdump
 
 Under Fedora this yum command might work for installing the dependencies:
 
