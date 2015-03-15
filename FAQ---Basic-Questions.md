@@ -16,7 +16,7 @@ When Mailpile is ready, that should be an option, yes.
 
 ### How can I get a MailPile account?
 
-There is no such thing! Mailpile is software you run on you computer, not an e-mail service provider. So you can just use the e-mail addresses you have already, or sign up for a new one somewhere.
+There is no such thing! Mailpile is software you run on your computer, not an e-mail service provider. So you can just use the e-mail addresses you have already, or sign up for a new one somewhere.
 
 ### Can I get a cool @mailpile.is email address?
 
