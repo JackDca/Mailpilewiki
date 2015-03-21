@@ -35,10 +35,11 @@ And everything that's listed in [requirements.txt](https://github.com/mailpile/M
  * python-jinja2
  * python-lxml
  * python-pgpdump
+ * spambayes
 
 On Debian, you could install these packages like this:
 
-    sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev python-jinja2 python-lxml python-pgpdump
+    sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev python-jinja2 python-lxml python-pgpdump spambayes
 
 Under Fedora this yum command might work for installing the dependencies:
 
