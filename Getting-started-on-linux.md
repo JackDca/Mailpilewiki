@@ -61,3 +61,49 @@ This should drop you into the Mailpile shell in the terminal and open up a new t
 
 If you want to configure Mailpile to launch automatically on startup, consider adding it to either your window system config (if you're running it on a personal computer for instance), or to your init scripts (if you're using Mailpile on a server).
 
+## 4. Accesing The GUI Over Internet
+
+At the moment, we do not recommend exposing Mailpile directly to the wider Internet.
+
+Putting it behind a security-mindful reverse proxy (NginX, Pound, etc...) will add an important layer of protection. That proxy then handles the SSL. A slightly more geeky solution which also provides strong security is to use SSH tunneling from your desktop to the VPS.
+
+We have not decided what our long-term solution is for this use-case. On Linux, making something like Pound a dependency is not a problem and is going to be the best overall technical solution. For desktop (win/mac) installations that people still want remote access to, we may need to bundle something ourselves.
+
+**Using Apache as Proxy**
+
+This requires the following modules `mod_ssl` and `mod_proxy` and perhaps others...
+
+```
+<IfModule mod_ssl.c>
+    <VirtualHost *:80>
+        ServerName webmail.rpadovani.com
+        Redirect permanent / https://webmail.rpadovani.com/
+    </VirtualHost>
+
+    <VirtualHost _default_:443>
+        ServerName webmail.rpadovani.com
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        SSLEngine on
+        SSLCertificateFile  /etc/apache2/ssl/mailpile.crt
+        SSLCertificateKeyFile /etc/apache2/ssl/mailpile.key
+
+        ProxyPass / http://localhost:33411/
+
+        <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+                SSLOptions +StdEnvVars
+        </Directory>
+
+        BrowserMatch "MSIE [2-6]" \
+                nokeepalive ssl-unclean-shutdown \
+                downgrade-1.0 force-response-1.0
+        BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown
+
+    </VirtualHost>
+</IfModule>
+```
