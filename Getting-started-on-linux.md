@@ -76,12 +76,12 @@ This requires the following modules `mod_ssl` and `mod_proxy` and perhaps others
 ```
 <IfModule mod_ssl.c>
     <VirtualHost *:80>
-        ServerName webmail.rpadovani.com
-        Redirect permanent / https://webmail.rpadovani.com/
+        ServerName webmail.mailpile.com
+        Redirect permanent / https://webmail.mailpile.com/
     </VirtualHost>
 
     <VirtualHost _default_:443>
-        ServerName webmail.rpadovani.com
+        ServerName webmail.mailpile.com
 
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
