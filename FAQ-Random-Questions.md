@@ -1,15 +1,17 @@
-### Which device would you recommend for us to use to enable maximum privacy? 
+### Is Mailpile real?
 
-This question might take a while to answer. In the meantime, check out https://securityinabox.org/. It's a good start!
-
-### Do you think that I could resell your service in Russia?
-
-Feel free!
+Yes, and so are we!
 
 ### Where is your blog's RSS button!?!?!?!
 
-Good question. Here: http://www.mailpile.is/blog/index.rss
+Good question. Here it is: <http://www.mailpile.is/blog/index.rss>
 
-### Will the Alpha build in Jan 2014 be an open Alpha? Will we be allowed to install, use, and give feed back around that time?
+### Can we use Mailpile as the standard mail solution for our clients/company/server?
 
-Absolutely. The Alpha release will require a bit of tech knowledge and use the command line to get up and running. The Beta (July 2014) will be much easier.
+When Mailpile is ready, that should be an option, yes. But when is software ever ready?
+
+### How do I get updates about your project?
+
+We have an IRC channel on Freenode, `#mailpile`. This is the easiest to get hold of us and ask questions. Otherwise you can [follow us on Twitter](https://twitter.com/MailpileTeam).
+
+We'll probably also add a mailing list one of these days... ;-)

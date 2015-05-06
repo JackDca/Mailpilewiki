@@ -1,9 +1,11 @@
-* [Basic Questions](FAQ---Basic-Questions)
-* [Branding Design](FAQ-Branding-&-Design)
-* [Contributing / Helping / Developing / Working Stuff](FAQ-Contributing,-Helping,-Developing)
-* [Encryption / Security](FAQ-Encryption-&-Security)
+* [What Is Mailpile?](FAQ-What-Is-Mailpile)
+
+* [How can I help?](FAQ-Contributing,-Helping,-Developing)
 * [Feature Requests](FAQ-Feature-Requests)
+
+* [Technical Questions](FAQ-Technical-Questions---Not-Encryption)
 * [Interface & Usability Design](FAQ-Interface-&-Usability-Design)
-* [Random Questions](FAQ-Random-Questions)
-* [Technical Questions/Not Encryption](FAQ-Technical-Questions---Not-Encryption)
-* [What Is Mailpile](FAQ-What-Is-Mailpile)
+* [Encryption & Security](FAQ-Encryption-&-Security)
+* [Branding & Design](FAQ-Branding-&-Design)
+
+* [Random! Random!](FAQ-Random-Questions)
