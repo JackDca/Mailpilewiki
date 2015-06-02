@@ -26,16 +26,16 @@ Conceptually, an Account is an e-mail address and all the meta-data required to 
 
 Accounts are manipulated using the /profiles/ API endpoints and the primary storage for an Account is a Mailpile VCard (kind=profile). Accounts inherit basic VCard semantics, but each account SHOULD also have:
 
-* A dedicated Tag (x-mailpile-profile-tag)
-* Zero or more Mail Sources (x-mailpile-profile-source)
-* Zero or one Mail Routes (x-mailpile-profile-route)
+* A dedicated Tag (x-mailpile-profile-tag, MailpileCard.tag)
+* Zero or more Mail Sources (x-mailpile-profile-source, MailpileCard.add_source(s), MailpileCard.sources())
+* Zero or one Mail Routes (x-mailpile-profile-route, MailpileCard.route)
 
 The data associated with these items are not currently stored on the VCard itself, but are linked using the named attributes. Other profile-specific VCard attributes are:
 
-* Human-readable message signature (x-mailpile-profile-signature)
-* Domains this account sends mail to (x-mailpile-profile-scope)
-* Outgoing encryption and signing policy (x-mailpile-crypto-policy)+
-* Outgoing encrypted mail format (x-mailpile-crypto-format)+
+* Human-readable message signature (x-mailpile-profile-signature, MailpileCard.signature)
+* Domains this account sends mail to (x-mailpile-profile-scope, MailpileCard.add_scope(e), MailpileCard.sends_to(email))
+* Outgoing encryption and signing policy (x-mailpile-crypto-policy, MailpileCard.crypto_policy)+
+* Outgoing encrypted mail format (x-mailpile-crypto-format, MailpileCard.crypto_format)+
 * PGP key fingerprint (key)+
 
 (+ The last three may be used by individual contacts as well, to specify per-recipient customizations)
