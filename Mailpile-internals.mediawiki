@@ -1,13 +1,13 @@
-![Technical documentation](https://github.com/pagekite/Mailpile/wiki/images/page-technical.png)
+![Technical documentation](https://github.com/mailpile/Mailpile/wiki/images/page-technical.png)
 
 * [[Commands]]
 * [[Contact management]]
+* [[Accounts]]
+** [[Mail routes]]
+** [[Mail sources]] and [[Mailboxes]]
 * [[Search engine]]
 ** [[Search index]]
 ** [[Search engine hooks]]
-* Incoming E-mail
-** [[Mail sources]]
-** [[Mailboxes]]
 * [[Tags]]
 * [[Filters]]
 * [[Event Log]]
