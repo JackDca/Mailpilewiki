@@ -33,9 +33,12 @@ Accounts are manipulated using the /profiles/ API endpoints and the primary stor
 The data associated with these items are not currently stored on the VCard itself, but are linked using the named attributes. Other profile-specific VCard attributes are:
 
 * Human-readable message signature (x-mailpile-profile-signature)
-* Outgoing encryption and signing policy (x-mailpile-crypto-policy)
-* Outgoing encrypted mail format (x-mailpile-crypto-format)
-* PGP key fingerprint (key)
+* Domains this account sends mail to (x-mailpile-profile-scope)
+* Outgoing encryption and signing policy (x-mailpile-crypto-policy)+
+* Outgoing encrypted mail format (x-mailpile-crypto-format)+
+* PGP key fingerprint (key)+
+
+(+ The last three may be used by individual contacts as well, to specify per-recipient customizations)
 
 
 ## Incoming mail, Tags and Accounts
