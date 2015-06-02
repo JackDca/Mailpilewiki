@@ -24,7 +24,7 @@ Conceptually, an Account is an e-mail address and all the meta-data required to 
 
 ## Implementation
 
-Accounts are manipulated using the /profiles/ API endpoints and the primary storage for an Account is a Mailpile VCard (kind=profile). Accounts inherit basic VCard semantics, but each account may also have:
+Accounts are manipulated using the /profiles/ API endpoints and the primary storage for an Account is a Mailpile VCard (kind=profile). Accounts inherit basic VCard semantics, but each account SHOULD also have:
 
 * A dedicated Tag (x-mailpile-profile-tag)
 * Zero or more Mail Sources (x-mailpile-profile-source)
