@@ -69,7 +69,7 @@ The strength (or weakness) of this protocol is largely dependent on how well the
 * Availability of the storage locations matters (affects M/N ratio)
 * The channels used to transmit the recovery codes to and from their storage locations, should be as diverse as the locations themselves
 * If storage locations are kept secret, they may be forgotten
-* If storage locations are not kept secret, attacks may be too easy
+* If storage locations are not kept secret, attacks and collusion are made easier
 * Manual work during recovery is more acceptable than manual work during the preparation phase, otherwise the preparation phase might never be completed
 
 There are a few potential storage locations considered in this document:
