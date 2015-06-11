@@ -58,12 +58,12 @@ Mailpile will invite the user to enable passphrase recovery once a certain thres
 
 When recovery is enabled, the following locations will be chosen as recovery code storage nodes:
 
-1. The folder containing the key itself (GNUPGHOME or Mailpile's data directory)
+1. The folder containing the key itself ($GNUPGHOME or $MAILPILE_HOME)
 2. All configured IMAP accounts
 3. The e-mail addresses of at least two frequent correspondents (the user may choose)
 4. An optional hard-copy printout
 
-Recovery codes will be constructed in such a way as to allow require an answer from all-but-one of the correspondents and all-but-one of the IMAP servers (assuming there is more than one available). With the exception of managing the optional hard-copy, distribution of recovery codes can be fully automated.
+Recovery codes will be constructed in such a way as to require an answer from all-but-one of the correspondents and all-but-one of the IMAP servers (assuming there is more than one available). With the exception of managing the optional hard-copy, distribution of recovery codes can be fully automated.
 
 Implementation notes:
 
