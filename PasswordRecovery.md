@@ -6,9 +6,11 @@ This document proposes a protocol for decentralized passphrase and password reco
 
 ## Discussion
 
-One of the most common failures in PGP key management is loss of the passphrase. In many common configurations, a strong passphrase is used to protect the private key material: the user is asked to cleverly create an unguessable passphrase and then commit it to memory. In general a longer and more complex passphrase is considered more secure, but unfortunately such passphrases are also more easily forgotten.
+One of the most common failures in PGP key management is loss of the passphrase.
 
-This problem is a special case of the general problem of passwords and memory, but is exacerbated by the nature of strong cryptography and the culture around PGP:
+In many common configurations, a strong passphrase is used to protect the private key material: the user is asked to cleverly create an unguessable passphrase and then commit it to memory. In general a longer and more complex passphrase is considered more secure, but unfortunately such passphrases are also more easily forgotten.
+
+This problem is a special case of the general problem of passwords and memory, but is exacerbated by the unforgiving nature of strong cryptography in general and the culture around PGP in particular:
 
 1. PGP keys have no "password reset" mechanism
 2. PGP passphrases are often considered "too important" to entrust them to keychain managers or hard copies
