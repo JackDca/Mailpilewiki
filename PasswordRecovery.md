@@ -38,7 +38,7 @@ Passphrase recovery can be made possible by employing a [Secret Sharing](https:/
 
 The recovery protocol therefore has the following preparation steps:
 
-1. Choose N and M
+1. Choose numbers N and M
 2. Generate N recovery codes
 3. Store each recovery code in a different location
 
