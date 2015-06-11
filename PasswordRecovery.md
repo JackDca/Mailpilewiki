@@ -18,9 +18,9 @@ This problem is a special case of the general problem of passwords and memory, b
 
 To put it another way: the high value placed on PGP keys inevitably implies that the cost of losing a passphrase is also very high.
 
-Although some high-risk users explicitly prefer the passphrase to be only ever committed to human memory, there is a significant number of users whose need to avoid data-loss outweighs the risks to confidentiality posed by making forgotten passphrases recoverable.
+Although some high-risk users explicitly need their passphrase to be only ever committed to human memory, there is a significant number of users whose need to avoid data-loss greatly outweighs the potential risk recoverable passphrases might pose to confidentiality of their data. It's interesting that PGP community has traditionally focused on the former case almost exclusively, which may be an overlooked factor contributing to the low adoption of the technology by the wider public. Backups are important!
 
-Tankred Hase of Whiteout has proposed [an elegant use of IMAP as a key synchronization channel](https://github.com/whiteout-io/mail-html5/wiki/Secure-OpenPGP-Key-Pair-Synchronization-via-IMAP), which Mailpile will adopt, not only to facilitate synchronization, but also to guarantee an off-site backup of the key material exists. This takes care of protecting the key material itself, but the problem of the passphrase getting lost or forgotten remains.
+Tankred Hase of Whiteout has proposed [an elegant use of IMAP as a key synchronization channel](https://github.com/whiteout-io/mail-html5/wiki/Secure-OpenPGP-Key-Pair-Synchronization-via-IMAP), which Mailpile will adopt, not only to facilitate synchronization, but also to guarantee an off-site backup of the user's key material. This greatly reduces the risk of catastrophic data loss, but the problem of the passphrase getting lost or forgotten remains.
 
 This document describes a decentralized protocol for implementing secure passphrase recovery using [Trivial Secret Sharing](https://en.wikipedia.org/wiki/Secret_sharing#Trivial_secret_sharing).
 
@@ -29,7 +29,7 @@ This document describes a decentralized protocol for implementing secure passphr
 
 Mailpile's initial attempt at solving the problem was to admonish users to print out and keep safe a hard-copy of their passphrase.
 
-Although Mailpile has so far only been used by a small number of technically skilled users, this "nagging" was almost universally ignored and one of the most common questions from our Alpha and Beta programs was "how do I reset my passphrase?". This does not bode well for the technique as the software is adopted by a wider audience.
+Although Mailpile has so far only been used by a small number of technically skilled users, this "nagging" was almost universally ignored.  One of the most common questions from our Alpha and Beta programs was "how do I reset my passphrase?", which does not bode well for the technique if the software is adopted by a wider, less technical audience.
 
 
 ## Generic Protocol
