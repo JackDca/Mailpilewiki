@@ -18,7 +18,9 @@ This problem is a special case of the general problem of passwords and memory, b
 
 To put it another way: the high value placed on PGP keys inevitably implies that the cost of losing a passphrase is also very high.
 
-Although some high-risk users explicitly need their passphrase to be only ever committed to human memory, there is a significant number of users whose need to avoid data-loss greatly outweighs the potential risk recoverable passphrases might pose to confidentiality of their data. It's interesting that PGP community has traditionally focused on the former case almost exclusively, which may be an overlooked factor contributing to the low adoption of PGP by the wider public. Backups are important!
+Although some high-risk users explicitly need their passphrase to be only ever committed to human memory, there is a significant number of users whose need to avoid data-loss greatly outweighs the potential risk recoverable passphrases might pose to confidentiality of their data.
+
+(Aside: The PGP community has traditionally focused exclusively on the former case, which may be an overlooked factor contributing to the low adoption of PGP by the wider public - backups are important! In a parallel universe where the community recognizes this, people might organize recovery code swapping parties in place of key-signing parties...)
 
 Tankred Hase of Whiteout has proposed [an elegant use of IMAP as a key synchronization channel](https://github.com/whiteout-io/mail-html5/wiki/Secure-OpenPGP-Key-Pair-Synchronization-via-IMAP), which Mailpile will adopt, not only to facilitate synchronization, but also to guarantee an off-site backup of the user's key material. This greatly reduces the risk of catastrophic data loss, but the problem of the passphrase getting lost or forgotten remains.
 
@@ -50,9 +52,31 @@ Recovery of the passphrase is then accomplished by:
 The key to this approach is each individual storage node does not need to be trusted, the security of the protocol can be improved even by adding untrusted nodes. It should be possible to choose a diverse enough set of nodes to thwart most attacks, including attempts by the nodes themselves to collude against the user.
 
 
-## Implementing The Protocol
+## Mailpile's Proposed Implementation
 
-This section will explore some of the practical considerations of implementing this protocol.
+Mailpile will invite the user to enable passphrase recovery once a certain threshold of app use has been passed; metrics to track include progress configuring accounts and keys, volume of e-mail downloaded or sent, number of custom tags created. In short, once it appears the user has invested time and effort into using their Mailpile, they should be prompted to take steps to protect that investment by enabling backups and key/passphrase recovery.
+
+When recovery is enabled, the following locations will be chosen as recovery code storage nodes:
+
+1. The folder containing the key itself (GNUPGHOME or Mailpile's data directory)
+2. All configured IMAP accounts
+3. The e-mail addresses of at least two frequent correspondents (the user may choose)
+4. An optional hard-copy printout
+
+Recovery codes will be constructed in such a way as to allow require an answer from all-but-one of the correspondents and all-but-one of the IMAP servers (assuming there is more than one available). With the exception of managing the optional hard-copy, distribution of recovery codes can be fully automated.
+
+Implementation notes:
+
+* The implementation must take care when correspondents are chosen, and attempt to avoid accounts hosted with the same providers as the user's own IMAP accounts (this can be ascertained with moderate confidence by using DNS MX-record lookups).
+* Mailpile should not keep a local record of the codes themselves or which correspondents received recovery codes, but if a hard-copy is made their names and addresses will be listed there.
+* Recovery codes sent by mail should be placed in attachments, so replies do not accidentally leak the codes via quoted content.
+
+*Note: Work in progress... this is unfinished and uncoded!*
+
+
+## Implementing Rationale
+
+This section will explore in detail the practical considerations of implementing this protocol which resulted in the above strategy.
 
 ### Algorithm Choice
 
@@ -84,6 +108,8 @@ There are a few potential storage locations considered in this document:
 
 As a special case; the physical media where the key material itself resides should always be one of the N storage locations. The key material needs to be stored *somewhere*; not storing one of the recovery codes alongside it would lower M needlessly.
 
+The case of losing the recovery code which is stored alongside the key itself need not be taken into account when generating recovery sets, thus reducing overhead somewhat.
+
 #### Storage: The user's brain
 
 As the recovery codes will be at least as long as the original passphrase (probably much longer), this is not feasible. If the user could remember the recovery code, they could remember the passphrase itself.
@@ -112,7 +138,11 @@ Downsides: If a full set of M recovery codes resides on IMAP servers, it is very
 
 Most people know how to keep small, valuable pieces of paper safe. As such, hard-copy printouts are suitable storage locations for recovery codes.
 
+A hard copy is also a suitable place to print recovery instructions, including a list of which storage nodes are in use for a given secret.
+
 Downsides: Manual labour during preparation. Recovery may be tedious and error prone for complex recovery codes.
+
+Note: This is a sufficiently onerous procedure for most users (making a hard copy and placing it in safe storage) that it may be better use of the effort involved to treat hard copies as full backups rather than single nodes of a shared scheme.
 
 #### Storage: Friends' and colleagues' computers
 
@@ -125,12 +155,6 @@ Downsides: Even more manual setup work and less convenience than the user's own 
 Sending e-mail containing recovery codes to friends, relatives and colleagues shares the same security and setup benefits as the user's own IMAP account, without suffering from the same "single point of access" vulnerability.
 
 Downsides: Recovery requires asking for help and remembering who to ask!  Choosing who to rely on may be difficult. Although automatable, is easy to make mistakes; friends must be chosen who do not use the same e-mail infrastructure, the sent messages must not be kept anywhere local (drafts, outbox, sent, ...) and the messages may be at risk of interception during transit - to name just a few potential pitfalls.
-
-
-## Mailpile's Implementation
-
-...TBD...
-
 
 
 
