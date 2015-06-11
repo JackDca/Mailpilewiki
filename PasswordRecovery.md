@@ -124,7 +124,7 @@ Downsides: Even more manual setup work and less convenience than the user's own 
 
 Sending e-mail containing recovery codes to friends, relatives and colleagues shares the same security and setup benefits as the user's own IMAP account, without suffering from the same "single point of access" vulnerability.
 
-Downsides: Recovery requires asking for help and remembering who to ask!  Choosing who to rely on may be difficult. Although automatable, is easy to make mistakes; friends must be chosen who do not use the same e-mail infrastructure, the sent messages must not be kept in drafts and the messages may be at risk of interception during transit - to name just a few potential pitfalls.
+Downsides: Recovery requires asking for help and remembering who to ask!  Choosing who to rely on may be difficult. Although automatable, is easy to make mistakes; friends must be chosen who do not use the same e-mail infrastructure, the sent messages must not be kept anywhere local (drafts, outbox, sent, ...) and the messages may be at risk of interception during transit - to name just a few potential pitfalls.
 
 
 ## Mailpile's Implementation
