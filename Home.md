@@ -28,6 +28,7 @@
 
 ### Emerging Protocols & Standards
 
+* [[PasswordRecovery]] using trivial secret sharing
 * [[SMTorP]] SMTP over Tor network
 * [[Super Contacts]] Auto updating address book
 * [[Social Messaging]] Format social media messages & chat
