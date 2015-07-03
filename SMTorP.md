@@ -29,7 +29,7 @@ is at least quite simple to implement. To test it yourself:
     mailpile> append sys.plugins smtp_server
 
 4. Restart Mailpile.
-5. Set the STMP server port to the port used above:
+5. Set the SMTP server port to the port used above:
 
     mailpile> set sys.smtpd.port = 33412
 
