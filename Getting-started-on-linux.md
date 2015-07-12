@@ -26,7 +26,17 @@ Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, y
 
     sudo apt-get install gnupg openssl
 
-And everything that's listed in [requirements.txt](https://github.com/mailpile/Mailpile/blob/master/requirements.txt) (which can be auto-installed if you have PIP, by running `sudo pip install -r requirements.txt`). If you don't want to use PIP, you need to install these dependencies:
+And everything that's listed in [requirements.txt](https://github.com/mailpile/Mailpile/blob/master/requirements.txt).
+
+If you want to use PIP (Python's package manager), you need to install these dependencies first, to enable PIP to run. For Debian...
+
+    sudo apt-get install python-dev libxml2-dev libxslt-dev libz-dev
+
+Then PIP can install required python components in requirements.txt
+
+    sudo pip install -r requirements.txt
+
+If you don't want to use PIP, you need to install these dependencies:
 
  * python-dev
  * libxml2-dev
