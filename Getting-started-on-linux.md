@@ -81,7 +81,9 @@ We have not decided what our long-term solution is for this use-case. On Linux, 
 
 **Using Apache as Proxy**
 
-This requires the following modules `mod_ssl` and `mod_proxy` and perhaps others...
+This requires the following modules `mod_ssl` and `mod_proxy` and `mod_proxy_http` and perhaps others... you can enable these (with most apache setups) by typing `sudo a2enmod mod_ssl ...` 
+
+Create the following site configuration file `example.com.conf` which usually exists in `/etc/apache2/sites-available/` directory.
 
 ```
 <IfModule mod_ssl.c>
@@ -117,3 +119,5 @@ This requires the following modules `mod_ssl` and `mod_proxy` and perhaps others
     </VirtualHost>
 </IfModule>
 ```
+
+Once you've added the above the virtual host file, enabled the site by typing `sudo a2ensite example.com` if you encounter any problems, Google + StackOverflow are handy!
