@@ -2,9 +2,8 @@
 
 This is currently a catch all page for people who run into issues with new or existing installs of Mailpile that get broken due to upgrading and such! Feel free to submit situations you encounter and how you manage to resolve the issue.
 
-# Debugging
+**If you're comfortable on the command line (CLI), make sure you have [debugging enabled](https://github.com/mailpile/Mailpile/wiki/Development-guide#turning-on-debugging) as it will greatly increase figuring how what isn't working**
 
-If you are comfortable on the command line (CLI), you might want to enable various types of debugging to better understand what is going on and to report issues. Enable varying types of debugging type typing `mailpile> set sys.debug = log`
 
 # Search index
 
