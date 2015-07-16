@@ -20,7 +20,7 @@
 * [[Ideas]]
 * [[Mailpile Internals]]
 * [[Development Guide]]
-* [[FrontEnd Development Guide]]
+* [[Front End Development Guide]]
 * [[Translations]] (i18n/i10n)
 * [[Privacy]]
 * [[Packaging]]
