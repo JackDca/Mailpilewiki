@@ -3,6 +3,7 @@
 ### Using Mailpile
 
 * Release notes:
+   * [[Beta III Release, July 2015|Release-Notes-201507-Beta-III]]
    * [[Beta II Release, January 2015|Release-Notes-201501-Beta-II]]
    * [[Beta Release, September 2014|Release-Notes-201409-Beta]]
    * [[Alpha II Release, July 2014|Release-Notes-201406-Alpha-II]]
