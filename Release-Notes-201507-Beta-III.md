@@ -1,15 +1,13 @@
 ![](https://www.mailpile.is/img/logo-275x200.png)
 
-## NOTE: Still preparing the release!
-
 The Beta III release of Mailpile is available for download from github, with
-pre-built packages availble for Windows and Mac OS X.
+pre-built packages available for Windows and Mac OS X.
 
 This release is a **technology preview release**, meant for developers, early
 adopters, usability testers and our community of translators. It might also
 be useful for reading and writing e-mail, you never know!
 
-See the [release blog post]() for details.
+See the [release blog post](https://www.mailpile.is/blog/2015-07-20_Mailpile_Beta_III.html) for details.
 
 **Note:** Please consult the list of known issues below before filing bugs!
 Thanks!
@@ -63,8 +61,9 @@ Known issues in the Beta III release:
    * The HTML user interface is not responsive and still rather slow
    * We lack a mechanism for tracking usage and notifying users about updates/news
    * Most translations are very incomplete due to rapid development and changes leading up to the release
+   * Translations were not included in the demo and packages for this release
 * **PGP and Security**   *(see the [[Security Roadmap]] for more details)*
-   * Gravatar and key-server lookups are not sent over Tor, thus leaking metadata about user communication
+   * Gravatar and key-server lookups are not sent over Tor, thus leaking meta-data about user communication
    * Non-ASCII characters in PGP key UIDs are not always handled correctly
    * Outgoing TLS (HTTPS, STARTTLS) connections do not validate certificates or prefer good ciphers
    * Encrypted/signed messages with attachments are incompatible with Google's end-to-end and other non-PGP/MIME capable mailers
@@ -81,4 +80,3 @@ Known issues in the Beta III release:
    * Image support (thumbnail generation) is broken on most Macs
    * It is currently only possible to run one instance of the app at a time (without manual tweaks)
    * The Windows launcher crashes after shutting down the python app (#889)
-
