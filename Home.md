@@ -10,6 +10,7 @@
    * [[Alpha Release, January 2014|Release-Notes-201401-Alpha]]
 * [[Getting Started]]
 * [[Troubleshooting]]
+* [[Search Queries]]
 * [[Keyboard shortcuts]]
 * [[Frequently Asked Questions]]
 
