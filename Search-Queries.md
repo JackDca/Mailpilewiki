@@ -2,12 +2,14 @@ Underneath the hood of Mailpile is a powerful search query engine that you can f
 
 ### Tags
 
+| Query    | Description                                                    |
 | -------- | ---------------------------------------------------------------|
 | in:tag   | messages with a given tag assigned                             |
 | -in:tag  | omits messages with a given tag assigned                       |
 
 ### Email Addresses
 
+| Query                     | Description                                   |
 | ------------------------- | ----------------------------------------------|
 | from:name@address.com     | messages sent from a given address            |
 | to:name@address.com       | messages sent to a given address              |
@@ -15,12 +17,14 @@ Underneath the hood of Mailpile is a powerful search query engine that you can f
 
 ### Mailboxes
 
+| Query          | Description                                              |
 | -------------- | ---------------------------------------------------------|
 | mailbox:name   | messages from one or more mailboxes which match name     |
 | mailbox:boxid  | messages from only the specified mailbox id              |
 
 ### Date
 
+| Query    | Description                                                    |
 | -------- | ---------------------------------------------------------------|
 | dates:2011..2012        | messages between a range of years               |
 | dates:2011-06..2011-07  | messages between range of years and months      |
@@ -30,6 +34,7 @@ Underneath the hood of Mailpile is a powerful search query engine that you can f
 
 ### Various
 
+| Query    | Description                                                    |
 | -------- | ---------------------------------------------------------------|
 | subject:keyword  | messages with keyword in subject only                  |
 | att:jpg          | messages with attachments of file type "jpg"           |
