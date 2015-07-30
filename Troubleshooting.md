@@ -8,7 +8,7 @@ This is currently a catch all page for people who run into issues with new or ex
 - [Backing up (and restoring) downloaded mail](#backing-up-and-restoring-downloaded-mail)
 - [Downloaded mail seems wonky](#downloaded-mail-seems-wonky)
 - [ImportError when running ./mp inside a virtualenv](#importerror-when-running-mp-inside-a-virtualenv)
-- [Starting from Scratch](#start-from-scratch)
+- [Starting from Scratch](#starting-from-scratch)
 
 *If you're comfortable on the command line (CLI), make sure you have [debugging enabled](https://github.com/mailpile/Mailpile/wiki/Development-guide#turning-on-debugging) as it will greatly increase figuring how what isn't working*
 
