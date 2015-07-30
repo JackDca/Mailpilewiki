@@ -2,12 +2,20 @@
 
 This is currently a catch all page for people who run into issues with new or existing installs of Mailpile that get broken due to upgrading and such! Feel free to submit situations you encounter and how you manage to resolve the issue.
 
-**If you're comfortable on the command line (CLI), make sure you have [debugging enabled](https://github.com/mailpile/Mailpile/wiki/Development-guide#turning-on-debugging) as it will greatly increase figuring how what isn't working**
+- [Search Index](#search-index)
+- [Mailboxes and Mail Sources](#mailboxes-and-mail-sources) 
+- [Checking & Fixing Mailboxes](#checking--fixing-mailboxes)
+- [Backing up (and restoring) downloaded mail](#backing-up-and-restoring-downloaded-mail)
+- [Downloaded mail seems wonky](#downloaded-mail-seems-wonky)
+- [ImportError when running ./mp inside a virtualenv](#importerror-when-running-mp-inside-a-virtualenv)
+- [Starting from Scratch](#start-from-scratch)
+
+*If you're comfortable on the command line (CLI), make sure you have [debugging enabled](https://github.com/mailpile/Mailpile/wiki/Development-guide#turning-on-debugging) as it will greatly increase figuring how what isn't working*
 
 
-# Search index
+## Search Index
 
-## I broke my search index, how to fix it ?
+### I broke my search index, how to fix it ?
 
 If you use development version and follow updates, it's possible your search index get damaged at some point (e.g: format change), the symptom is only recent messages are searchable. To rebuild your whole search index:
 
@@ -18,10 +26,11 @@ If you use development version and follow updates, it's possible your search ind
 
 This operation is harmless (does not destroy tag information or anything else), but it may take a while!
 
+---
 
-# Mailboxes and Mail Sources
+## Mailboxes and Mail Sources
 
-## How do I look at my mail source settings?
+### How do I look at my mail source settings?
 
 You can use the `print` command to print out the relevant section(s) of the Mailpile configuration. Since the output can be quite verbose, you may prefer to use the `-flat` argument to avoid looking at all the data at once.  If you need to double-check your passwords, you'll use the `-secrets` argument.
 
@@ -62,15 +71,15 @@ Some examples:
     # or this:
     mailpile> print sources.9e6bc04lzz8.password
 
+---
 
-
-## Checking & Fixing Mailboxes
+### Checking & Fixing Mailboxes
 
 There is a tool which exists that checks and attempts to fix issues with given mailboxes such as duplicates and such. To use this functionality run the following command whereby `001a` is the mailbox id:
 
 `mailpile> hacks/chkmbx -clean 001a`
 
-
+---
 
 ## Backing up (and restoring) downloaded mail
 
@@ -126,8 +135,9 @@ Examples:
     # To re-import exported mail, put the mbox file somewhere nice and:
     mailpile> add /path/to/exported-0006.mbx
 
+---
 
-## My downloaded mail seems wonky
+## Downloaded mail seems wonky
 
 If you have the feeling that too much or too little mail is being downloaded, you can try to reset the local copy of a remote mail source and see if things behave better.  The procedure is as follows:
 
@@ -167,7 +177,9 @@ Examples of relevant commands:
     # Rescanning your mail (press CTRL-C to abort at any time)
     mailpile> rescan both
 
-## I get an ImportError when running ./mp inside a virtualenv 
+---
+
+## ImportError when running ./mp inside a virtualenv 
 
     $ ./mp
     ImportError: No module named jinja2
@@ -179,3 +191,13 @@ Virtualenv works by overriding the `python` command in your current shell by mod
 Older versions did not override `python2`. The `mp` script specifies `python2` as its interpreter. So with old versions of virtualenv, when your shell invokes `python2` it runs outside of the virtualenv and without your dependencies.
 
 [#1106](https://github.com/mailpile/Mailpile/issues/1106) shows the fix on Ubuntu 12.04
+
+---
+
+## Starting from Scratch
+
+If you decide you just want to say "screw it" and start from scratch with the most recent codebase of Mailpile, you can delete EVERYTHING pertaining to your install by deleting the following directory pertaining to your operating system:
+
+- On Linux the `~/.local/shared/Mailpile/`
+- On OS X the `~/Libary/Application Support/Mailpile/`
+- On all operating systems check for `~/.mailpile`
