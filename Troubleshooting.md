@@ -8,6 +8,7 @@ This is currently a catch all page for people who run into issues with new or ex
 - [Backing up (and restoring) downloaded mail](#backing-up-and-restoring-downloaded-mail)
 - [Downloaded mail seems wonky](#downloaded-mail-seems-wonky)
 - [ImportError when running ./mp inside a virtualenv](#importerror-when-running-mp-inside-a-virtualenv)
+- [Notification messages are acting wonky](#notification-messages-are-acting-wonky)
 - [Starting from Scratch](#starting-from-scratch)
 
 *If you're comfortable on the command line (CLI), make sure you have [debugging enabled](https://github.com/mailpile/Mailpile/wiki/Development-guide#turning-on-debugging) as it will greatly increase figuring how what isn't working*
@@ -191,6 +192,19 @@ Virtualenv works by overriding the `python` command in your current shell by mod
 Older versions did not override `python2`. The `mp` script specifies `python2` as its interpreter. So with old versions of virtualenv, when your shell invokes `python2` it runs outside of the virtualenv and without your dependencies.
 
 [#1106](https://github.com/mailpile/Mailpile/issues/1106) shows the fix on Ubuntu 12.04
+
+---
+
+## Notification messages are acting wonky
+
+There are cases when a notifications from a completed or uncompleted task keep popping up in your screen. You can try running the following command from Mailpile's CLI:
+
+`mailpile> eventlog/cancel all`
+
+If you feel confident reading debugging messages, you can also try running the following to see if it leads to any clues:
+
+`mailpile> eventlog/watch`
+
 
 ---
 
