@@ -30,7 +30,7 @@ And everything that's listed in [requirements.txt](https://github.com/mailpile/M
 
 If you want to use PIP (Python's package manager), you need to install these dependencies first, to enable PIP to run. For Debian...
 
-    sudo apt-get install python-dev libxml2-dev libxslt-dev libz-dev
+    sudo apt-get install python-dev libxml2-dev libxslt-dev libz-dev python-pip
 
 Then PIP can install required python components in requirements.txt
 
