@@ -15,6 +15,7 @@ The quickest way to get up and running, is to follow one of the following guides
 When that is done, the following guides will help you configure the software and get started using it:
 
 * [[Configuring Mailpile]]
+* [[Accesing The GUI Over Internet]]
 * [[Indexing Mail]]
   * [[Synchronizing Mailpile with Thunderbird]]
 * [[Using Mailpile]]
