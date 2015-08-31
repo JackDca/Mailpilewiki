@@ -105,7 +105,7 @@ setting:
 Mailpile allows you to create tags and attach any number of tags to each
 message.  For example:
 
-    mailpile> tag add Inbox
+    mailpile> tags/add Inbox
     ...
     mailpile> search to:bre from:klaki
     ...
@@ -131,7 +131,7 @@ the `mailpile` CLI.
 If you want Mailpile to automatically tag (or untag) messages based on
 certain search criteria, you can use the `filter` command instead:
 
-    mailpile> tag add Lists/Diaspora
+    mailpile> tags/add Lists/Diaspora
     ...
     mailpile> search list:diaspora
     ...
