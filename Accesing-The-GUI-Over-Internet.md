@@ -2,7 +2,13 @@ At the moment, we do not recommend exposing Mailpile directly to the wider Inter
 
 Putting it behind a security-mindful reverse proxy (NginX, Pound, etc...) will add an important layer of protection. That proxy then handles the SSL. A slightly more geeky solution which also provides strong security is to use SSH tunneling from your desktop to the VPS.
 
+- [Using Apache as Proxy](#using-apache-as-proxy)
+- [Using Nginx as Proxy](#using-nginx-as-proxy)
+- [Using Lighttpd as Proxy](#using-lighttp-as-proxy)
+- [Serving from a Sub Directory](#serving-from-a-sub-directory)
+
 We have not decided what our long-term solution is for this use-case. On Linux, making something like Pound a dependency is not a problem and is going to be the best overall technical solution. For desktop (win/mac) installations that people still want remote access to, we may need to bundle something ourselves.
+
 
 ### Using Apache as Proxy
 
@@ -47,7 +53,7 @@ Create the following site configuration file `example.com.conf` which usually ex
 
 Once you've added the above the virtual host file, enabled the site by typing `sudo a2ensite example.com` if you encounter any problems, Google + StackOverflow are handy!
 
-### Using Nginx as a Proxy
+### Using Nginx as Proxy
 
 If you want to use Mailpile at the root location of a domain, then the following configuration will get you started:
 
@@ -122,3 +128,13 @@ server {
   }
 }
 ```  
+
+### Using Lighttpd as Proxy
+
+...needs to be filled out by nice community member...
+
+### Serving from a Sub Directory
+
+If you want to serve Mailpile from a subdirectory `your-domain.com/email` you need to specify the path in your proxy server's configuration file, but you also need to tell Mailpile about this. 
+
+Type the command `mailpile> set sys.http_path = /email` into your Mailpile CLI
