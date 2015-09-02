@@ -4,7 +4,7 @@ Putting it behind a security-mindful reverse proxy (NginX, Pound, etc...) will a
 
 - [Using Apache as Proxy](#using-apache-as-proxy)
 - [Using Nginx as Proxy](#using-nginx-as-proxy)
-- [Using Lighttpd as Proxy](#using-lighttp-as-proxy)
+- [Using Lighttpd as Proxy](#using-lighttpd-as-proxy)
 - [Serving from a Sub Directory](#serving-from-a-sub-directory)
 
 We have not decided what our long-term solution is for this use-case. On Linux, making something like Pound a dependency is not a problem and is going to be the best overall technical solution. For desktop (win/mac) installations that people still want remote access to, we may need to bundle something ourselves.
