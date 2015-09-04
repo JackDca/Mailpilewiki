@@ -131,7 +131,39 @@ server {
 
 ### Using Lighttpd as Proxy
 
-...needs to be filled out by nice community member...
+In lighttpd 1.4 add this to your lighttpd.conf:
+
+```
+# either this or add mod_proxy to your existing modules list
+server.modules =~ (
+        "mod_proxy",
+)
+
+# this will redirect www.your.domain.org/email to 127.0.0.1:33411, where mailpile listens
+$HTTP["url"] =~ "(^/email/)" {                                                                          
+             proxy.server  = ( "" => ("" => ( "host" => "127.0.0.1", "port" => 33411 )))                
+             }     
+```
+
+For lighttpd 1.5 the [oficial documentation](http://redmine.lighttpd.net/projects/1/wiki/Docs_ModProxyCore)
+says this should work:
+
+```
+# either this or add mod_proxy to your existing modules list
+server.modules =~ (
+        "mod_proxy_core",
+)
+
+# this will redirect www.your.domain.org/email to 127.0.0.1:33411, where mailpile listens
+$HTTP["url"] =~ "^/email" {
+  proxy-core.rewrite-request = (
+    "_uri" => ( "^/email/?(.*)" => "/$1" ),
+    "Host" => ( ".*" => "127.0.0.1" ),
+    "port" => '33411
+  )
+}
+``` 
+**But:** This has not been teste and need to be revised by another nice community member. ;)
 
 ### Serving from a Sub Directory
 
