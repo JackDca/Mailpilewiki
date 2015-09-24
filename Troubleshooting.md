@@ -9,7 +9,7 @@ This is currently a catch all page for people who run into issues with new or ex
 - [Downloaded mail seems wonky](#downloaded-mail-seems-wonky)
 - [ImportError when running ./mp inside a virtualenv](#importerror-when-running-mp-inside-a-virtualenv)
 - [Notification messages are acting wonky](#notification-messages-are-acting-wonky)
-- [Delete & Start from Scratch](#delete-start-from-scratch)
+- [Delete & Start from Scratch](#delete--start-from-scratch)
 
 *If you're comfortable on the command line (CLI), make sure you have [debugging enabled](https://github.com/mailpile/Mailpile/wiki/Development-guide#turning-on-debugging) as it will greatly increase figuring how what isn't working*
 
