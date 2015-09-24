@@ -1,10 +1,7 @@
 ![Guide](https://github.com/pagekite/Mailpile/wiki/images/page-guide.png)
 
-You can configure Mailpile through the settings menu.
 
-![Mailpile settings dropdown](https://github.com/pagekite/Mailpile/wiki/images/Mailpile-Settings-Dropdown.png)
-
-### Profiles
+## Profiles
 
 You can see your profile details from CLI with :
 
@@ -22,11 +19,17 @@ You can add a blank signature if you prefer :
 
     vcards/addlines jdoe@example.com "=x-mailpile-profile-signature: "
 
-### Mail Sources
+## Mail Sources
 
-### Sending Routes
+...tbw
 
-### Language
+## Sending Routes
+
+...tbw
+
+## Language
+
+...tbw
 
 From CLI, for exemple to go french :
 
@@ -34,11 +37,25 @@ From CLI, for exemple to go french :
 
 For now, the list of language codes can be read [from the source](https://github.com/mailpile/Mailpile/tree/master/mailpile/locale).
 
-### Encryption Keys
+## Encryption Keys
 
-### Security
+...tbw
 
-# See also
+## Security
+
+...tbw
+
+## Using Tor or Proxies
+
+To configure Mailpile to access mailservers Tor or other proxies, you can set the following values via the CLI
+
+```
+set sys.proxy.protocol=socks5
+set sys.proxy.host=localhost
+set sys.proxy.port=9050
+```
+
+## See also
 
 * [[Manual configuration]]
 * [[Technical details about configuration|Config]]
