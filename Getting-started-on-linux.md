@@ -39,7 +39,7 @@ If you would prefer not to use virtualenv at all and install Mailpile globally (
 
 This will clone the main development branch of Mailpile. If you want to clone a specific branch, specify it like so:
 
-    git clone -b --recursive branchname https://github.com/mailpile/Mailpile.git
+    git clone --recursive -b branchname https://github.com/mailpile/Mailpile.git
 
 A [full list of existing branches is available on Github](https://github.com/mailpile/Mailpile/branches). Generally you'll want the highest version number available.
 
