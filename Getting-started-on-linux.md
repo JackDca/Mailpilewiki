@@ -98,12 +98,20 @@ If you don't want to use PIP, you need to install these dependencies:
  * python-pgpdump
  * spambayes
 
-On Debian, you could install these packages like this:
+**Debian**
 
-    sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev python-jinja2 python-lxml python-pgpdump spambayes
+You could install these packages like this:
 
-Under Fedora this yum command might work for installing the dependencies:
+```
+sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev python-jinja2 python-lxml python-pgpdump spambayes
+```
 
-`sudo yum install gnupg openssl python-devel libxml2-devel libxslt-devel zlibrary-devel python-jinja2 python-lxml python-pgpdump`
+**Fedora**
+
+Using this yum command might work for installing the dependencies:
+
+```
+sudo yum install gnupg openssl python-devel libxml2-devel libxslt-devel zlibrary-devel python-jinja2 python-lxml python-pgpdump
+```
 
 Then follow the details in [step 3](#3-clone-the-source-repository)
