@@ -9,10 +9,9 @@ Read on...
 If you're developing Mailpile, you probably want a lot more debug output than
 otherwise. Simply:
 
-`set sys.debug = [terms]`
+`set sys.debug = ["log"]`
 
-where [terms] is a space-separated list of types of debug messages you want to
-get. Options include:
+where ["log"] is a list of types of debug messages you want to see printed out. Options include:
 
 * log
 * http
