@@ -45,6 +45,8 @@ A [full list of existing branches is available on Github](https://github.com/mai
 
 ## 4. Install the dependencies
 
+**Important:** You must have activated the virtual environment, as described in step 1 above.
+
 Move into the source directory:
 
     cd Mailpile
@@ -74,6 +76,36 @@ This should drop you into the Mailpile shell in the terminal and open up a new t
 If you want to configure Mailpile to launch automatically on startup, consider adding it to either your window system config (if you're running it on a personal computer for instance), or to your init scripts (if you're using Mailpile on a server).
 
 *If you want to configure Mailpile to accessed over the internet [follow these instructions](https://github.com/mailpile/Mailpile/wiki/Accesing-The-GUI-Over-Internet)*
+
+
+### 5.1. Run Mailpile again!
+
+Steps 1-5 should get you up and running. However, you don't need to go through the entire process every time you want to run Mailpile. The steps for doing that are as follows:
+
+    # move to the virtualenv directory and activate your virtualenv
+    # you can later leave the virtualenv by typing `deactivate`
+    cd /path/to/mailpile && source bin/activate
+
+    # enter the Mailpile source directory
+    cd Mailpile
+
+    # run Mailpile
+    ./mp
+
+Other useful commands (from within the Mailpile directory):
+
+    # update your Mailpile
+    git pull
+
+    # update any submodules (documentation, plug-ins)
+    git submodule update
+
+    # if you are developing and want a throw-away, blank Mailpile
+    ./scripts/setup-test.sh
+
+    # running all the tests
+    make alltests
+
 
 ## 6. Installing Mailpile globally
 
