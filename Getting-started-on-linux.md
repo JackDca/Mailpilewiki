@@ -12,15 +12,16 @@ Mailpile requires a number of different packages in order to run. Specifically:
 
 Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, you could install the other two packages by running
 
-    sudo apt-get install gnupg openssl
+    sudo apt-get install gnupg openssl python-virtualenv python-pip
+
+This will also install the Python virtual environment and package installer tools, which are optional but recommended.
 
 To clone the source repo make sure to have `git` installed too
     
     sudo apt-get install git
 
-The following steps assume that you already have [virtualenv](http://virtualenv.readthedocs.org) installed. If not please follow the [installation instructions](http://virtualenv.readthedocs.org/en/latest.installation.html) for that first.
+The following steps assume that you already have [virtualenv](http://virtualenv.readthedocs.org) installed. If not please follow the [installation instructions](http://virtualenv.readthedocs.org/en/latest.installation.html) for that first. If you would prefer not to use virtualenv at all and install Mailpile globally (either with or without [pip](http://pip.readthedocs.org)), please see the instructions at the end of the page.
 
-If you would prefer not to use virtualenv at all and install Mailpile globally (either with or without [pip](http://pip.readthedocs.org)), please see the instructions at the end of the page.
 
 ## 2. Setup your virtual environment
 
@@ -30,7 +31,7 @@ If you would prefer not to use virtualenv at all and install Mailpile globally (
     # move to the new directory
     cd mailpile
 
-    # activate the virtualenv (you can later leave the virtualenv by typing `deactivate`)
+    # activate the virtual Python environment
     source bin/activate
 
 #### What is virtualenv?
@@ -51,7 +52,7 @@ A [full list of existing branches is available on Github](https://github.com/mai
 
 ## 4. Install the dependencies
 
-**Important:** You must have activated the virtual environment, as described in step 1 above.
+**Important:** You must have activated the virtual environment in your current shell, as described in step 1 above. If you open a new shell, see section 5.1.
 
 Move into the source directory:
 
@@ -116,6 +117,9 @@ Other useful commands (from within the Mailpile directory):
 
     # running all the tests
     make alltests
+
+    # leave the virtual Python environment
+    deactivate
 
 
 ## 6. Installing Mailpile globally
