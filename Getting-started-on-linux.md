@@ -27,20 +27,20 @@ If you would prefer not to use virtualenv at all and install Mailpile globally (
     # create a virtual environment directory
     virtualenv -p /usr/bin/python2.7 --system-site-packages mailpile
 
-    # move to the new directory and activate your virtualenv
-    # you can later leave the virtualenv by typing `deactivate`
+    # move to the new directory
     cd mailpile
+
+    # activate the virtualenv (you can later leave the virtualenv by typing `deactivate`)
     source bin/activate
 
 #### What is virtualenv?
 
-Virtualenv is a tool which allows you to install the Mailpile's Python dependencies locally, without having to modify your operating system's global Python. This keeps things contained and makes it easier to un-install everything all at once. The downside, is you need to *activate* the virtual environment before you continue setting up Mailpile and before you run Mailpile. That is what the commands above (and the commands in step 5.1) do.
+Virtualenv is a tool which allows you to install the Mailpile's Python dependencies locally, without having to modify your operating system's global Python. This keeps things contained and makes it easier to un-install everything all at once. The downside, is you need to *activate* the virtual environment before you continue setting up Mailpile and always before you run Mailpile. That is what the `source` command does.
 
 
 ## 3. Clone the source repository
 
-    # clone Mailpile to your machine
-    # this also pulls in the docs via submodules
+    # clone Mailpile, docs and plugins (submodules) to your machine
     git clone --recursive https://github.com/mailpile/Mailpile.git
 
 This will clone the main development branch of Mailpile. If you want to clone a specific branch, specify it like so:
@@ -91,9 +91,11 @@ If you want to configure Mailpile to launch automatically on startup, consider a
 
 Steps 1-5 should get you up and running. However, you don't need to go through the entire process every time you want to run Mailpile. The steps for doing that are as follows:
 
-    # move to the virtualenv directory and activate your virtualenv
-    # you can later leave the virtualenv by typing `deactivate`
-    cd /path/to/mailpile && source bin/activate
+    # move to the virtualenv directory
+    cd /path/to/mailpile
+
+    # activate the Mailpile virtual Python environment
+    source bin/activate
 
     # enter the Mailpile source directory
     cd Mailpile
