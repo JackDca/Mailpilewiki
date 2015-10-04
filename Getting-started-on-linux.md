@@ -25,11 +25,17 @@ If you would prefer not to use virtualenv at all and install Mailpile globally (
 ## 2. Setup your virtual environment
 
     # create a virtual environment directory
-    virtualenv -p /usr/bin/python2.7 mailpile
+    virtualenv -p /usr/bin/python2.7 --system-site-packages mailpile
 
     # move to the new directory and activate your virtualenv
     # you can later leave the virtualenv by typing `deactivate`
-    cd mailpile && source bin/activate
+    cd mailpile
+    source bin/activate
+
+#### What is virtualenv?
+
+Virtualenv is a tool which allows you to install the Mailpile's Python dependencies locally, without having to modify your operating system's global Python. This keeps things contained and makes it easier to un-install everything all at once. The downside, is you need to *activate* the virtual environment before you continue setting up Mailpile and before you run Mailpile. That is what the commands above (and the commands in step 5.1) do.
+
 
 ## 3. Clone the source repository
 
@@ -61,9 +67,12 @@ For production or end-users, install everything that's listed in [requirements.t
 
 If all is well, you should now be able to run Mailpile.
 
+**Note:** If you have difficulty installing the LXML package, you can try installing a vendor supplied package instead, e.g. by running `sudo apt-get install python-lxml` or equivalent.
+
+
 ## 5. Start Running Mailpile
 
-You can run Mailpile directly using the command:
+You can now run Mailpile directly using the command:
 
     ./mp
 
