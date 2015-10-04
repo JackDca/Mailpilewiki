@@ -9,10 +9,11 @@ Mailpile requires a number of different packages in order to run. Specifically:
  * GnuPG _(preferably on the 1.x branch for now, as Mailpile doesn't currently act as a GPG Agent)_
  * OpenSSL
  * Python 2.7+
+ * Lxml
 
-Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, you could install the other two packages by running
+Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, you could install the other packages by running
 
-    sudo apt-get install gnupg openssl python-virtualenv python-pip
+    sudo apt-get install gnupg openssl python-virtualenv python-pip python-lxml
 
 This will also install the Python virtual environment and package installer tools, which are optional but recommended.
 
@@ -22,24 +23,7 @@ To clone the source repo make sure to have `git` installed too
 
 The following steps assume that you already have [virtualenv](http://virtualenv.readthedocs.org) installed. If not please follow the [installation instructions](http://virtualenv.readthedocs.org/en/latest.installation.html) for that first. If you would prefer not to use virtualenv at all and install Mailpile globally (either with or without [pip](http://pip.readthedocs.org)), please see the instructions at the end of the page.
 
-
-## 2. Setup your virtual environment
-
-    # create a virtual environment directory
-    virtualenv -p /usr/bin/python2.7 --system-site-packages mailpile-env
-
-    # move to the new directory
-    cd mailpile-env
-
-    # activate the virtual Python environment
-    source bin/activate
-
-#### What is virtualenv?
-
-Virtualenv is a tool which allows you to install the Mailpile's Python dependencies locally, without having to modify your operating system's global Python. This keeps things contained and makes it easier to un-install everything all at once. The downside, is you need to *activate* the virtual environment before you continue setting up Mailpile and always before you run Mailpile. That is what the `source` command does.
-
-
-## 3. Clone the source repository
+## 2. Clone the source repository
 
     # clone Mailpile, docs and plugins (submodules) to your machine
     git clone --recursive https://github.com/mailpile/Mailpile.git
@@ -50,13 +34,24 @@ This will clone the main development branch of Mailpile. If you want to clone a 
 
 A [full list of existing branches is available on Github](https://github.com/mailpile/Mailpile/branches). Generally you'll want the highest version number available.
 
+## 3. Setup your virtual environment
+
+    # move into the newly created source repo
+    cd Mailpile
+
+    # create a virtual environment directory
+    virtualenv -p /usr/bin/python2.7 --system-site-packages mp-virtualenv
+
+    # activate the virtual Python environment
+    source mp-virtualenv/bin/activate
+
+#### What is virtualenv?
+
+Virtualenv is a tool which allows you to install the Mailpile's Python dependencies locally, without having to modify your operating system's global Python. This keeps things contained and makes it easier to un-install everything all at once. The downside, is you need to *activate* the virtual environment before you continue setting up Mailpile and always before you run Mailpile. That is what the `source` command does.
+
 ## 4. Install the dependencies
 
 **Important:** You must have activated the virtual Python environment in your current shell, as described in step 1 above. If you opened a new shell or a new terminal window, see section 5.1.
-
-Move into the source directory:
-
-    cd Mailpile
 
 If you want to develop Mailpile:
 
@@ -69,7 +64,6 @@ For production or end-users, install everything that's listed in [requirements.t
 If all is well, you should now be able to run Mailpile.
 
 **Note:** If you have difficulty installing the LXML package, you can try installing a vendor supplied package instead, e.g. by running `sudo apt-get install python-lxml` or equivalent.
-
 
 ## 5. Start Running Mailpile
 
@@ -87,22 +81,19 @@ If you want to configure Mailpile to launch automatically on startup, consider a
 
 *If you want to configure Mailpile to accessed over the internet [follow these instructions](https://github.com/mailpile/Mailpile/wiki/Accesing-The-GUI-Over-Internet)*
 
-
 ### 5.1. Run Mailpile again!
 
 Steps 1-5 should get you up and running. However, you don't need to go through the entire process every time you want to run Mailpile. The steps for doing that are as follows:
 
-    # move to the virtualenv directory
-    cd /path/to/mailpile-env
-
-    # activate the Mailpile virtual Python environment
-    source bin/activate
-
     # enter the Mailpile source directory
     cd Mailpile
 
+    # activate the Mailpile virtual Python environment
+    source mp-virtualenv/bin/activate
+
     # run Mailpile
     ./mp
+
 
 Other useful commands (from within the Mailpile directory):
 
