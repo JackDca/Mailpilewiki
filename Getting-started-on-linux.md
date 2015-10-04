@@ -52,7 +52,7 @@ A [full list of existing branches is available on Github](https://github.com/mai
 
 ## 4. Install the dependencies
 
-**Important:** You must have activated the virtual environment in your current shell, as described in step 1 above. If you open a new shell, see section 5.1.
+**Important:** You must have activated the virtual Python environment in your current shell, as described in step 1 above. If you opened a new shell or a new terminal window, see section 5.1.
 
 Move into the source directory:
 
