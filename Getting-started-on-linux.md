@@ -26,10 +26,10 @@ The following steps assume that you already have [virtualenv](http://virtualenv.
 ## 2. Setup your virtual environment
 
     # create a virtual environment directory
-    virtualenv -p /usr/bin/python2.7 --system-site-packages mailpile
+    virtualenv -p /usr/bin/python2.7 --system-site-packages mailpile-env
 
     # move to the new directory
-    cd mailpile
+    cd mailpile-env
 
     # activate the virtual Python environment
     source bin/activate
@@ -93,7 +93,7 @@ If you want to configure Mailpile to launch automatically on startup, consider a
 Steps 1-5 should get you up and running. However, you don't need to go through the entire process every time you want to run Mailpile. The steps for doing that are as follows:
 
     # move to the virtualenv directory
-    cd /path/to/mailpile
+    cd /path/to/mailpile-env
 
     # activate the Mailpile virtual Python environment
     source bin/activate
