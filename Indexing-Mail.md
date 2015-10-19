@@ -165,7 +165,7 @@ Finally, we can examine some of the resources mentioned in the settings above:
 You can create a new mail source simply by adding an entry to the sources section. There are many, many ways to do this, but here is a relatively complete example to get you started:
 
     # Create a source with the ID "test"
-    mailpile> set sources.test = set sources.test = {"name": "Testing", "protocol": "local"}
+    mailpile> set sources.test = {"name": "Testing", "protocol": "local"}
     ...
 
     # Take a look at the result:
