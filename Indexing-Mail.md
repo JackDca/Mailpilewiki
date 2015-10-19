@@ -49,6 +49,7 @@ If you are impatient and want a round of indexing to happen *right now*, you can
 
     # Rescan everything, not just mail
     mailpile> rescan full
+    ...
 
     # Rescan only mail sources
     mailpile> rescan sources
@@ -159,11 +160,67 @@ Finally, we can examine some of the resources mentioned in the settings above:
     mailpile> vcard random-vcard-id-string
     ...
 
+### Creating a new Mail Source
+
+You can create a new mail source simply by adding an entry to the sources section. There are many, many ways to do this, but here is a relatively complete example to get you started:
+
+    # Create a source with the ID "test"
+    mailpile> set sources.test = set sources.test = {"name": "Testing", "protocol": "local"}
+    ...
+
+    # Take a look at the result:
+    mailpile> print sources.test
+    ...
+
+You should probably link this new source with an account, to make sure it behaves "as expected" in the Mailpile user interface:
+
+    # Create a new account (skipping this step is OK)
+    mailpile> profiles/add user@example.com = User McTesterson
+    ...
+
+    # Examine the profile, look for the profile-tag and rid lines:
+    mailpile> profiles --lines user@example.com
+    ...
+    19 990.3 x-mailpile-profile-tag: 16 (pref=None)
+    25       x-mailpile-rid: 9c655ba4912
+    ...
+    mailpile> set sources.test.profile = 9c655ba4912
+    ...
+    mailpile> set sources.test.discovery.apply_tags.0 = 16
+    ...
+
+You may also want to change the value of `sources.test.discovery.local_copy` or other discovery settings if you want Mailpile to make copies of the mail or you don't like the default tag creation policy.
+
+We can now in a single command add and configure a new mailbox:
+
+    mailpile> add user@example.com /path/to/file.mbx
+    ...
+
+We could also add an entire folder full of mailboxes all at once:
+
+    mailpile> add --recurse user@example.com /home/USER/Mail/
+
+And finally, if we expect new mailboxes to show up in that folder now and then, we could configure auto-discovery:
+
+    mailpile> set sources.test.discovery.policy = read
+    ...
+    mailpile> set sources.test.discovery.paths.0  = /home/USER/Mail/
+    ...
+
+
 ### Changing Settings
 
-### Creating a new Mail Source
+Settings can be examined and changed using the "standard" `print` and `set` commands as illustrated above.
+
+The only setting **you should never change** is the `protocol` attribute of a working mail source. If you change the protocol, any existing mailboxes and all of the mail they contain may become inaccessible (unless you enabled local copies).
+
+If you change the authentication (username and password) or host or port of a remote source, the same thing may happen.
+
 
 ## Examples
 
 ### Auto-discover New Maildirs
 
+(to be written)
+
+**Please feel free to edit and add your own configuration examples here!**
