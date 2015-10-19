@@ -9,11 +9,11 @@ In this guide:
    * [What Happens During Indexing?](#what-happens-during-indexing)
    * [When Does Indexing Happen?](#when-does-indexing-happen)
    * [Manually Configuring Mail Sources](#manually-configuring-mail-sources)
-      * [Examining your Settings](#examining-your-settings)
+      * [Examining Your Settings](#examining-your-settings)
+      * [Creating a New Mail Source](#creating-a-new-mail-source)
       * [Changing Settings](#changing-settings)
-      * [Creating a new Mail Source](#creating-a-new-mail-source)
    * [Examples](#examples)
-      * [Auto-discover New Maildirs](#auto-discover-new-maildirs)
+      * [Auto-discover New Local Mailboxes](#auto-discover-new-local-mailboxes)
 
 **Important:** Low-level configuration tools do not yet exist for the web interface of Mailpile; in order to benefit from this guide you will need to make use of the Mailpile command-line interface. Changing these settings is NOT without risk - you can break your Mailpile if you get things wrong here!
 
@@ -219,8 +219,48 @@ If you change the authentication (username and password) or host or port of a re
 
 ## Examples
 
-### Auto-discover New Maildirs
+### Auto-discover New Local Mailboxes
 
-(to be written)
+This is what a configuration similar to the one described above looks like when complete. It will discover new mailboxes (in mbox or Maildir format) automatically.
 
-**Please feel free to edit and add your own configuration examples here!**
+(Default values that do not matter have been omitted for brevity.)
+
+    "sources.test": {
+        "name": "Testing", 
+        "enabled": true, 
+        "interval": 300, 
+        "protocol": "local", 
+        "profile": "299af055371", 
+        "discovery": {
+            "apply_tags": {
+                "0000": "1z"
+            }, 
+            "create_tag": true, 
+            "guess_tags": true, 
+            "local_copy": false, 
+            "parent_tag": "20", 
+            "paths": {
+                "0000": "/home/USER/Mail/"
+            }, 
+            "policy": "read", 
+            "process_new": true, 
+            "visible_tags": false
+        }, 
+        "mailbox": {
+            "000q": {
+                "apply_tags": {
+                    "0000": "1z"
+                }, 
+                "local": "", 
+                "name": "mailpile-1407513984.mbx", 
+                "path": "@000q", 
+                "policy": "read", 
+                "primary_tag": "21", 
+                "process_new": true
+            }
+        }
+    }
+
+***
+
+*Please feel free to edit and add your own configuration examples here!*
