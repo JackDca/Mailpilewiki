@@ -236,9 +236,7 @@ Examples:
 
 See the list of available settings below.
 
-The only setting **you should never change** is the `protocol` attribute of a working mail source. If you change the protocol, any existing mailboxes and all of the mail they contain may become inaccessible (unless you enabled local copies).
-
-If you change the authentication (username and password) or host or port of a remote source, the same thing may happen.
+Each of these commands will trigger a save operation, updating the Mailpile config file right away. Careful, there is no undo for settings, short of quitting the app, visiting the Mailpile data directory and replacing the current config with one of the backup files.
 
 
 ### What Settings Exist?
