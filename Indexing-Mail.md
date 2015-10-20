@@ -12,6 +12,7 @@ In this guide:
       * [Examining Your Settings](#examining-your-settings)
       * [Creating a New Mail Source](#creating-a-new-mail-source)
       * [Changing Settings](#changing-settings)
+      * [What Settings Exist?](#what-settings-exist)
    * [Examples](#examples)
       * [Auto-discover New Local Mailboxes](#auto-discover-new-local-mailboxes)
 
@@ -210,12 +211,86 @@ And finally, if we expect new mailboxes to show up in that folder now and then, 
 
 ### Changing Settings
 
-Settings can be examined and changed using the "standard" `print` and `set` commands as illustrated above.
+Settings can be examined and changed using the "standard" `print` and `set` commands. To revert a setting to its default value, use `unset`. Examples:
+
+    # Disable a mail source temporarily
+    mailpile> set sources.12345678.enabled = false
+
+    # Reset the polling interval to its default value
+    mailpile> unset sources.12345678.interval
+
+    # Reset the list of discovery paths to the empty set
+    mailpile> unset sources.12345678.discovery.paths
+
+See the list of available settings below.
 
 The only setting **you should never change** is the `protocol` attribute of a working mail source. If you change the protocol, any existing mailboxes and all of the mail they contain may become inaccessible (unless you enabled local copies).
 
 If you change the authentication (username and password) or host or port of a remote source, the same thing may happen.
 
+
+### What Settings Exist?
+
+**Note:** See the previous section for examples of the correct syntax for changing a setting. What follows is a relatively dense reference.
+
+#### General settings
+
+**name**: The name of this mail source (used in the user interface).
+
+**profile**: The profile (or account) which this mail source belongs to.
+
+**protocol**: One of `local`, `imap`, `imap_ssl`, `imap_tls`, `pop3`, `pop3_ssl`. The protocols ending in `_ssl` assume the use of a "secure socket layer" connect wrapping the entire connection, the `_tls` ending means the STARTSSL protocol extension should be used. **IMPORTANT:** Changing from a remote protocol to local (or vice versa) is not supported and may cause unpredictable behaviour!
+
+**interval**: Seconds of waiting between checking for new mail.
+
+**keepalive**: `true` or `false`, controls whether Mailpile disconnects from the remote server or not after each check for new mail. Note that some servers, GMail in particular or old POP3 servers, will behave badly if this is false.
+
+**username**, **password**: User credentials for logging in to remote servers (IMAP, POP3).
+
+**auth_type**: Authentication type, currently only `password` is implemented.
+
+**host**, **port**: Connection details for remote servers (IMAP, POP3).
+
+**pre_command**, **post_command**: *Not yet implemented*
+
+#### Discovery Policy Settings
+
+The discovery policy controls both where Mailpile looks for new mailboxes and how they are configured when they are found. As a result many of the settings are simply inherited by new mailbox entries and their meaning is explained in the next section.
+
+**paths**: A list of paths to check for new mailboxes, may be empty.
+
+**policy**: One of `unknown`, `ignore`, `read`, `watch`, `move` and `sync`. See per-mailbox settings.
+
+**local_copy**: `true` or `false`; determines whether new mailboxes are configured for making local copies or not.
+
+**parent_tag**: The Tag-ID of a tag to use as parent of all per-mailbox tags. Set to "!CREATE" to have Mailpile create a new tag when needed (this is the default).
+
+**guess_tags**: `true` or `false`; Enable or disable Mailpile's heuristics to guess whether a discovered mailbox is a known type of mailbox such as spam, drafts or inbox.
+
+**create_tag**: `true` or `false`; Determine whether each new mailbox is assigned a dedicated tag automatically. Without this it is not easy to browse individual mailboxes using the Mailpile UI; rather than disabling this it is better to use the `visible_tags` setting to hide them if you want to avoid clutter.
+
+**visible_tags**: `true` or `false`; Determine whether per-mailbox tags should be visible in the sidebar by default or not.
+
+**process_new**: `true` or `false`; See per-mailbox settings.
+
+**apply_tags**: A list of Tag-IDs; See per-mailbox settings.
+
+
+#### Per-Mailbox settings
+
+**name**: The name of this mailbox.
+
+**path**: A path identifier for this mailbox (usually the ID in the `sys.mailbox` table).
+
+**policy**: One of `unknown`, `ignore`, `read`, `watch`, `move` and `sync`. Both `unknown` and `ignore` do the same thing (nothing), but `unknown` may be a trigger for notifications in the user interface that user attention is needed. The `read` policy is used to read the contents of this mailbox and add to the index. *Other options are currently unimplemented.*
+
+**local**: Path to a local mailbox. If this is set, it implies that local copies (Mailpile internal, usually encrypted) should be made.
+
+**process_new**: `true` or `false`; Determine whether Mailpile should treat newly discovered e-mail as "new" by default or not. Use this for incoming mail spools, disable if the mailbox is an archive of old mail.
+
+**primary_tag**: The Tag-ID of a tag representing this mailbox.
+
+**apply_tags**: A list of other Tag-IDs, all of which will be applied to all new messages as they are discovered. This is commonly used to merge the contents of a mail spool into the shared Inbox. This list is often empty.
 
 ## Examples
 
