@@ -187,7 +187,7 @@ You should probably link this new source with an account, to make sure it behave
     ...
     mailpile> set sources.test.profile = 9c655ba4912
     ...
-    mailpile> set sources.test.discovery.apply_tags.0 = 16
+    mailpile> append sources.test.discovery.apply_tags 16
     ...
 
 You may also want to change the value of `sources.test.discovery.local_copy` or other discovery settings if you want Mailpile to make copies of the mail or you don't like the default tag creation policy.
@@ -205,13 +205,15 @@ And finally, if we expect new mailboxes to show up in that folder now and then, 
 
     mailpile> set sources.test.discovery.policy = read
     ...
-    mailpile> set sources.test.discovery.paths.0  = /home/USER/Mail/
+    mailpile> append sources.test.discovery.paths /home/USER/Mail/
     ...
 
 
 ### Changing Settings
 
-Settings can be examined and changed using the "standard" `print` and `set` commands. To revert a setting to its default value, use `unset`. Examples:
+Settings can be examined and changed using the "standard" `print` and `set` commands. To revert a setting to its default value, use `unset`. The command `append` appends to lists.
+
+Examples:
 
     # Disable a mail source temporarily
     mailpile> set sources.12345678.enabled = false
@@ -221,6 +223,16 @@ Settings can be examined and changed using the "standard" `print` and `set` comm
 
     # Reset the list of discovery paths to the empty set
     mailpile> unset sources.12345678.discovery.paths
+
+    # Append to the discovery path list
+    mailpile> append sources.12345678.discovery.paths /my/stuff/is/here
+    ...
+    mailpile> append sources.12345678.discovery.paths /other/stuff/is/her
+    ...
+
+    # Update an element in the discovery path list
+    mailpile> set sources.12345678.discovery.paths.1 = /other/stuff/is/HERE
+    ...
 
 See the list of available settings below.
 
