@@ -11,7 +11,7 @@ The goals for the new configuration system are:
       validity
    
 Code which accomplishes these 3 goals has been written (see
-`mailpile/config.py`). This document is describes the format used to define
+[mailpile/config.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/config.py)). This document is describes the format used to define
 configuration itself; they are are written as JSON (or the equivalent Python
 dicts).  A variable is defined using a list of three values: [comment,
 type/constraint, default-value].
