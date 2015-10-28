@@ -21,6 +21,10 @@ You can add a blank signature if you prefer :
 
 ## Mail Sources
 
+From CLI, you can list them by issuing
+    
+    print sources
+
 ...tbw
 
 ## Sending Routes
