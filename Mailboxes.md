@@ -25,9 +25,14 @@ new tag.
 
 Currently to make entire mailboxes disappear is a bit of a hack:
 
+#### Deleting mailbox content (mails)
+
 1. Search for that mailbox `mailpile> search mailbox:something.mbox`
 2. Tag that search as Trash `mailpile> tag -inbox +trash all`
-3. Find the ID of the mailbox `mailpile> print sys.mailbox`
-4. Replace the mailbox path: `mailpile> set sys.mailbox.1234 = /dev/null`
+
+#### Deleting the mailbox itself
+
+1. Find the ID of the mailbox `mailpile> print sys.mailbox`
+2. Replace the mailbox path: `mailpile> set sys.mailbox.1234 = /dev/null`
 
 (Replace 1234 in step 4, with the ID found in step 3.)
