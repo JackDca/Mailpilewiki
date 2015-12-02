@@ -79,8 +79,8 @@ This should drop you into the Mailpile shell in the terminal and open up a new t
 
 If you want to configure Mailpile to launch automatically on startup, consider adding it to either your window system config (if you're running it on a personal computer for instance), or to your init scripts (if you're using Mailpile on a server).
 
-*If you want to configure Mailpile to accessed over the internet [follow these instructions](https://github.com/mailpile/Mailpile/wiki/Accesing-The-GUI-Over-Internet)*
-
+*If you want to configure Mailpile to accessed over the internet [follow these instructions]
+(https://github.com/mailpile/Mailpile/wiki/Accessing-The-GUI-Over-Internet)*
 ### 5.1. Run Mailpile again!
 
 Steps 1-5 should get you up and running. However, you don't need to go through the entire process every time you want to run Mailpile. The steps for doing that are as follows:
