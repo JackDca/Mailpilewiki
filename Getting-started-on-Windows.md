@@ -22,20 +22,23 @@ clone Mailpile, docs and plugins (submodules) to your machine
 
 This will clone the main development branch of Mailpile. If you want to clone a specific branch, specify it like so:
 
-git clone --recursive -b branchname https://github.com/mailpile/Mailpile.git
+    git clone --recursive -b branchname https://github.com/mailpile/Mailpile.git
 
 A full list of existing branches is available on Github. Generally you'll want the highest version number available.
 
 # 3. Setup your virtual environment
 
 move into the newly created source repo
-cd Mailpile
+
+    cd Mailpile
 
 create a virtual environment directory
-virtualenv -p "C:\Python27\python.exe" --system-site-packages mp-virtualenv
+
+    virtualenv -p "C:\Python27\python.exe" --system-site-packages mp-virtualenv
 
 activate the virtual Python environment
-"mp-virtualenv\Scripts\activate"
+
+    "mp-virtualenv\Scripts\activate"
 
 What is virtualenv?
 
@@ -47,15 +50,15 @@ Important: You must have activated the virtual Python environment in your curren
 
 If you want to develop Mailpile:
 
-python -m pip install -r requirements-dev.txt
+    python -m pip install -r requirements-dev.txt
 
 For production or end-users, install everything that's listed in requirements.txt instead.
 
-python -m pip install -r requirements.txt
+    python -m pip install -r requirements.txt
 
 Also see if pyreadline is installed else run the following command
 
-python -m pip install pyreadline
+    python -m pip install pyreadline
 
 If all is well, you should now be able to run Mailpile.
 
@@ -63,7 +66,7 @@ If all is well, you should now be able to run Mailpile.
 
 You can now run Mailpile directly using the command:
 
-./mp
+    mp
 
 
 
