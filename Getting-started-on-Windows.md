@@ -25,22 +25,22 @@ git clone --recursive -b branchname https://github.com/mailpile/Mailpile.git
 
 A full list of existing branches is available on Github. Generally you'll want the highest version number available.
 
-3. Setup your virtual environment
+# 3. Setup your virtual environment
 
-# move into the newly created source repo
+move into the newly created source repo
 cd Mailpile
 
-# create a virtual environment directory
+create a virtual environment directory
 virtualenv -p "C:\Python27\python.exe" --system-site-packages mp-virtualenv
 
-# activate the virtual Python environment
+activate the virtual Python environment
 "mp-virtualenv\Scripts\activate"
 
 What is virtualenv?
 
 Virtualenv is a tool which allows you to install the Mailpile's Python dependencies locally, without having to modify your operating system's global Python. This keeps things contained and makes it easier to un-install everything all at once. The downside, is you need to activate the virtual environment before you continue setting up Mailpile and always before you run Mailpile. That is what the source command does.
 
-4. Install the dependencies
+# 4. Install the dependencies
 
 Important: You must have activated the virtual Python environment in your current shell, as described in step 1 above. If you opened a new shell or a new terminal window, see section 5.1.
 
@@ -58,7 +58,7 @@ python -m pip install pyreadline
 
 If all is well, you should now be able to run Mailpile.
 
-5. Start Running Mailpile
+# 5. Start Running Mailpile
 
 You can now run Mailpile directly using the command:
 
