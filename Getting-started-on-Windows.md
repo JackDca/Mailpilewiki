@@ -17,7 +17,8 @@ Download links used to resolve dependencies:
 # 2. Clone the source repository
 
 clone Mailpile, docs and plugins (submodules) to your machine
-git clone --recursive https://github.com/mailpile/Mailpile.git
+
+    git clone --recursive https://github.com/mailpile/Mailpile.git
 
 This will clone the main development branch of Mailpile. If you want to clone a specific branch, specify it like so:
 
