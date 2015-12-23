@@ -14,9 +14,9 @@ Download links used to resolve dependencies:
     lxml: <http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml>
     pyreadline: <https://pypi.python.org/pypi/pyreadline/2.0>
 
-2. Clone the source repository
+# 2. Clone the source repository
 
-# clone Mailpile, docs and plugins (submodules) to your machine
+clone Mailpile, docs and plugins (submodules) to your machine
 git clone --recursive https://github.com/mailpile/Mailpile.git
 
 This will clone the main development branch of Mailpile. If you want to clone a specific branch, specify it like so:
