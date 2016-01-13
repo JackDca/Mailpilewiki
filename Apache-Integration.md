@@ -1,6 +1,10 @@
 Mailpile provides a simple script for integrating with the Apache
 web-server.
 
+## WARNING
+
+This page is slightly out of date. See Issue https://github.com/mailpile/Mailpile/issues/1538 for hints on what has changed. If you can fix this page and resolve that issue, that would be most appreciated!
+
 ## What it does
 
 Creates a /mailpile/ namespace in your Apache configuration, which is
