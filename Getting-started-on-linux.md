@@ -146,10 +146,10 @@ sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev python-jinja
 
 **Fedora**
 
-Using this yum command might work for installing the dependencies:
+Using this dnf command might work for installing the dependencies:
 
 ```
-sudo yum install gnupg openssl python-devel libxml2-devel libxslt-devel zlib-devel python-jinja2 python-lxml python-pgpdump
+sudo dnf install gnupg openssl python-devel libxml2-devel libxslt-devel zlib-devel python-jinja2 python-lxml python-pgpdump
 ```
 
 Then follow the details in [step 3](#3-clone-the-source-repository)
