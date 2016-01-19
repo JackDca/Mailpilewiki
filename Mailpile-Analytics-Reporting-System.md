@@ -19,6 +19,11 @@ We do not want to know, or even be able to find out:
 
 ## Implementation
 
+### The Code
+
+The main code for MARS data submission is in: [plugins/motd.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/plugins/motd.py)
+
+
 ### Collecting information
 
 The metrics we would like to collect overlap almost perfectly with how we would like to target announcements to different groups of users; for example there is little or no reason to inform Mac OS X users about a security vulnerability which is specific to Linux, nor to bother Linux users with the information that new Windows packages are available for download.
@@ -30,9 +35,12 @@ The Message Of The Day is a simple JSON file, which is available from the follow
    * https://www.mailpile.is/motd/latest/motd.json
    * https://www.mailpile.is/motd/[VERSION]-[OS]/motd.json
 
-The first URL allows MOTD updates which carry no MARS information at all. The second allows more targeted announcements and allows the required metrics to be extracted from the web server logs. Additional variables for tracking (the Python version and the installed language) may be appended to the URL using the query-string.
+The first URL allows MOTD updates which carry no MARS information at all. The second allows more targeted announcements and allows the required metrics to be extracted from the web server logs. Additional variables for tracking (the Python version and the active language) may be appended to the URL using the query-string.
 
 The MOTD is updated roughly once per day, which gives us a lower bound for daily active users of the software.
+
+Which URL is used is configurable via the **prefs.motd_url** setting; the user interface should allow the user to opt in (or out) of MARS entirely, or potentially omitting individual variables as they prefer.
+
 
 ### Avoiding collection of user data
 
@@ -42,9 +50,19 @@ The exception to this is the IP address is the only concern; it may indirectly r
 
 We therefore will make MOTD/MARS updates use Tor by default whenever possible, and that the updates be made opt-in when Tor is unavailable.
 
+
 ### Processing the data
 
 Data will be processed by analyzing the Mailpile site's web server logs. Further details are TBD.
+
+
+### Future Improvements
+
+Allowing the user to voluntarily disclose a (rough) geographic location would be useful for Mailpile marketing and planning.
+
+Certain metrics about how Mailpile is being used (with or without encryption, most popular e-mail providers) might also have value, but will need careful assessment.
+
+As a rule any such additions must be opt-in, not opt-out and not part of the recommended defaults.
 
 ------------------------------------------------------------------------------------------------
 
