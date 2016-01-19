@@ -37,9 +37,9 @@ The Message Of The Day is a simple JSON file, which is available from the follow
 
 The first URL allows MOTD updates which carry no MARS information at all. The second allows more targeted announcements and allows the required metrics to be extracted from the web server logs. Additional variables for tracking (the Python version and the active language) may be appended to the URL using the query-string.
 
-The MOTD is updated roughly once per day, which gives us a lower bound for daily active users of the software.
+The MOTD system checks for updates roughly once per day, which gives MARS a lower bound for daily active users of the software.
 
-Which URL is used is configurable via the **prefs.motd_url** setting; the user interface should allow the user to opt in (or out) of MARS entirely, or potentially omitting individual variables as they prefer.
+Which URL is used is configurable via the **prefs.motd_url** setting; the user interface should allow the user to opt in (or out) of MARS entirely, or potentially omitting individual variables as they prefer. Setting this variable to an empty string or a local file can be used to disable the feature entirely (or repurpose for local needs).
 
 
 ### Avoiding collection of user data
