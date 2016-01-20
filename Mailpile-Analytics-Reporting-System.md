@@ -21,7 +21,7 @@ We do not want to know, or even be able to find out:
 
 ### The Code
 
-The main code for MARS data submission is in: [plugins/motd.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/plugins/motd.py)
+The main code for MARS data submission is in: [mailpile/plugins/motd.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/plugins/motd.py)
 
 
 ### Collecting information
@@ -53,7 +53,7 @@ We therefore will make MOTD/MARS updates use Tor by default whenever possible, a
 
 ### Processing the data
 
-Data will be processed by analyzing the Mailpile site's web server logs. Further details are TBD.
+Data will be processed by analyzing the Mailpile site's web server logs. Further details are TBD, see [issue #721](/mailpile/Mailpile/issues/721).
 
 
 ### Future Improvements
