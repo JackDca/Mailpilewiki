@@ -22,7 +22,11 @@ Mailpile's `default-theme` theme contains:
 
 ## Changing Themes
 
-Currently, you can only change the them from the Mailpile CLI. To do so type `mailpile> set sys.path.html_theme=/full/path/to/your-theme`
+Currently, you can only change the them from the Mailpile CLI. To do so type 
+
+```
+mailpile> set sys.path.html_theme=/full/path/to/your-theme
+```
 
 That is the structure that Mailpile's theme ships with, but when making your own theme, just copy this directory and organize your assets however you like.
 
