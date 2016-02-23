@@ -4,13 +4,13 @@
 
 * Make sure you have a instance of Mailpile installed and working properly
 * Make sure you have completed steps in our [[Front End Development Guide]]
-* Copy the default theme located in `mailpile/www/default` to `mailpile/www/new-theme`
+* Copy the `default-theme` located in `shared-data/` to `shared-data/your-theme/`
 
 ### Architecture
 
-Mailpile supports themes. They live in `mailpile/www/`, so the directory `mailpile/www/default` contains the theme named `default`. Note that any files living in a theme folder will be accessible via the `/static/*` URL in the HTTP interface. It is not currently possible to access files via the HTTP interface from themes other than the current theme.
+Mailpile supports themes. They live in `shared-data/`, so the directory `shared-data/default-theme` contains the theme named `default-theme`. Note that any files living in a theme folder will be accessible via the `/static/*` URL in the HTTP interface. It is not currently possible to access files via the HTTP interface from themes other than the current theme.
 
-Mailpile's `default` theme contains:
+Mailpile's `default-theme` theme contains:
 
 * `css/` all the CSS stylesheets get compiled to
 * `html/` all Jinja2 HTML templates
@@ -22,3 +22,7 @@ Mailpile's `default` theme contains:
 
 
 That is the structure that Mailpile's theme ships with, but when making your own theme, just copy this directory and organize your assets however you like.
+
+## Additional Themes
+
+- [ArchivePile](https://github.com/TransparencyToolkit/ArchivePile/) - a read-only theme for browsing archives
