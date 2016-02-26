@@ -13,7 +13,7 @@ Mailpile requires a number of different packages in order to run. Specifically:
 
 Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, you could install the other packages by running
 
-    sudo apt-get install gnupg openssl virtualenv python-virtualenv python-pip python-lxml
+    sudo apt-get install gnupg openssl virtualenv python-virtualenv python-pip python-lxml libjpeg-dev
 
 This will also install the Python virtual environment and package installer tools, which are optional but recommended.
 
