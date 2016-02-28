@@ -45,6 +45,8 @@ A [full list of existing branches is available on Github](https://github.com/mai
     # activate the virtual Python environment
     source mp-virtualenv/bin/activate
 
+`source` is a built into bash, so you have to use either bash or a bash compatible shell.
+
 #### What is virtualenv?
 
 Virtualenv is a tool which allows you to install the Mailpile's Python dependencies locally, without having to modify your operating system's global Python. This keeps things contained and makes it easier to un-install everything all at once. The downside, is you need to *activate* the virtual environment before you continue setting up Mailpile and always before you run Mailpile. That is what the `source` command does.
