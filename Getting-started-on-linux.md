@@ -13,13 +13,13 @@ Mailpile requires a number of different packages in order to run. Specifically:
 
 Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, you could install the other packages by running
 
-    sudo apt-get install gnupg openssl python-virtualenv python-pip python-lxml libjpeg-dev
+    sudo apt-get install gnupg openssl python-virtualenv python-pip python-lxml libjpeg-dev git
+
+On Fedora, you could install the other packages by running
+
+    sudo dnf install install gnupg openssl python-virtualenv python-pip python-lxml libjpeg-turbo-devel git
 
 This will also install the Python virtual environment and package installer tools, which are optional but recommended.
-
-To clone the source repo make sure to have `git` installed too
-    
-    sudo apt-get install git
 
 The following steps assume that you already have [virtualenv](http://virtualenv.readthedocs.org) installed. If not please follow the [installation instructions](http://virtualenv.readthedocs.org/en/latest.installation.html) for that first. If you would prefer not to use virtualenv at all and install Mailpile globally (either with or without [pip](http://pip.readthedocs.org)), please see the instructions at the end of the page.
 
