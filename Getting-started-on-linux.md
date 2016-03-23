@@ -14,12 +14,12 @@ Mailpile requires a number of different packages in order to run. Specifically:
 Python 2.7 or newer is standard on virtually all Linux systems now. On Debian, you could install the other packages by running:
 
     sudo apt-get install git gnupg openssl python-virtualenv \
-                         python-pip python-lxml libjpeg-dev
+                         python-pip python-lxml python-dev libjpeg-dev
 
 On Fedora, you could install the other packages by running:
 
     sudo dnf install git gnupg openssl python-virtualenv \
-                     python-pip python-lxml libjpeg-turbo-devel
+                     python-pip python-lxml python-devel libjpeg-turbo-devel
 
 This will also install the Python virtual environment and package installer tools, which are optional but recommended.
 
