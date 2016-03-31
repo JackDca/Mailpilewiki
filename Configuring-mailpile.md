@@ -39,7 +39,7 @@ From CLI, for exemple to go french :
 
     set prefs.language fr_FR
 
-For now, the list of language codes can be read [from the source](https://github.com/mailpile/Mailpile/tree/master/mailpile/locale).
+For now, the list of language codes can be read [from the source](https://github.com/mailpile/Mailpile/tree/master/shared-data/locale).
 
 ## Encryption Keys
 
