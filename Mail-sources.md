@@ -6,6 +6,7 @@ Mailpile's Mail Sources take care of importing mail into Mailpile's local storag
 
 Eventually mail sources will also be able to synchronize changes back, e.g. for keeping a remote IMAP server in sync with Mailpile's internal state.
 
+**NOTE:** A more detailed guide can be found here: [[Indexing-Mail]]
 
 ## Architecture
 
