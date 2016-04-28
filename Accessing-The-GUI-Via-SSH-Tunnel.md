@@ -9,13 +9,13 @@ This code has been tested using a Debian Jessie Gnu-Linux system for the server,
 The test system uses a dynamic DNS service to make it acessible from the Internet.  The router is set up to forward the port used by the SSH server to the Mailpile server.  This is too complicated for a casual user.  The use of a relay (Pagekite?) or STUN are friendlier possibilities.
 
 Note: This document is available at
-```
+
 <https://github.com/JackDca/Mailpilewiki/blob/ssh-tunnel/Accessing-The-GUI-Via-SSH-Tunnel.md>
-```
+
 and the scripts that are referenced are at
-```
+
 <https://github.com/JackDca/Mailpile/tree/ssh-tunnel/scripts>
-```
+
 
 ### Why OpenSSH?
 
@@ -45,7 +45,7 @@ One possible way to get `ssh` and `ssh-keygen` for a stock device is to download
 
 - [Setting up a Linux Mailpile server for SSH tunneling from remotes](#setting-up-a-linux-mailpile-server-for-ssh-tunneling-from-remotes)
 - [Setting up an Android remote device for SSH tunneling to a Mailpile server](#setting-up-an-android-remote-device-for-ssh-tunneling-to-a-mailpile-server)
-- [Setting up a Windows Mailpile server for SSH tunneling from remotes](#setting-up-a-Windows-mailpile-server-for-ssh-tunneling-from-remotes)
+- [Setting up a Windows Mailpile server for SSH tunneling from remotes](#setting-up-a-windows-mailpile-server-for-ssh-tunneling-from-remotes)
 - [Setting up a Windows remote system for SSH tunneling to a Mailpile server](#setting-up-a-windows-remote-system-for-ssh-tunneling-to-a-mailpile-server)
 - [Setting up an Apple server for SSH tunneling from remotes](#setting-up-an-apple-server-for-ssh-tunneling-from-remotes)
 - [Setting up an iPad or iPhone remote device for SSH tunneling to a Mailpile server](#setting-up-an-ipad-or-iphone-remote-device-for-ssh-tunneling-to-a-mailpile-server)
