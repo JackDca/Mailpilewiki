@@ -34,12 +34,12 @@ One possible way to get ssh and ssh-keygen for a stock device is to download a C
 
 ### Specific setup instructions
 
-- [Using a Linux Mailpile server for SSH tunneling from remotes](#using a linux mailpile server for ssh tunneling from remotes)
-- [Setting up an Android remote device for SSH tunneling to a Mailpile server](#setting up an android remote device for ssh tunneling to a mailpile server)
-- [Setting up a Windows Mailpile server for SSH tunneling from remotes](#setting up a Windows mailpile server for ssh tunneling from remotes)
-- [Setting up a Windows remote system for SSH tunneling to a Mailpile server](#setting up a windows remote system for ssh tunneling to a mailpile server)
-- [Using an Apple server for SSH tunneling from remotes](#using an apple server for ssh tunneling from remotes)
-- [Setting up an iPad or iPhone remote for SSH tunneling to a Mailpile server](#setting up an ipad or iphone remote for ssh tunneling to a mailpile server)
+--[Using a Linux Mailpile server for SSH tunneling from remotes](#using-a linux-mailpile-server-for-ssh-tunneling-from-remotes)
+- [Setting up an Android remote device for SSH tunneling to a Mailpile server](#setting-up-an-android-remote-device-for-ssh-tunneling-to-a-mailpile-server)
+- [Setting up a Windows Mailpile server for SSH tunneling from remotes](#setting-up-a-Windows-mailpile-server-for-ssh-tunneling-from-remotes)
+- [Setting up a Windows remote system for SSH tunneling to a Mailpile server](#setting-up-a-windows-remote-system-for-ssh-tunneling-to-a-mailpile-server)
+- [Using an Apple server for SSH tunneling from remotes](#using-an-apple-server-for-ssh-tunneling-from-remotes)
+- [Setting up an iPad or iPhone remote for SSH tunneling to a Mailpile server](#setting-up-an-ipad-or-iphone-remote-for-ssh-tunneling-to-a-mailpile-server)
 
 
 ### Setting up a Linux Mailpile server for SSH tunneling from remotes
@@ -50,6 +50,7 @@ Open a terminal window, cd to the Mailpile data directory, e.g. ~/.local/share/M
 
 Run the script .../Mailpile/scripts/mp_ssh_server_setup.sh .  (The ... indicates that the path will depend on the location of your Mailpile code.) This will create a subdirectory sshd in the Mailpile data directory, which will look something like this:
 
+---
 $ ls -l sshd
 -rw-r--r-- 1 jack jack    0 apr 25 10:29 authorized_keys
 -rw-r--r-- 1 jack jack    6 apr 25 10:29 port_external
@@ -59,11 +60,14 @@ $ ls -l sshd
 -rw-r--r-- 1 jack jack   92 apr 25 10:29 ssh_host_ed25519_key.pub
 -rw------- 1 jack jack 3243 apr 25 10:29 ssh_host_rsa_key
 -rw-r--r-- 1 jack jack  736 apr 25 10:29 ssh_host_rsa_key.pub
+---
 
 If the server is behind a router, the router must now be set up to forward the high port number to the Mailpile server.  The port number is in the file port_external listed above:
 
+---
 $ cat sshd/port_external
 25610
+---
 
 Once this step is complete, set up the remote (next section); then:
 
@@ -73,7 +77,9 @@ To stop listening and terminate connections, use the script in .../Mailpile/scri
 
 For all these scripts, the current directory must be the Mailpile data directory, or alternatively, the environment variable MAILPILE_HOME must be set to point to the Mailpile data directory. e.g. 
 
+---
 export MAILPILE_HOME=~/.local/share/Mailpile/default
+---
 
 ### Setting up an Android remote device for SSH tunneling to a Mailpile server
 
@@ -83,10 +89,13 @@ Open a "Terminal Emulator" window.  When the window is first opened, the current
 
 Then, on the server, cd to the Mailpile data directory, then run the remote setup script giving the Internet address of the Mailpile server as the parameter, e.g. 
 
+---
  .../Mailpile/scripts/mp_ssh_remote_setup.sh   cyberspirit.dyndns.org
+---
 
 Key in commands to the remote Terminal Emulator window as instructed by the server script.  When the script is complete on the server, exit the busybox nc command on the remote using <ctrl>c.  A directory ~/ssh-tunnel should be present on the remote and accessible from the Terminal Emulator shell.  It will look something like this:
 
+---
 $ ls -l ssh-tunnel
 -rw------- u0_a41   u0_a41       1732 2016-04-25 11:01 config25610
 -rw------- u0_a41   u0_a41       3243 2016-04-25 11:02 id_rsa
@@ -95,6 +104,7 @@ $ ls -l ssh-tunnel
 -rwx------ u0_a41   u0_a41        171 2016-04-25 11:03 run25610
 -rwx------ u0_a41   u0_a41         54 2016-04-25 11:03 start25610
 -rwx------ u0_a41   u0_a41        249 2016-04-25 11:03 stop25610
+---
 
 Once setup is complete, to open a connection, use the script ~/ssh-tunnel/startnnnnn on the remote, where nnnnn is the external port selected by the server setup script (that's the "25610" that appears in some of the file names listed above).  The Terminal Emulator window can then be closed.  The SSH client is run by a background process that retries once a minute if the Mailpile server has not been started, or if a connection is lost. 
 
