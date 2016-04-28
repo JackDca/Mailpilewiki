@@ -8,6 +8,15 @@ This code has been tested using a Debian Jessie Gnu-Linux system for the server,
 
 The test system uses a dynamic DNS service to make it acessible from the Internet.  The router is set up to forward the port used by the SSH server to the Mailpile server.  This is too complicated for a casual user.  The use of a relay (Pagekite?) or STUN are friendlier possibilities.
 
+Note: This document is available at
+```
+https://github.com/JackDca/Mailpilewiki/blob/ssh-tunnel/Accessing-The-GUI-Via-SSH-Tunnel.md
+```
+and the scripts that are referenced are at
+```
+https://github.com/JackDca/Mailpile/tree/ssh-tunnel/scripts
+```
+
 ### Why OpenSSH?
 
 OpenSSH has all the capabilites that are needed to implement an automatic secure link between the Mailpile server and a remote, without unnecessary bloat.  It is well maintained and vulnerabilities are patched quickly when they are discovered.
@@ -34,7 +43,7 @@ One possible way to get `ssh` and `ssh-keygen` for a stock device is to download
 
 ### Specific setup instructions
 
---[Using a Linux Mailpile server for SSH tunneling from remotes](#using-a linux-mailpile-server-for-ssh-tunneling-from-remotes)
+- [Using a Linux Mailpile server for SSH tunneling from remotes](#using-a linux-mailpile-server-for-ssh-tunneling-from-remotes)
 - [Setting up an Android remote device for SSH tunneling to a Mailpile server](#setting-up-an-android-remote-device-for-ssh-tunneling-to-a-mailpile-server)
 - [Setting up a Windows Mailpile server for SSH tunneling from remotes](#setting-up-a-Windows-mailpile-server-for-ssh-tunneling-from-remotes)
 - [Setting up a Windows remote system for SSH tunneling to a Mailpile server](#setting-up-a-windows-remote-system-for-ssh-tunneling-to-a-mailpile-server)
@@ -93,7 +102,7 @@ Then, on the server, `cd` to the Mailpile data directory, then run the remote se
  .../Mailpile/scripts/mp_ssh_remote_setup.sh   cyberspirit.dyndns.org
 ```
 
-Key in commands to the remote Terminal Emulator window as instructed by the server script.  When the script is complete on the server, exit the busybox nc command on the remote using <ctrl>c.  A directory ~/ssh-tunnel should be present on the remote and accessible from the Terminal Emulator shell.  It will look something like this:
+Key in commands to the remote Terminal Emulator window as instructed by the server script.  When the script is complete on the server, exit the last command that was requested by the script for the remote (`busybox nc ...`) using `<ctrl>c`.  A directory `~/ssh-tunnel` should be present on the remote and accessible from the Terminal Emulator shell.  It will look something like this:
 
 ```
 $ ls -l ssh-tunnel
